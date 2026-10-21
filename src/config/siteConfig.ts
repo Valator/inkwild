@@ -29,7 +29,7 @@ export const siteConfig: SiteConfig = {
   studioName: 'InkWild Games',
   gameName: 'Magical Garden',
   domain: 'https://inkwildgames.com',
-  contactEmail: '',
+  contactEmail: 'inkwildgames@gmail.com',
   defaultLocale: 'en',
   detectBrowserLocale: true,
   persistLocale: true,

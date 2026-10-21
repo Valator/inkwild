@@ -2,7 +2,7 @@ import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it, vi } from 'vitest'
 import { LOCALE_STORAGE_KEY } from './i18n/storage'
-import { renderApp, setBrowserLanguages } from './test/utils'
+import { renderApp, setBrowserLanguages, setContactEmail } from './test/utils'
 
 const meta = (selector: string) => document.head.querySelector(selector)?.getAttribute('content')
 
@@ -236,11 +236,29 @@ describe('store badges and links without configured URLs', () => {
   })
 
   it('hides social links and the email and shows translated placeholders', () => {
+    setContactEmail('')
     renderApp()
     expect(screen.getByText('Our community links are on their way — check back soon.')).toBeInTheDocument()
     expect(screen.getByText('Our contact details will be shared here soon.')).toBeInTheDocument()
     expect(document.querySelector('a[href^="mailto:"]')).toBeNull()
     expect(document.querySelector('.social-links')).toBeNull()
+  })
+})
+
+describe('configured contact email', () => {
+  it('is shown as a mailto link in the contact card and in the structured data', () => {
+    setContactEmail('hello@example.com')
+    renderApp('es')
+    const link = screen.getByRole('link', { name: 'Escribe a InkWild Games a hello@example.com' })
+    expect(link).toHaveAttribute('href', 'mailto:hello@example.com')
+    expect(screen.queryByText('Muy pronto compartiremos aquí nuestros datos de contacto.')).toBeNull()
+    expect(JSON.parse(document.head.querySelector('script#ld-organization')!.textContent!).email).toBe('hello@example.com')
+  })
+
+  it('is ignored when it is not a valid address', () => {
+    setContactEmail('not an email')
+    renderApp()
+    expect(document.querySelector('a[href^="mailto:"]')).toBeNull()
   })
 })
 

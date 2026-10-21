@@ -4,7 +4,7 @@ import { I18nextProvider } from 'react-i18next'
 import { describe, expect, it } from 'vitest'
 import { createI18n } from '../../i18n'
 import type { LocaleCode } from '../../i18n/locales'
-import { renderApp } from '../../test/utils'
+import { renderApp, setContactEmail } from '../../test/utils'
 import { PrivacyPage } from './PrivacyPage'
 
 function renderPrivacy(locale: LocaleCode) {
@@ -41,12 +41,20 @@ describe.each([
   })
 
   it('links to Unity safely and shows a placeholder while no contact email is configured', () => {
+    setContactEmail('')
     renderPrivacy(locale)
     const unity = document.querySelector('a[href="https://unity.com/legal/privacy-policy"]')
     expect(unity).toHaveAttribute('rel', 'noopener noreferrer')
     expect(unity).toHaveAttribute('target', '_blank')
     expect(document.querySelector('a[href^="mailto:"]')).toBeNull()
     expect(document.querySelector('.policy__placeholder')).toBeInTheDocument()
+  })
+
+  it('shows the configured contact email as a mailto link', () => {
+    setContactEmail('hello@example.com')
+    renderPrivacy(locale)
+    expect(screen.getByRole('link', { name: /hello@example\.com/ })).toHaveAttribute('href', 'mailto:hello@example.com')
+    expect(document.querySelector('.policy__placeholder')).toBeNull()
   })
 
   it('links back to the home sections instead of scrolling in place', () => {

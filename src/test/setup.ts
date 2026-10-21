@@ -1,6 +1,9 @@
 import '@testing-library/jest-dom/vitest'
 import { cleanup } from '@testing-library/react'
 import { afterEach, beforeEach, vi } from 'vitest'
+import { siteConfig } from '../config/siteConfig'
+
+const configuredEmail = siteConfig.contactEmail
 
 /** Queries that should report `matches: true` in the current test. */
 export const mediaState = new Map<string, boolean>()
@@ -37,6 +40,7 @@ beforeEach(() => {
 })
 
 afterEach(() => {
+  ;(siteConfig as { contactEmail: string }).contactEmail = configuredEmail
   cleanup()
   vi.restoreAllMocks()
   document.head.querySelectorAll('meta[property], meta[name], link[rel="canonical"], script[type="application/ld+json"]').forEach((el) => {

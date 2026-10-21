@@ -104,7 +104,7 @@ export function MobileNavigation({ activeSection }: MobileNavigationProps) {
           onKeyDown={onKeyDown}
         >
           <div className="mobile-nav__top">
-            <span className="logo-plaque mobile-nav__logo">
+            <span className="logo-mark mobile-nav__logo">
               <img src={logo} width={1000} height={375} alt={t('common:brand.logoAlt')} />
             </span>
             <button ref={closeRef} type="button" className="mobile-nav__close" aria-label={t('navigation:menu.close')} onClick={() => close()}>

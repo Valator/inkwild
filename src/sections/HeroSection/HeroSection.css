@@ -41,37 +41,6 @@
   pointer-events: none;
 }
 
-.hero__vines {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline: 0;
-  z-index: -1;
-  inline-size: 100%;
-  max-block-size: 30%;
-  object-fit: cover;
-  object-position: top center;
-  opacity: 0.75;
-  pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
-  mask-image: linear-gradient(to bottom, #000 55%, transparent);
-}
-
-.hero__forest {
-  inset-block: auto -3rem;
-  block-size: clamp(6rem, 22vw, 15rem);
-  z-index: -1;
-}
-
-.hero__forest svg {
-  inline-size: 100%;
-  block-size: 100%;
-}
-
-.hero__forest--back {
-  opacity: 0.9;
-  transform-origin: bottom;
-}
-
 .hero__content {
   position: relative;
   display: grid;
@@ -85,7 +54,8 @@
 }
 
 .hero__eyebrow {
-  text-shadow: 0 1px 12px rgb(0 0 0 / 0.8);
+  font-weight: 700;
+  text-shadow: 0 0 0.6rem rgb(0 0 0 / 0.95), 0 1px 14px rgb(0 0 0 / 0.9);
 }
 
 .hero__title {
@@ -164,9 +134,5 @@
     inset-inline-end: 0.5rem;
     inset-block-end: 4.5rem;
     inline-size: 9.5rem;
-  }
-
-  .hero__vines {
-    max-block-size: 38%;
   }
 }

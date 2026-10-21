@@ -23,7 +23,7 @@ export function Header() {
   return (
     <header className="site-header" data-scrolled={scrolled}>
       <div className="site-header__inner container">
-        <a className="site-header__logo logo-plaque" href="#home" onClick={(event) => go(event, 'home')}>
+        <a className="site-header__logo logo-mark" href="#home" onClick={(event) => go(event, 'home')}>
           <img src={logo} width={1000} height={375} alt={t('common:brand.logoAlt')} />
         </a>
 

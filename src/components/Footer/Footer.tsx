@@ -18,7 +18,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__inner">
         <div className="site-footer__brand">
-          <span className="logo-plaque">
+          <span className="logo-mark">
             <img src={logo} width={1000} height={375} alt={t('common:brand.logoAlt')} loading="lazy" />
           </span>
           <p>{t('footer:tagline')}</p>

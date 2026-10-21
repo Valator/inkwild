@@ -11,8 +11,8 @@
  * The generated files are committed, so this only needs to run when a source changes.
  *
  * The InkWild Games logo is the supplied original, kept untouched in assets-source/inkwild-logo.webp.
- * It is only resized here — never redrawn or recoloured. Its wordmark is dark green, so the site
- * presents it on a Story Parchment plaque (see .logo-plaque in styles/global.css).
+ * The original has a pure-black background and no alpha channel, so the black is keyed out to
+ * transparency (colours of the artwork are untouched; see keyOutBlack). Nothing is redrawn or recoloured.
  */
 import { existsSync } from 'node:fs'
 import { mkdir } from 'node:fs/promises'
@@ -45,8 +45,23 @@ async function run(label, source, task) {
 const webp = (quality = 80) => ({ quality, effort: 5 })
 
 // ---- Brand: InkWild Games logo + emblem --------------------------------------------
+/** Turns the logo's pure-black backdrop transparent (only near-black pixels; artwork colours are kept). */
+async function keyOutBlack(file) {
+  const { data, info } = await sharp(file).removeAlpha().raw().toBuffer({ resolveWithObject: true })
+  const rgba = Buffer.alloc(info.width * info.height * 4)
+  for (let i = 0; i < info.width * info.height; i++) {
+    const r = data[i * 3], g = data[i * 3 + 1], b = data[i * 3 + 2]
+    const peak = Math.max(r, g, b)
+    rgba[i * 4] = r
+    rgba[i * 4 + 1] = g
+    rgba[i * 4 + 2] = b
+    rgba[i * 4 + 3] = Math.max(0, Math.min(255, Math.round(((peak - 1) / 11) * 255)))
+  }
+  return sharp(rgba, { raw: { width: info.width, height: info.height, channels: 4 } })
+}
+
 await run('brand/inkwild-logo.webp', LOGO_SOURCE, async () => {
-  const logo = sharp(LOGO_SOURCE).resize({ width: 1000, kernel: 'lanczos3' })
+  const logo = (await keyOutBlack(LOGO_SOURCE)).resize({ width: 1000, kernel: 'lanczos3' })
   await logo.clone().webp({ quality: 92, alphaQuality: 100, effort: 5 }).toFile(path.join(brandDir, 'inkwild-logo.webp'))
   // PNG copy for JSON-LD / external consumers.
   await logo.clone().png({ compressionLevel: 9 }).toFile(out('public/inkwild-logo.png'))
@@ -54,7 +69,7 @@ await run('brand/inkwild-logo.webp', LOGO_SOURCE, async () => {
 
 await run('brand/inkwild-emblem + favicons', LOGO_SOURCE, async () => {
   // The IW monogram occupies the left part of the lockup.
-  const emblem = await sharp(LOGO_SOURCE).extract({ left: 30, top: 0, width: 880, height: 750 }).png().toBuffer()
+  const emblem = await (await keyOutBlack(LOGO_SOURCE)).extract({ left: 30, top: 0, width: 880, height: 750 }).png().toBuffer()
   const fit = (size) =>
     sharp(emblem).resize(size, size, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 }, kernel: 'lanczos3' }).png()
   await fit(256).toFile(path.join(brandDir, 'inkwild-emblem.png'))
@@ -69,13 +84,6 @@ await run('games/magical-garden-logo.webp', path.join(ART, 'UI/logo.png'), () =>
 await run('games/fairy.webp', path.join(ART, 'Characters/mascot.png'), () =>
   sharp(path.join(ART, 'Characters/mascot.png')).resize({ width: 720 }).webp(webp(88)).toFile(path.join(gamesDir, 'fairy.webp')),
 )
-await run('games/vines-top.webp', path.join(ART, 'Play/vines_top.png'), () =>
-  sharp(path.join(ART, 'Play/vines_top.png'))
-    .extract({ left: 0, top: 0, width: 1024, height: 640 })
-    .webp(webp(82))
-    .toFile(path.join(gamesDir, 'vines-top.webp')),
-)
-
 for (const [name, file] of [
   ['play-screen', '01_play_screen.png'],
   ['menu-screen', '03_main_menu.png'],
@@ -119,16 +127,10 @@ await run('public/og-image.jpg', path.join(ART, 'Garden/maze_stage4.jpg'), async
      </svg>`,
   )
   const logo = await sharp(path.join(brandDir, 'inkwild-logo.webp')).resize({ width: 520 }).toBuffer()
-  const plaque = Buffer.from(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="240">
-       <rect x="2" y="2" width="596" height="236" rx="22" fill="#EAE1D0" stroke="#C49A58" stroke-width="3"/>
-     </svg>`,
-  )
   await sharp(bg)
     .composite([
       { input: shade },
-      { input: plaque, left: 80, top: 130 },
-      { input: logo, left: 120, top: 156 },
+      { input: logo, left: 80, top: 190 },
       {
         input: Buffer.from(
           `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="120">

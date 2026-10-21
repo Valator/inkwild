@@ -2,13 +2,11 @@ import { ChevronDown, Leaf } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { sectionLinkHandler } from '../../lib/navigateToSection'
 import { Button } from '../../components/Button/Button'
-import { ForestSilhouette } from '../../components/ForestSilhouette/ForestSilhouette'
 import { ParallaxLayer } from '../../components/ParallaxLayer/ParallaxLayer'
 import { ParticleField } from '../../components/ParticleField/ParticleField'
 import { Reveal } from '../../components/Reveal/Reveal'
 import fairy from '../../assets/games/fairy.webp'
 import heroArt from '../../assets/games/hero-garden.webp'
-import vines from '../../assets/games/vines-top.webp'
 import './HeroSection.css'
 
 export function HeroSection() {
@@ -21,14 +19,7 @@ export function HeroSection() {
       </ParallaxLayer>
       <div className="hero__veil" aria-hidden="true" />
       <div className="hero__glow glow-pulse" aria-hidden="true" />
-      <img className="hero__vines" src={vines} width={1024} height={640} alt="" decoding="async" aria-hidden="true" />
 
-      <ParallaxLayer speed={-0.05} className="hero__forest hero__forest--back">
-        <ForestSilhouette seed={7} trees={22} maxHeight={0.8} fill="#2a3b31" />
-      </ParallaxLayer>
-      <ParallaxLayer speed={-0.1} className="hero__forest hero__forest--front">
-        <ForestSilhouette seed={19} trees={15} maxHeight={0.62} fill="#14131a" />
-      </ParallaxLayer>
       <ParticleField />
 
       <div className="container hero__content">

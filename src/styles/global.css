@@ -1,5 +1,7 @@
-@import '@fontsource-variable/fraunces/opsz.css';
-@import '@fontsource-variable/figtree/wght.css';
+/* Google Fonts, self-hosted via Fontsource (no requests to Google at runtime). */
+@import '@fontsource-variable/cormorant-garamond/wght.css';
+@import '@fontsource-variable/dm-sans/opsz.css';
+@import '@fontsource-variable/cinzel/wght.css';
 @import './tokens.css';
 @import './animations.css';
 
@@ -137,9 +139,10 @@ select {
 }
 
 .eyebrow {
+  font-family: var(--font-decorative);
   font-size: var(--step--1);
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-bright);
   text-wrap: balance;
@@ -173,22 +176,12 @@ select {
   transform: rotate(45deg);
 }
 
-/*
- * The InkWild logo's wordmark is dark green, so it is always shown on a Story Parchment plaque
- * (a brand colour) instead of being recoloured. The `img` keeps its original artwork.
- */
-.logo-plaque {
+.logo-mark {
   display: inline-block;
   line-height: 0;
-  padding: 0.3rem 0.65rem;
-  border: 1px solid color-mix(in srgb, var(--old-gold) 70%, transparent);
-  border-radius: 0.7rem;
-  background:
-    radial-gradient(120% 140% at 50% 0%, #f4ecdb, var(--story-parchment) 62%, var(--parchment-shade));
-  box-shadow: 0 0.3rem 1rem rgb(0 0 0 / 0.35), inset 0 1px 0 rgb(255 255 255 / 0.6);
 }
 
-.logo-plaque img {
+.logo-mark img {
   inline-size: 100%;
 }
 

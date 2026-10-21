@@ -181,10 +181,6 @@ select {
   line-height: 0;
 }
 
-.logo-mark img {
-  inline-size: 100%;
-}
-
 /* Sections: sit below the sticky header when reached by anchor */
 .section {
   position: relative;

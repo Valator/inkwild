@@ -32,7 +32,7 @@
 }
 
 .site-header__logo img {
-  inline-size: clamp(7.5rem, 36vw, 9.5rem);
+  inline-size: clamp(6.5rem, 30vw, 8rem);
 }
 
 .site-header__nav {
@@ -47,7 +47,7 @@
 
 @media (min-width: 60rem) {
   .site-header__logo img {
-    inline-size: 13.5rem;
+    inline-size: 300px;
   }
 
   .site-header__nav {

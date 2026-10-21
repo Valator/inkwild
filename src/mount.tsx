@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import { I18nextProvider } from 'react-i18next'
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary'
 import { createI18n, reportResourceIssues } from './i18n'
-import './styles/global.css'
 
 /** Shared start-up for every page of the site (home, privacy, …): i18n, error boundary, React root. */
 export function mountPage(page: ReactNode) {

@@ -60,7 +60,7 @@
   --shadow-gold: 0 0 2.5rem rgb(196 154 88 / 0.28);
 
   /* Layout */
-  --header-h: 4.5rem;
+  --header-h: 4.25rem;
   --z-header: 50;
   --z-drawer: 60;
   --z-toast: 70;
@@ -70,6 +70,6 @@
 
 @media (min-width: 60rem) {
   :root {
-    --header-h: 5.75rem;
+    --header-h: 7.25rem; /* fits the 300px-wide header logo (about 112px tall) */
   }
 }

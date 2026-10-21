@@ -1,0 +1,204 @@
+.game {
+  padding-block: var(--section-pad);
+  overflow: clip;
+  background: var(--forest-deep);
+}
+
+.game__art {
+  z-index: -3;
+}
+
+.game__art img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: 50% 55%;
+  filter: saturate(1.15);
+}
+
+/* Keeps the colourful game art vivid but lets the copy breathe. */
+.game__veil {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(180deg, var(--ink-black) 0%, rgb(25 24 32 / 0.35) 14%, rgb(25 24 32 / 0.45) 86%, var(--ink-black) 100%),
+    linear-gradient(90deg, rgb(25 24 32 / 0.88), rgb(25 24 32 / 0.5) 50%, rgb(25 24 32 / 0.3));
+}
+
+.game__grid {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.game__intro {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: start;
+}
+
+.game__title {
+  inline-size: min(100%, 26rem);
+  line-height: 0;
+  filter: drop-shadow(0 0.5rem 1.5rem rgb(0 0 0 / 0.55));
+}
+
+.game__tagline {
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--gold-bright);
+  text-wrap: balance;
+}
+
+.game__description {
+  max-inline-size: 34rem;
+  font-size: var(--step-1);
+}
+
+.game__availability {
+  display: grid;
+  gap: var(--space-4);
+  inline-size: min(100%, 27rem);
+  margin-block-start: var(--space-2);
+}
+
+/* Parchment ribbon with softly torn ends. */
+.game__status {
+  display: grid;
+  justify-items: center;
+  gap: 0.15rem;
+  padding: var(--space-3) var(--space-6);
+  background:
+    radial-gradient(120% 140% at 50% 0%, #f3ead8, var(--story-parchment) 60%, var(--parchment-shade));
+  color: var(--ink-black);
+  text-align: center;
+  clip-path: polygon(0 8%, 3% 0, 7% 6%, 12% 0, 20% 5%, 30% 0, 40% 4%, 52% 0, 63% 5%, 75% 0, 86% 5%, 94% 0, 100% 7%, 98% 50%, 100% 93%, 94% 100%, 86% 95%, 75% 100%, 63% 94%, 52% 100%, 40% 95%, 30% 100%, 20% 96%, 12% 100%, 7% 94%, 3% 100%, 0 92%, 2% 50%);
+  filter: drop-shadow(0 0.5rem 1rem rgb(0 0 0 / 0.5));
+}
+
+.game__status strong {
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  line-height: 1.1;
+}
+
+.game__status span {
+  font-size: var(--step-0);
+  font-weight: 600;
+  color: #3a3226;
+}
+
+/* Phone mock-ups */
+.game__phones {
+  position: relative;
+  margin: 0;
+  inline-size: min(100%, 30rem);
+  aspect-ratio: 1 / 1.06;
+  margin-inline: auto;
+}
+
+.phone {
+  position: absolute;
+  inline-size: 56%;
+  padding: 0.4rem;
+  border: 1px solid color-mix(in srgb, var(--gold-bright) 60%, transparent);
+  border-radius: 2rem;
+  background: #07070a;
+  box-shadow: var(--shadow-soft), 0 0 3rem rgb(230 196 135 / 0.22);
+}
+
+.phone img {
+  inline-size: 100%;
+  border-radius: 1.65rem;
+}
+
+.phone--front {
+  inset-block-start: 0;
+  inset-inline-end: 3%;
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+.phone--back {
+  inset-block-start: 9%;
+  inset-inline-start: 2%;
+  transform: rotate(-6deg);
+  opacity: 0.96;
+}
+
+.game__floater {
+  position: absolute;
+  z-index: 3;
+  inline-size: clamp(3rem, 12%, 4.5rem);
+  filter: drop-shadow(0 0.6rem 0.8rem rgb(0 0 0 / 0.5));
+  pointer-events: none;
+}
+
+.game__floater--a {
+  inset-block-start: -2%;
+  inset-inline-start: 4%;
+  --float-delay: -1s;
+  --float-duration: 6s;
+}
+.game__floater--b {
+  inset-block-end: 6%;
+  inset-inline-start: -2%;
+  --float-delay: -3s;
+  --float-tilt: 6deg;
+}
+.game__floater--c {
+  inset-block-start: 38%;
+  inset-inline-end: -3%;
+  --float-delay: -2s;
+  --float-duration: 8s;
+}
+.game__floater--d {
+  inset-block-end: -2%;
+  inset-inline-end: 14%;
+  --float-delay: -4.5s;
+  --float-tilt: -5deg;
+}
+
+/* Feature strip */
+.game__features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5) var(--space-4);
+  margin-block-start: var(--space-8);
+  padding-block-start: var(--space-6);
+  border-block-start: 1px solid var(--line-gold);
+}
+
+.game__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-inline-size: 0;
+  font-weight: 600;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.game__feature img {
+  flex: none;
+  inline-size: 3rem;
+  block-size: 3rem;
+  filter: drop-shadow(0 0.25rem 0.4rem rgb(0 0 0 / 0.5));
+}
+
+@media (min-width: 48rem) {
+  .game__features {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+}
+
+@media (min-width: 64rem) {
+  .game__grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: var(--space-7);
+  }
+}

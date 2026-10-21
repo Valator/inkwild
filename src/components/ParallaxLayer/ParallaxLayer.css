@@ -1,0 +1,7 @@
+.parallax-layer {
+  position: absolute;
+  inset-inline: 0;
+  inset-block: -12% -12%;
+  pointer-events: none;
+  will-change: transform;
+}

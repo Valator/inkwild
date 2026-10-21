@@ -1,0 +1,30 @@
+{
+  "eyebrow": "Our first game",
+  "logoAlt": "Magical Garden",
+  "tagline": "A little magic can change everything.",
+  "description": "Restore a forgotten garden, match magical treasures, and uncover the charm hiding beneath the overgrowth. A cozy puzzle adventure made to brighten your day — one match at a time.",
+  "preview": {
+    "label": "Gameplay preview",
+    "playAlt": "A level of Magical Garden: a board of leaves, flowers, mushrooms, fruit, and potions to match.",
+    "menuAlt": "The Magical Garden main menu, with a cheerful flower fairy above the game modes."
+  },
+  "status": {
+    "title": "Coming soon",
+    "subtitle": "to iOS and Android"
+  },
+  "stores": {
+    "label": "Store availability",
+    "pendingPrefix": "Coming soon on",
+    "livePrefix": "Get it on",
+    "pendingAria": "{{store}}: the store listing isn't available yet",
+    "liveAria": "{{game}} on {{store}} (opens in a new tab)",
+    "notice": "The {{store}} listing isn't available yet. We'll add the link here as soon as {{game}} is ready."
+  },
+  "features": {
+    "label": "What to expect",
+    "relaxing": "Relaxing and fun gameplay",
+    "worlds": "Charming worlds to restore",
+    "powerups": "Magical power-ups and combos",
+    "growth": "A garden that grows with your progress"
+  }
+}

@@ -1,0 +1,122 @@
+/* Story Parchment: paper grain from an inline SVG noise filter — no extra image request. */
+.studio {
+  padding-block: var(--section-pad);
+  overflow: clip;
+  color: var(--ink-black);
+  background-color: var(--story-parchment);
+  background-image:
+    radial-gradient(120% 90% at 50% 0%, rgb(255 255 255 / 0.4), transparent 60%),
+    radial-gradient(90% 70% at 100% 100%, rgb(150 120 70 / 0.22), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .14 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.studio::before,
+.studio::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  block-size: clamp(1.5rem, 4vw, 3rem);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.studio::before {
+  inset-block-start: 0;
+  background: linear-gradient(to bottom, rgb(25 24 32 / 0.55), transparent);
+}
+
+.studio::after {
+  inset-block-end: 0;
+  background: linear-gradient(to top, rgb(25 24 32 / 0.55), transparent);
+}
+
+.studio__grid {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+/* The game's own garden art, engraved in sepia and dissolved into the paper. */
+.studio__art {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 45%, transparent 100%);
+  mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 45%, transparent 100%);
+}
+
+.studio__art img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: 50% 70%;
+  filter: grayscale(1) sepia(0.85) contrast(1.15) brightness(1.02);
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+.studio__copy {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: start;
+}
+
+.studio__eyebrow {
+  color: var(--gold-deep);
+}
+
+.studio__title {
+  font-size: var(--step-4);
+  color: var(--ink-black);
+}
+
+.studio .ornament {
+  color: var(--gold-deep);
+}
+
+.studio__description {
+  max-inline-size: 38rem;
+  font-size: var(--step-1);
+  color: #2b2924;
+}
+
+.studio__principles {
+  display: grid;
+  gap: var(--space-6);
+  margin-block-start: var(--space-8);
+  padding-block-start: var(--space-6);
+  border-block-start: 1px solid color-mix(in srgb, var(--gold-deep) 45%, transparent);
+}
+
+.studio__principle {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: start;
+}
+
+.studio__principle-icon {
+  color: var(--gold-deep);
+}
+
+.studio__principle h3 {
+  font-size: var(--step-2);
+  color: var(--ink-black);
+}
+
+.studio__principle p {
+  color: #3a372f;
+}
+
+@media (min-width: 48rem) {
+  .studio__principles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-7);
+  }
+}
+
+@media (min-width: 64rem) {
+  .studio__grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--space-8);
+  }
+}

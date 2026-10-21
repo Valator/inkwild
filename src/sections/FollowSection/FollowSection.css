@@ -1,0 +1,90 @@
+.follow {
+  padding-block: var(--section-pad);
+  overflow: clip;
+  background: var(--ink-black);
+}
+
+.follow__art {
+  z-index: -3;
+}
+
+.follow__art img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+.follow__veil {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(60% 55% at 50% 45%, rgb(25 24 32 / 0.5), rgb(25 24 32 / 0.8) 100%),
+    linear-gradient(180deg, rgb(25 24 32 / 0.85), rgb(25 24 32 / 0.3) 40%, rgb(25 24 32 / 0.9));
+}
+
+.follow__inner {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: center;
+  text-align: center;
+}
+
+.follow__title {
+  max-inline-size: 22ch;
+  font-size: var(--step-4);
+  color: var(--story-parchment);
+  text-shadow: 0 0.1em 1.2rem rgb(0 0 0 / 0.6);
+}
+
+.follow__description {
+  max-inline-size: 38rem;
+  font-size: var(--step-1);
+}
+
+.follow__cards {
+  display: grid;
+  gap: var(--space-4);
+  inline-size: min(100%, 44rem);
+  margin-block-start: var(--space-4);
+}
+
+.follow__card {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  align-content: start;
+  padding: var(--space-5);
+  border: 1px solid var(--line-gold);
+  border-radius: var(--radius-l);
+  background: color-mix(in srgb, var(--ink-black) 74%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.follow__card h3 {
+  font-size: var(--step-2);
+  color: var(--gold-bright);
+}
+
+.follow__empty {
+  max-inline-size: 24rem;
+  color: var(--text-muted);
+  font-size: var(--step-0);
+}
+
+.follow__email {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-block-size: 2.75rem;
+  color: var(--gold-soft);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 48rem) {
+  .follow__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

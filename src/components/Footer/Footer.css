@@ -1,0 +1,77 @@
+.site-footer {
+  position: relative;
+  padding-block: var(--space-7) var(--space-5);
+  border-block-start: 1px solid var(--line-gold);
+  background:
+    radial-gradient(70% 120% at 0% 100%, color-mix(in srgb, var(--wild-forest) 45%, transparent), transparent 70%),
+    var(--ink-black);
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.site-footer__brand {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+}
+
+.site-footer__brand img {
+  inline-size: 12rem;
+}
+
+.site-footer__brand p {
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+}
+
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+
+.site-footer__nav a {
+  display: inline-block;
+  padding-block: var(--space-2);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.site-footer__nav a:hover {
+  color: var(--gold-bright);
+}
+
+.site-footer__social {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.site-footer__social p {
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+}
+
+.site-footer__legal {
+  margin-block-start: var(--space-6);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid color-mix(in srgb, var(--old-gold) 25%, transparent);
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}
+
+@media (min-width: 64rem) {
+  .site-footer__inner {
+    grid-template-columns: 1.2fr 1fr auto;
+    gap: var(--space-7);
+  }
+
+  .site-footer__nav {
+    justify-content: center;
+  }
+}

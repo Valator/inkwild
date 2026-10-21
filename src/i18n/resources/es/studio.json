@@ -1,0 +1,20 @@
+{
+  "eyebrow": "El estudio",
+  "title": "Un pequeño estudio. Una gran imaginación.",
+  "description": "InkWild Games es un estudio independiente que crea mundos originales y experiencias memorables. Creemos que los videojuegos pueden ser divertidos, hermosos, misteriosos y estar llenos de sorpresas.",
+  "principles": {
+    "label": "En lo que creemos",
+    "worlds": {
+      "title": "Mundos con alma",
+      "description": "Lugares y personajes originales con una historia que vale la pena descubrir."
+    },
+    "care": {
+      "title": "Hechos con cuidado",
+      "description": "Cuidamos los pequeños detalles: cómo se ve, cómo suena y cómo se siente jugar en cada mundo."
+    },
+    "room": {
+      "title": "Espacio para imaginar",
+      "description": "Un hogar para muchos tipos de juegos: acogedores, curiosos y aventureros."
+    }
+  }
+}

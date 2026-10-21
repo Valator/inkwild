@@ -1,0 +1,20 @@
+{
+  "eyebrow": "The studio",
+  "title": "Small studio. Wild imagination.",
+  "description": "InkWild Games is an independent studio creating original worlds and memorable experiences. We believe games can be playful, beautiful, mysterious, and full of surprises.",
+  "principles": {
+    "label": "What we believe in",
+    "worlds": {
+      "title": "Worlds with a soul",
+      "description": "Original places and characters with a story worth discovering."
+    },
+    "care": {
+      "title": "Made with care",
+      "description": "We sweat the small details: how a world looks, sounds, and feels to play."
+    },
+    "room": {
+      "title": "Room to grow wild",
+      "description": "A home for many kinds of games — cozy, curious, and adventurous."
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.social-links__link {
+  display: grid;
+  place-items: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  border: 1px solid var(--line-gold);
+  border-radius: var(--radius-s);
+  color: var(--gold-bright);
+  transition:
+    background-color 0.25s,
+    color 0.25s,
+    transform 0.25s var(--ease-out);
+}
+
+@media (hover: hover) {
+  .social-links__link:hover {
+    background: var(--old-gold);
+    color: var(--ink-black);
+    transform: translateY(-2px);
+  }
+}

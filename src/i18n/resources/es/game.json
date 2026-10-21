@@ -1,0 +1,30 @@
+{
+  "eyebrow": "Nuestro primer juego",
+  "logoAlt": "Magical Garden",
+  "tagline": "Un poco de magia puede cambiarlo todo.",
+  "description": "Restaura un jardín olvidado, combina tesoros mágicos y descubre el encanto que se oculta bajo la maleza. Una acogedora aventura de rompecabezas para alegrarte el día, una combinación a la vez.",
+  "preview": {
+    "label": "Vista previa del juego",
+    "playAlt": "Un nivel de Magical Garden: un tablero de hojas, flores, hongos, frutas y pociones para combinar.",
+    "menuAlt": "El menú principal de Magical Garden, con un alegre hada de flores sobre los modos de juego."
+  },
+  "status": {
+    "title": "Próximamente",
+    "subtitle": "en iOS y Android"
+  },
+  "stores": {
+    "label": "Disponibilidad en tiendas",
+    "pendingPrefix": "Próximamente en",
+    "livePrefix": "Consíguelo en",
+    "pendingAria": "{{store}}: la página de la tienda aún no está disponible",
+    "liveAria": "{{game}} en {{store}} (se abre en una pestaña nueva)",
+    "notice": "La página de {{game}} en {{store}} aún no está disponible. Agregaremos el enlace aquí en cuanto el juego esté listo."
+  },
+  "features": {
+    "label": "Qué esperar",
+    "relaxing": "Una jugabilidad relajante y divertida",
+    "worlds": "Mundos encantadores por restaurar",
+    "powerups": "Poderes mágicos y combos",
+    "growth": "Un jardín que crece con tu progreso"
+  }
+}

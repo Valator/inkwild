@@ -1,0 +1,13 @@
+{
+  "home": "Inicio",
+  "game": "Nuestro juego",
+  "about": "El estudio",
+  "contact": "Contacto",
+  "primaryLabel": "Navegación principal",
+  "footerLabel": "Navegación del pie de página",
+  "menu": {
+    "open": "Abrir menú",
+    "close": "Cerrar menú",
+    "title": "Menú del sitio"
+  }
+}

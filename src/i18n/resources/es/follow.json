@@ -1,0 +1,18 @@
+{
+  "title": "Acompáñanos cuando florezca la magia.",
+  "description": "Magical Garden llega pronto a iOS y Android. Los enlaces a las tiendas y a la comunidad aparecerán aquí en cuanto estén disponibles.",
+  "social": {
+    "title": "Acompaña el viaje",
+    "empty": "Nuestros enlaces de comunidad están en camino. Vuelve pronto.",
+    "aria": "{{studioName}} en {{network}} (se abre en una pestaña nueva)",
+    "youtube": "YouTube",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "discord": "Discord"
+  },
+  "contact": {
+    "title": "Escríbenos",
+    "emailAria": "Escribe a {{studioName}} a {{email}}",
+    "empty": "Muy pronto compartiremos aquí nuestros datos de contacto."
+  }
+}

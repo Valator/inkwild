@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "logoAlt": "InkWild Games"
+  },
+  "meta": {
+    "title": "InkWild Games — Donde la imaginación vuela libre.",
+    "description": "InkWild Games es un estudio independiente de videojuegos que crea mundos originales y experiencias memorables. Conoce Magical Garden, una acogedora aventura de rompecabezas que llega pronto a iOS y Android.",
+    "ogTitle": "InkWild Games — Donde la imaginación vuela libre.",
+    "ogDescription": "Un estudio independiente que crea juegos llenos de asombro, calidez y un poquito de magia. Magical Garden llega pronto a iOS y Android.",
+    "ogImageAlt": "Logotipo de InkWild Games sobre un jardín de rosas encantado al atardecer.",
+    "organizationDescription": "InkWild Games es un estudio independiente de videojuegos que crea mundos originales y experiencias memorables."
+  },
+  "skipToContent": "Saltar al contenido principal",
+  "language": {
+    "label": "Idioma",
+    "select": "Elige un idioma",
+    "changed": "Idioma cambiado a {{language}}."
+  },
+  "errors": {
+    "title": "Algo salió mal",
+    "message": "No se pudo mostrar la página. Actualízala para intentarlo de nuevo.",
+    "reload": "Actualizar la página"
+  }
+}

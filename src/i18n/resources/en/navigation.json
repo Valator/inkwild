@@ -1,0 +1,13 @@
+{
+  "home": "Home",
+  "game": "Our Game",
+  "about": "About",
+  "contact": "Contact",
+  "primaryLabel": "Main navigation",
+  "footerLabel": "Footer navigation",
+  "menu": {
+    "open": "Open menu",
+    "close": "Close menu",
+    "title": "Site menu"
+  }
+}

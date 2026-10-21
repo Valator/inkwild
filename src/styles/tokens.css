@@ -1,0 +1,72 @@
+/* Design tokens — official InkWild Games palette plus derived tints. */
+:root {
+  color-scheme: dark;
+
+  /* Brand */
+  --ink-black: #191820;
+  --wild-forest: #35483d;
+  --old-gold: #c49a58;
+  --story-parchment: #eae1d0;
+
+  /* Derived */
+  --ink-deep: #0f0e14;
+  --ink-raised: #22212b;
+  --forest-deep: #1f2d25;
+  --forest-glow: #4b6a58;
+  --gold-bright: #e6c487;
+  --gold-soft: #f3dfb5;
+  --gold-deep: #6b4f1d; /* gold text on parchment — 5.6:1 */
+  --parchment-shade: #d9cdb4;
+  --text: color-mix(in srgb, var(--story-parchment) 92%, transparent);
+  --text-muted: color-mix(in srgb, var(--story-parchment) 72%, transparent);
+  --line-gold: color-mix(in srgb, var(--old-gold) 55%, transparent);
+  --focus: #ffe3a3;
+
+  /* Typography */
+  --font-display: 'Fraunces Variable', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-body: 'Figtree Variable', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  --step--1: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-0: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+  --step-1: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --step-2: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --step-3: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --step-4: clamp(2.125rem, 1.5rem + 3vw, 3.75rem);
+  --step-5: clamp(2.5rem, 1.2rem + 6vw, 6rem);
+
+  /* Space */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --section-pad: clamp(4rem, 9vw, 8rem);
+  --content-width: 76rem;
+
+  /* Shape & depth */
+  --radius-s: 0.5rem;
+  --radius-m: 0.875rem;
+  --radius-l: 1.5rem;
+  --radius-pill: 999px;
+  --shadow-soft: 0 0.75rem 2rem rgb(0 0 0 / 0.35);
+  --shadow-gold: 0 0 2.5rem rgb(196 154 88 / 0.28);
+
+  /* Layout */
+  --header-h: 4.25rem;
+  --z-header: 50;
+  --z-drawer: 60;
+  --z-toast: 70;
+
+  --ease-out: cubic-bezier(0.22, 0.8, 0.28, 1);
+}
+
+@media (min-width: 60rem) {
+  :root {
+    --header-h: 4.75rem;
+  }
+}

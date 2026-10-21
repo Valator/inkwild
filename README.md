@@ -59,6 +59,20 @@ the default (English) text is guaranteed to be indexed. For real multilingual SE
 (`/en/`, `/es/`), return the matching URL from `getCanonicalUrl()` in `src/config/seo.ts`, and emit `hreflang`
 alternates for those pages. No `hreflang` is emitted today because no alternate URLs exist.
 
+## Typography
+
+Google Fonts, self-hosted through Fontsource (no runtime requests to Google): **Cormorant Garamond** for atmosphere
+(headings, taglines), **DM Sans** for usability (body copy, navigation, buttons) and **Cinzel** reserved for occasional
+decorative details (eyebrow labels, the "coming soon" ribbon). Tokens: `--font-display`, `--font-body`,
+`--font-decorative` in `src/styles/tokens.css`. All three cover accented Latin; add `:lang()` overrides for other scripts.
+
+## Deployment (GitHub Pages)
+
+`.github/workflows/deploy.yml` validates, tests and builds on every push to `main`, then publishes `dist/` to GitHub Pages.
+One-time setup: **Settings → Pages → Source: GitHub Actions**, then set the custom domain to `inkwildgames.com` and enable
+"Enforce HTTPS". `public/CNAME` keeps the domain attached on each deploy. DNS (at HostGator): four `A` records
+(`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`) for the root and a `CNAME` for `www` → `valator.github.io`.
+
 ## Motion
 
 * `ParticleField` — canvas fireflies; fewer on phones/low-end devices, paused off-screen and in hidden tabs.
@@ -71,10 +85,10 @@ alternates for those pages. No `hreflang` is emitted today because no alternate 
 Optimised images are committed. `npm run assets` rebuilds them from the Magical Garden Unity project
 (`~/MagicalGarden/Assets/Art`, `DesignProposals`) — override with `MG_ART_DIR` / `MG_DESIGN_DIR`.
 
-**InkWild Games logo:** the supplied original is kept untouched in `assets-source/inkwild-logo.webp` and only resized by
-`npm run assets` (to `src/assets/brand/inkwild-logo.webp`, `public/inkwild-logo.png`, favicons and the social image). Its
-wordmark is dark green, so the site never recolours it: it sits on a Story Parchment plaque (`.logo-plaque` in
-`src/styles/global.css`). To update the logo, replace the file in `assets-source/` and re-run `npm run assets`.
+**InkWild Games logo:** the supplied original (gold lettering on pure black, no alpha) is kept untouched in
+`assets-source/inkwild-logo.webp`. `npm run assets` only resizes it and keys the pure-black backdrop out to transparency
+(artwork colours are never changed) to produce `src/assets/brand/inkwild-logo.webp`, `public/inkwild-logo.png`, the
+favicons and the social image. To update the logo, replace the file in `assets-source/` and re-run `npm run assets`.
 
 ## Structure
 

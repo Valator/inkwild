@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { PRIVACY_PATH } from '../../config/privacy'
 import { getAbsoluteUrl, getCanonicalUrl } from '../../config/seo'
 import { toSafeExternalUrl } from '../../config/links'
 import { siteConfig } from '../../config/siteConfig'
@@ -13,8 +14,13 @@ import { replaceMetaGroup, upsertJsonLd, upsertLink, upsertMeta } from '../../li
  * Note: a client-side switcher updates the page for people; search engines index the URL they fetch.
  * Locale-specific URLs (and hreflang) can be added later — see `src/config/seo.ts`.
  */
-export function DocumentMeta() {
-  const { t, i18n } = useTranslation(['common', 'footer'])
+interface DocumentMetaProps {
+  /** Which page is showing; each has its own title, description and canonical URL. */
+  page?: 'home' | 'privacy'
+}
+
+export function DocumentMeta({ page = 'home' }: DocumentMetaProps) {
+  const { t, i18n } = useTranslation(['common', 'footer', 'privacy'])
   const locale = isEnabledLocale(i18n.resolvedLanguage) ? i18n.resolvedLanguage : siteConfig.defaultLocale
 
   useEffect(() => {
@@ -24,9 +30,10 @@ export function DocumentMeta() {
     root.dir = definition.dir
     root.dataset.locale = locale
 
-    const title = t('common:meta.title')
-    const description = t('common:meta.description')
-    const canonical = getCanonicalUrl(locale)
+    const isPrivacy = page === 'privacy'
+    const title = isPrivacy ? t('privacy:meta.title') : t('common:meta.title')
+    const description = isPrivacy ? t('privacy:meta.description') : t('common:meta.description')
+    const canonical = getCanonicalUrl(locale, isPrivacy ? PRIVACY_PATH : '/')
     const image = getAbsoluteUrl('/og-image.jpg')
 
     document.title = title
@@ -35,8 +42,8 @@ export function DocumentMeta() {
 
     upsertMeta('property', 'og:type', 'website')
     upsertMeta('property', 'og:site_name', siteConfig.studioName)
-    upsertMeta('property', 'og:title', t('common:meta.ogTitle'))
-    upsertMeta('property', 'og:description', t('common:meta.ogDescription'))
+    upsertMeta('property', 'og:title', isPrivacy ? title : t('common:meta.ogTitle'))
+    upsertMeta('property', 'og:description', isPrivacy ? description : t('common:meta.ogDescription'))
     upsertMeta('property', 'og:url', canonical)
     upsertMeta('property', 'og:image', image)
     upsertMeta('property', 'og:image:alt', t('common:meta.ogImageAlt'))
@@ -47,8 +54,8 @@ export function DocumentMeta() {
     )
 
     upsertMeta('name', 'twitter:card', 'summary_large_image')
-    upsertMeta('name', 'twitter:title', t('common:meta.ogTitle'))
-    upsertMeta('name', 'twitter:description', t('common:meta.ogDescription'))
+    upsertMeta('name', 'twitter:title', isPrivacy ? title : t('common:meta.ogTitle'))
+    upsertMeta('name', 'twitter:description', isPrivacy ? description : t('common:meta.ogDescription'))
     upsertMeta('name', 'twitter:image', image)
     upsertMeta('name', 'twitter:image:alt', t('common:meta.ogImageAlt'))
 
@@ -67,7 +74,7 @@ export function DocumentMeta() {
       ...(sameAs.length > 0 ? { sameAs } : {}),
       ...(siteConfig.contactEmail ? { email: siteConfig.contactEmail } : {}),
     })
-  }, [locale, t])
+  }, [locale, t, page])
 
   return null
 }

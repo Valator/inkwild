@@ -1,0 +1,87 @@
+.policy {
+  padding-block: var(--space-8) var(--section-pad);
+  background:
+    radial-gradient(60% 40% at 50% 0%, color-mix(in srgb, var(--wild-forest) 55%, transparent), transparent 70%),
+    var(--ink-black);
+}
+
+.policy__wrap {
+  max-inline-size: 54rem;
+}
+
+/* Story Parchment sheet: the long-form text stays easy to read. */
+.policy__sheet {
+  display: grid;
+  gap: var(--space-5);
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  border: 1px solid var(--line-gold);
+  border-radius: var(--radius-l);
+  color: #2b2924;
+  background-color: var(--story-parchment);
+  background-image: radial-gradient(120% 90% at 50% 0%, rgb(255 255 255 / 0.4), transparent 60%);
+  box-shadow: var(--shadow-soft), var(--shadow-gold);
+  font-size: var(--step-0);
+}
+
+.policy__header {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.policy__eyebrow {
+  color: var(--gold-deep);
+}
+
+.policy__sheet h1 {
+  font-size: var(--step-4);
+  color: var(--ink-black);
+}
+
+.policy__updated {
+  color: #4a463c;
+  font-size: var(--step--1);
+}
+
+.policy__summary {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+  border-inline-start: 4px solid var(--old-gold);
+  border-radius: var(--radius-s);
+  background: color-mix(in srgb, var(--old-gold) 16%, transparent);
+}
+
+.policy__sheet h2 {
+  font-size: var(--step-2);
+  color: var(--ink-black);
+}
+
+.policy__section {
+  display: grid;
+  gap: var(--space-3);
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid color-mix(in srgb, var(--gold-deep) 35%, transparent);
+}
+
+.policy__sheet ul {
+  display: grid;
+  gap: var(--space-3);
+  padding-inline-start: 1.25rem;
+  list-style: disc;
+}
+
+.policy__sheet li::marker {
+  color: var(--gold-deep);
+}
+
+.policy__sheet a {
+  color: #5a3f10;
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
+
+.policy__placeholder {
+  color: #4a463c;
+  font-style: italic;
+}

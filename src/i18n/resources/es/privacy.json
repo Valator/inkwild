@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Política de privacidad — Magical Garden · InkWild Games",
+    "description": "Cómo Magical Garden y el sitio web de InkWild Games tratan tu información: qué se recopila, para qué, quién la procesa y qué opciones tienes."
+  },
+  "title": "Política de privacidad",
+  "subtitle": "Magical Garden e inkwildgames.com",
+  "updated": "Última actualización: {{date}}",
+  "summary": {
+    "title": "En pocas palabras",
+    "text": "Magical Garden no tiene cuentas, anuncios ni compras. Te asigna un ID de jugador anónimo y aleatorio, guarda tu progreso y muestra en la Escalera (Ladder) mundial el nombre de jugador que elijas junto con tu puntuación. Las estadísticas anónimas de juego solo se recopilan si tú aceptas, y puedes desactivarlas en cualquier momento."
+  },
+  "intro": "Esta política explica qué información tratan Magical Garden (el \"juego\") y el sitio web de InkWild Games (inkwildgames.com), para qué se usa y qué opciones tienes. \"Nosotros\" se refiere a InkWild Games, el estudio independiente que crea el juego.",
+  "collect": {
+    "title": "Qué recopila el juego",
+    "intro": "Magical Garden no te pide correo electrónico, nombre real ni contraseña. Esto es todo lo que trata:",
+    "id": {
+      "label": "ID de jugador anónimo.",
+      "text": "Al abrir el juego, inicias sesión de forma anónima mediante Unity Authentication. El ID es un código aleatorio que se guarda en tu dispositivo. No está vinculado a tu nombre, correo ni teléfono."
+    },
+    "progress": {
+      "label": "Progreso del juego.",
+      "text": "Tu nivel de la Historia, las estrellas de cada nivel, tu mejor puntuación en la Escalera (Ladder) y el avance de la restauración del jardín. Se guardan en tu dispositivo y se copian en Unity Cloud Save, para que no pierdas tu progreso si falla un guardado."
+    },
+    "ladder": {
+      "label": "Nombre y puntuación en la Escalera.",
+      "text": "Cuando terminas una partida de la Escalera, tu nombre de jugador (\"Gardener\" más un número aleatorio hasta que lo cambies), tu puntuación y la semilla de la partida se envían a la Escalera (Ladder) mundial, donde otros jugadores pueden ver tu nombre y tu puntuación. Por favor, no uses tu nombre real ni datos personales como nombre de jugador."
+    },
+    "stats": {
+      "label": "Estadísticas anónimas de juego (solo si lo permites).",
+      "text": "En tu primer inicio, el juego te pregunta si puede contar cómo juegas. Si pulsas Permitir (Allow), registra eventos como el inicio y el fin de un nivel, el modo y el nivel, los movimientos, la puntuación, las pistas usadas, el tiempo en pantalla, los consejos mostrados y los errores técnicos (el tipo de error y la primera línea de su mensaje). Estos eventos no incluyen tu nombre de jugador ni texto que hayas escrito. Unity también añade sus eventos estándar, como jugadores nuevos y duración de las sesiones, y puede recibir datos técnicos como el tipo de dispositivo, el sistema operativo, la versión de la app, el idioma y una ubicación aproximada derivada de tu dirección IP, según describe la política de privacidad de Unity. Si pulsas No, gracias (No thanks), no se registra ni se envía nada."
+    },
+    "device": {
+      "label": "Solo en tu dispositivo.",
+      "text": "Tus ajustes de volumen, vibración y modo calmado, los consejos que ya viste, una partida interrumpida para que puedas retomarla y tu respuesta sobre las estadísticas de juego."
+    }
+  },
+  "nocollect": {
+    "title": "Lo que no recopila",
+    "text": "El juego no recopila tu nombre real, correo electrónico, número de teléfono, contactos, ubicación precisa, fotos ni datos del micrófono o la cámara. Actualmente no muestra publicidad y no vende nada, así que no hay datos de pago ni rastreo publicitario."
+  },
+  "use": {
+    "title": "Cómo usamos la información",
+    "li1": "Para que el juego funcione: iniciar tu sesión anónima, guardar y recuperar tu progreso y mostrar la Escalera.",
+    "li2": "Para entender dónde se atoran los jugadores y así equilibrar los niveles y corregir problemas, con las estadísticas anónimas que permitiste.",
+    "li3": "Para detectar y corregir errores, y mantener el juego y la Escalera justos y seguros."
+  },
+  "choices": {
+    "title": "Tus opciones",
+    "li1": "Datos de juego (Play data): actívalos o desactívalos cuando quieras en Ajustes (Settings). Al desactivarlos, el cambio es inmediato y se descarta lo que aún no se haya enviado.",
+    "li2": "Nombre de jugador: cámbialo en Ajustes (Settings) cuando quieras.",
+    "li3": "Juego sin conexión: el juego funciona sin internet; el progreso y las puntuaciones de la Escalera se guardan en tu dispositivo y se envían después.",
+    "li4": "Eliminar datos: al desinstalar el juego se borran los datos de tu dispositivo. Para pedirnos que eliminemos tu progreso en la nube y tus registros de la Escalera, escríbenos (consulta más abajo). Como tu ID de jugador es anónimo, es posible que te pidamos datos como tu nombre de jugador y fechas aproximadas para poder localizar tus registros."
+  },
+  "providers": {
+    "title": "Quién procesa tu información",
+    "text": "Usamos Unity Gaming Services (Unity Technologies) para el inicio de sesión anónimo, Cloud Save, la Escalera y las estadísticas. Unity procesa esta información por cuenta nuestra y bajo sus propios términos, y puede hacerlo en países distintos al tuyo, incluido Estados Unidos. No vendemos tu información personal ni la compartimos con anunciantes.",
+    "link": "Lee la política de privacidad de Unity",
+    "linkAria": "Política de privacidad de Unity (se abre en una pestaña nueva)"
+  },
+  "retention": {
+    "title": "Cuánto tiempo la conservamos",
+    "text": "Conservamos el progreso y los registros de la Escalera mientras el juego esté disponible o hasta que nos pidas eliminarlos. Los datos de estadísticas se conservan solo el tiempo necesario para mejorar el juego, y nunca más allá de los plazos de conservación de Unity."
+  },
+  "children": {
+    "title": "Menores de edad",
+    "text": "Magical Garden no está dirigido a menores de 13 años (ni de 16 donde la ley local fije una edad mayor). No recopilamos intencionalmente información personal de ellos. Si crees que un menor nos dio información personal, escríbenos y la eliminaremos."
+  },
+  "rights": {
+    "title": "Tus derechos",
+    "text": "Según el lugar donde vivas (por ejemplo, el Espacio Económico Europeo, el Reino Unido, México o California), puedes tener derecho a acceder a tu información personal, rectificarla, eliminarla o limitar su uso, a oponerte a su tratamiento y a retirar tu consentimiento en cualquier momento. Puedes retirar tu consentimiento para las estadísticas de juego en Ajustes (Settings) y escribirnos para ejercer cualquier otro derecho."
+  },
+  "security": {
+    "title": "Seguridad",
+    "text": "Nos apoyamos en los servicios protegidos de Unity y limitamos lo que el juego envía a lo descrito aquí. Ningún sistema es perfectamente seguro, por lo que no podemos garantizar una seguridad absoluta."
+  },
+  "changes": {
+    "title": "Cambios a esta política",
+    "text": "Si el juego cambia de una forma que afecte tu privacidad (por ejemplo, al añadir publicidad, compras o el inicio de sesión con Google Play Juegos o Apple Game Center), actualizaremos esta política antes de que el cambio llegue a ti. La fecha de arriba indica cuándo se actualizó por última vez."
+  },
+  "website": {
+    "title": "Este sitio web",
+    "text": "Este sitio no usa cookies, publicidad ni analítica. Solo guarda tu elección de idioma en el almacenamiento local de tu navegador y carga sus tipografías desde su propio servidor. Está alojado en GitHub Pages, que puede conservar registros estándar del servidor, incluidas direcciones IP, según la declaración de privacidad de GitHub."
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "text": "¿Tienes dudas o quieres ejercer alguno de tus derechos? Escríbenos:",
+    "emailAria": "Escribe a {{studioName}} a {{email}}",
+    "empty": "Publicaremos aquí nuestro correo de contacto antes del lanzamiento del juego."
+  }
+}

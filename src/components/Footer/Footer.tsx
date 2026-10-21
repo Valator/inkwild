@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { navItems } from '../../config/navigation'
+import { PRIVACY_PATH } from '../../config/privacy'
 import { siteConfig } from '../../config/siteConfig'
 import { sectionLinkHandler } from '../../lib/navigateToSection'
 import { getConfiguredSocialLinks } from '../../lib/socialLinks'
@@ -8,7 +9,12 @@ import { SocialLinks } from '../SocialLinks/SocialLinks'
 import logo from '../../assets/brand/inkwild-logo.webp'
 import './Footer.css'
 
-export function Footer() {
+interface FooterProps {
+  /** See `Header`: set on pages other than home so section links go to `${sectionBase}#id`. */
+  sectionBase?: string
+}
+
+export function Footer({ sectionBase }: FooterProps) {
   const { t } = useTranslation(['footer', 'navigation', 'follow', 'common'])
   // Lazy initialiser: the year is read once per mount, not on every render.
   const [year] = useState(() => new Date().getFullYear())
@@ -28,7 +34,7 @@ export function Footer() {
           <ul className="site-footer__nav">
             {navItems.map(({ id, labelKey }) => (
               <li key={id}>
-                <a href={`#${id}`} onClick={sectionLinkHandler(id)}>
+                <a href={`${sectionBase ?? ''}#${id}`} onClick={sectionBase === undefined ? sectionLinkHandler(id) : undefined}>
                   {t(`navigation:${labelKey}`)}
                 </a>
               </li>
@@ -44,9 +50,10 @@ export function Footer() {
         ) : null}
       </div>
 
-      <p className="site-footer__legal container">
-        {t('footer:copyright', { year, studioName: siteConfig.studioName })}
-      </p>
+      <div className="site-footer__legal container">
+        <p>{t('footer:copyright', { year, studioName: siteConfig.studioName })}</p>
+        <a href={PRIVACY_PATH}>{t('footer:privacy')}</a>
+      </div>
     </footer>
   )
 }

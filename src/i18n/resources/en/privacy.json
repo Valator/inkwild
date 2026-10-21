@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Privacy Policy — Magical Garden · InkWild Games",
+    "description": "How Magical Garden and the InkWild Games website handle your information: what is collected, why, who processes it, and the choices you have."
+  },
+  "title": "Privacy Policy",
+  "subtitle": "Magical Garden and inkwildgames.com",
+  "updated": "Last updated: {{date}}",
+  "summary": {
+    "title": "The short version",
+    "text": "Magical Garden has no accounts, no ads, and no purchases. It gives you a random anonymous player ID, saves your progress, and shows your chosen player name and score on the worldwide Ladder. Anonymous play statistics are only collected if you say yes, and you can turn them off at any time."
+  },
+  "intro": "This policy explains what information Magical Garden (the \"game\") and the InkWild Games website (inkwildgames.com) handle, why, and what choices you have. \"We\" means InkWild Games, the independent studio that makes the game.",
+  "collect": {
+    "title": "What the game collects",
+    "intro": "Magical Garden asks for no email address, real name, or password. This is everything it handles:",
+    "id": {
+      "label": "Anonymous player ID.",
+      "text": "When you open the game it signs you in anonymously through Unity Authentication. The ID is a random code kept on your device. It is not linked to your name, email, or phone."
+    },
+    "progress": {
+      "label": "Game progress.",
+      "text": "Your Story level, stars per level, best Ladder score, and garden restoration progress. They are saved on your device and copied to Unity Cloud Save, so your progress is not lost if a save fails."
+    },
+    "ladder": {
+      "label": "Ladder name and score.",
+      "text": "When you finish a Ladder run, your player name (\"Gardener\" plus a random number until you change it), your score, and the run's seed are sent to the worldwide Ladder, where other players can see your name and score. Please do not use your real name or any personal information as a player name."
+    },
+    "stats": {
+      "label": "Anonymous play statistics (only if you allow).",
+      "text": "On your first launch the game asks whether it may count how you play. If you tap Allow, it records events such as when a level starts or ends, the mode and level, moves, score, hints used, time on screen, how-to tips shown, and technical errors (error type and the first line of its message). These events contain no player name and no text you typed. Unity also adds its standard events, such as new players and session length, and may receive technical details such as device type, operating system, app version, language, and approximate location derived from your IP address, as described in Unity's privacy policy. If you tap No thanks, nothing is recorded or sent."
+    },
+    "device": {
+      "label": "Kept on your device only.",
+      "text": "Your volume, haptics, and calm mode settings, which how-to tips you have seen, a run that was interrupted so you can resume it, and your answer about play statistics."
+    }
+  },
+  "nocollect": {
+    "title": "What it does not collect",
+    "text": "The game does not collect your real name, email address, phone number, contacts, precise location, photos, or microphone or camera data. It currently shows no advertising and sells nothing, so there is no payment information and no ad tracking."
+  },
+  "use": {
+    "title": "How we use information",
+    "li1": "To run the game: sign you in anonymously, save and restore your progress, and show the Ladder.",
+    "li2": "To understand where players get stuck so we can balance levels and fix problems, using the anonymous statistics you allowed.",
+    "li3": "To find and fix errors and keep the game and the Ladder fair and secure."
+  },
+  "choices": {
+    "title": "Your choices",
+    "li1": "Play data: switch it on or off at any time in Settings. Turning it off takes effect at once and discards anything not yet sent.",
+    "li2": "Player name: change it in Settings whenever you like.",
+    "li3": "Offline play: the game works without a connection; progress and Ladder scores are then kept on your device and sent later.",
+    "li4": "Deleting data: uninstalling the game removes the data on your device. To ask us to delete your cloud progress and Ladder entries, contact us (see below). Because your player ID is anonymous, we may ask for details such as your player name and approximate dates so we can find your records."
+  },
+  "providers": {
+    "title": "Who processes your information",
+    "text": "We use Unity Gaming Services (Unity Technologies) for anonymous sign-in, Cloud Save, the Ladder, and analytics. Unity processes this information for us and under its own terms, and it may process it in countries other than yours, including the United States. We do not sell your personal information and we do not share it with advertisers.",
+    "link": "Read Unity's privacy policy",
+    "linkAria": "Unity's privacy policy (opens in a new tab)"
+  },
+  "retention": {
+    "title": "How long we keep it",
+    "text": "We keep progress and Ladder entries for as long as the game is available, or until you ask us to delete them. Analytics data is kept only as long as we need it to improve the game, and no longer than Unity's own retention periods allow."
+  },
+  "children": {
+    "title": "Children",
+    "text": "Magical Garden is not directed at children under 13 (or under 16 where local law sets a higher age). We do not knowingly collect personal information from them. If you believe a child has given us personal information, contact us and we will delete it."
+  },
+  "rights": {
+    "title": "Your rights",
+    "text": "Depending on where you live (for example the European Economic Area, the United Kingdom, Mexico, or California), you may have the right to access, correct, delete, or restrict the use of your personal information, to object to its use, and to withdraw consent at any time. You can withdraw consent for play statistics in Settings, and you can contact us to exercise any other right."
+  },
+  "security": {
+    "title": "Security",
+    "text": "We rely on Unity's secured services and limit what the game sends to what is described here. No system is perfectly secure, so we cannot guarantee absolute security."
+  },
+  "changes": {
+    "title": "Changes to this policy",
+    "text": "If the game changes in a way that affects your privacy (for example by adding advertising, purchases, or sign-in with Google Play Games or Apple Game Center), we will update this policy before the change reaches you. The date at the top shows when it was last updated."
+  },
+  "website": {
+    "title": "This website",
+    "text": "This website uses no cookies, no advertising, and no analytics. It stores only your language choice in your browser's local storage, and it loads its fonts from its own server. It is hosted on GitHub Pages, which may keep standard server logs, including IP addresses, under GitHub's privacy statement."
+  },
+  "contact": {
+    "title": "Contact us",
+    "text": "Questions, or want to use one of your rights? Write to us:",
+    "emailAria": "Email {{studioName}} at {{email}}",
+    "empty": "Our contact email will be published here before the game launches."
+  }
+}

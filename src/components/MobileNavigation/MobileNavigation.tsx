@@ -10,7 +10,9 @@ import logo from '../../assets/brand/inkwild-logo.webp'
 import './MobileNavigation.css'
 
 interface MobileNavigationProps {
-  activeSection: SectionId
+  activeSection: SectionId | undefined
+  /** See `Header`: links go to `${sectionBase}#id` on pages other than home. */
+  sectionBase?: string
 }
 
 const FOCUSABLE = 'a[href], button:not([disabled]), select, [tabindex]:not([tabindex="-1"])'
@@ -19,7 +21,7 @@ const FOCUSABLE = 'a[href], button:not([disabled]), select, [tabindex]:not([tabi
  * Slide-in menu for small screens. A modal dialog: Escape closes it, Tab stays inside it,
  * scrolling the page behind is locked, and focus returns to the toggle on close.
  */
-export function MobileNavigation({ activeSection }: MobileNavigationProps) {
+export function MobileNavigation({ activeSection, sectionBase }: MobileNavigationProps) {
   const { t } = useTranslation(['navigation', 'common', 'footer'])
   const [open, setOpen] = useState(false)
   const toggleRef = useRef<HTMLButtonElement>(null)
@@ -69,8 +71,9 @@ export function MobileNavigation({ activeSection }: MobileNavigationProps) {
   }
 
   const onNavigate = (event: MouseEvent<HTMLAnchorElement>, id: SectionId) => {
-    event.preventDefault()
     close(false)
+    if (sectionBase !== undefined) return
+    event.preventDefault()
     // Wait a frame so the scroll lock is released before scrolling.
     requestAnimationFrame(() => navigateToSection(id))
   }
@@ -119,7 +122,7 @@ export function MobileNavigation({ activeSection }: MobileNavigationProps) {
               {navItems.map(({ id, labelKey }) => (
                 <li key={id}>
                   <a
-                    href={`#${id}`}
+                    href={`${sectionBase ?? ''}#${id}`}
                     className="mobile-nav__link"
                     aria-current={activeSection === id ? 'location' : undefined}
                     onClick={(event) => onNavigate(event, id)}

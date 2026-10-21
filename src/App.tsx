@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { AnnouncerProvider } from './components/Announcer/Announcer'
 import { DocumentMeta } from './components/DocumentMeta/DocumentMeta'
-import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary'
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 import { FollowSection } from './sections/FollowSection/FollowSection'
@@ -12,8 +11,7 @@ import { StudioSection } from './sections/StudioSection/StudioSection'
 export default function App() {
   const { t } = useTranslation('common')
   return (
-    <ErrorBoundary>
-      <AnnouncerProvider>
+    <AnnouncerProvider>
         <DocumentMeta />
         <a className="skip-link" href="#main">
           {t('skipToContent')}
@@ -26,7 +24,6 @@ export default function App() {
           <FollowSection />
         </main>
         <Footer />
-      </AnnouncerProvider>
-    </ErrorBoundary>
+    </AnnouncerProvider>
   )
 }

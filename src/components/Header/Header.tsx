@@ -8,14 +8,24 @@ import { MobileNavigation } from '../MobileNavigation/MobileNavigation'
 import logo from '../../assets/brand/inkwild-logo.webp'
 import './Header.css'
 
-export function Header() {
+interface HeaderProps {
+  /**
+   * Set on pages other than the home page (e.g. `/`): section links then navigate to `${sectionBase}#id`
+   * instead of scrolling in place, and no section is highlighted.
+   */
+  sectionBase?: string
+}
+
+export function Header({ sectionBase }: HeaderProps) {
   const { t } = useTranslation(['navigation', 'common'])
-  const active = useActiveSection<SectionId>(sectionIds)
+  const observed = useActiveSection<SectionId>(sectionIds)
+  const active = sectionBase === undefined ? observed : undefined
+  const prefix = sectionBase ?? ''
   const scrolled = useScrolled()
 
   const go = (event: React.MouseEvent<HTMLAnchorElement>, id: SectionId) => {
-    // Keep the browser's native behaviour for modified clicks (open in a new tab, etc.).
-    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return
+    // Other pages, and modified clicks (open in a new tab, etc.), use the browser's own navigation.
+    if (sectionBase !== undefined || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return
     event.preventDefault()
     navigateToSection(id)
   }
@@ -23,7 +33,7 @@ export function Header() {
   return (
     <header className="site-header" data-scrolled={scrolled}>
       <div className="site-header__inner container">
-        <a className="site-header__logo logo-mark" href="#home" onClick={(event) => go(event, 'home')}>
+        <a className="site-header__logo logo-mark" href={`${prefix}#home`} onClick={(event) => go(event, 'home')}>
           <img src={logo} width={1000} height={375} alt={t('common:brand.logoAlt')} />
         </a>
 
@@ -33,7 +43,7 @@ export function Header() {
               <li key={id}>
                 <a
                   className="site-header__link"
-                  href={`#${id}`}
+                  href={`${prefix}#${id}`}
                   aria-current={active === id ? 'location' : undefined}
                   onClick={(event) => go(event, id)}
                 >
@@ -46,7 +56,7 @@ export function Header() {
 
         <div className="site-header__actions">
           <LanguageSwitcher />
-          <MobileNavigation activeSection={active} />
+          <MobileNavigation activeSection={active} sectionBase={sectionBase} />
         </div>
       </div>
     </header>

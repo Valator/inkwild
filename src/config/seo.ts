@@ -10,8 +10,8 @@ import type { LocaleCode } from '../i18n/locales'
  * later, return `${domain}/${locale}/` here, render each route with its locale and
  * add the matching `hreflang` alternates in `DocumentMeta`.
  */
-export function getCanonicalUrl(_locale: LocaleCode): string {
-  return `${siteConfig.domain}/`
+export function getCanonicalUrl(_locale: LocaleCode, path = '/'): string {
+  return `${siteConfig.domain}${path}`
 }
 
 export function getAbsoluteUrl(path: string): string {

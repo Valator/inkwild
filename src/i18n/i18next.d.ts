@@ -4,6 +4,7 @@ import type follow from './resources/en/follow.json'
 import type footer from './resources/en/footer.json'
 import type game from './resources/en/game.json'
 import type home from './resources/en/home.json'
+import type privacy from './resources/en/privacy.json'
 import type navigation from './resources/en/navigation.json'
 import type studio from './resources/en/studio.json'
 
@@ -19,6 +20,7 @@ declare module 'i18next' {
       studio: typeof studio
       follow: typeof follow
       footer: typeof footer
+      privacy: typeof privacy
     }
   }
 }

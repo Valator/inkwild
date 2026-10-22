@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "logoAlt": "InkWild Games"
+  },
+  "meta": {
+    "title": "InkWild Games — 让想象力自由驰骋。",
+    "description": "InkWild Games 是一家独立游戏工作室，致力于打造原创世界和难忘的体验。认识 Magical Garden——一款温馨的益智冒险游戏，即将登陆 iOS 和 Android。",
+    "ogTitle": "InkWild Games — 让想象力自由驰骋。",
+    "ogDescription": "一家独立工作室，用游戏带来惊奇、温暖和一点点魔法。Magical Garden 即将登陆 iOS 和 Android。",
+    "ogImageAlt": "夕阳下魔法玫瑰花园之上的 InkWild Games 标志。",
+    "organizationDescription": "InkWild Games 是一家独立游戏工作室，致力于打造原创世界和难忘的体验。"
+  },
+  "skipToContent": "跳到主要内容",
+  "language": {
+    "label": "语言",
+    "select": "选择语言",
+    "changed": "语言已切换为{{language}}。"
+  },
+  "errors": {
+    "title": "出了点问题",
+    "message": "无法显示该页面。请刷新后重试。",
+    "reload": "刷新页面"
+  }
+}

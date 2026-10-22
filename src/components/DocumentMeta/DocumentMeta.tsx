@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { PRIVACY_PATH } from '../../config/privacy'
+import { PRIVACY_PAGE_LOCALES, PRIVACY_PATH, privacyPath } from '../../config/privacy'
 import { getAbsoluteUrl, getCanonicalUrl } from '../../config/seo'
 import { toSafeExternalUrl } from '../../config/links'
 import { siteConfig } from '../../config/siteConfig'
 import { enabledLocales, isEnabledLocale, locales } from '../../i18n/locales'
-import { replaceMetaGroup, upsertJsonLd, upsertLink, upsertMeta } from '../../lib/documentHead'
+import { replaceHreflangLinks, replaceMetaGroup, upsertJsonLd, upsertLink, upsertMeta } from '../../lib/documentHead'
 
 /**
  * Keeps <html lang/dir>, the title and every locale-dependent <meta> tag in sync with the active
@@ -33,12 +33,24 @@ export function DocumentMeta({ page = 'home' }: DocumentMetaProps) {
     const isPrivacy = page === 'privacy'
     const title = isPrivacy ? t('privacy:meta.title') : t('common:meta.title')
     const description = isPrivacy ? t('privacy:meta.description') : t('common:meta.description')
-    const canonical = getCanonicalUrl(locale, isPrivacy ? PRIVACY_PATH : '/')
+    const canonical = getCanonicalUrl(locale, isPrivacy ? privacyPath(locale) : '/')
     const image = getAbsoluteUrl('/og-image.jpg')
 
     document.title = title
     upsertMeta('name', 'description', description)
     upsertLink('canonical', canonical)
+    // hreflang only for pages that exist: one policy URL per locale in PRIVACY_PAGE_LOCALES.
+    replaceHreflangLinks(
+      isPrivacy
+        ? [
+            ...PRIVACY_PAGE_LOCALES.map((code) => ({
+              hreflang: locales[code].htmlLang,
+              href: getCanonicalUrl(code, privacyPath(code)),
+            })),
+            { hreflang: 'x-default', href: getCanonicalUrl(siteConfig.defaultLocale, PRIVACY_PATH) },
+          ]
+        : [],
+    )
 
     upsertMeta('property', 'og:type', 'website')
     upsertMeta('property', 'og:site_name', siteConfig.studioName)

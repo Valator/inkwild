@@ -44,3 +44,15 @@ export function upsertJsonLd(id: string, data: Record<string, unknown>): void {
   }
   script.textContent = JSON.stringify(data)
 }
+
+/** Replaces every `<link rel="alternate" hreflang>` with the given entries (each must point at a page that exists). */
+export function replaceHreflangLinks(entries: readonly { hreflang: string; href: string }[]): void {
+  document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((link) => link.remove())
+  for (const { hreflang, href } of entries) {
+    const link = document.createElement('link')
+    link.setAttribute('rel', 'alternate')
+    link.setAttribute('hreflang', hreflang)
+    link.setAttribute('href', href)
+    document.head.appendChild(link)
+  }
+}

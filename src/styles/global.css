@@ -41,6 +41,11 @@ body {
  * line-height or letter-spacing without touching components, e.g.:
  *   :lang(ja) { --font-body: 'Noto Sans JP', system-ui, sans-serif; line-height: 1.8; }
  */
+:lang(zh) {
+  --font-display: 'Cormorant Garamond Variable', 'Songti SC', 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif;
+  --font-body: 'DM Sans Variable', system-ui, -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', 'Source Han Sans SC', sans-serif;
+  --font-decorative: 'Cinzel Variable', 'Cormorant Garamond Variable', 'Songti SC', 'Noto Serif SC', serif;
+}
 
 img,
 picture,

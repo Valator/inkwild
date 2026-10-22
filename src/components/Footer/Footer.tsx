@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { navItems } from '../../config/navigation'
-import { PRIVACY_PATH } from '../../config/privacy'
+import { privacyPath } from '../../config/privacy'
 import { siteConfig } from '../../config/siteConfig'
+import { isEnabledLocale } from '../../i18n/locales'
 import { sectionLinkHandler } from '../../lib/navigateToSection'
 import { getConfiguredSocialLinks } from '../../lib/socialLinks'
 import { SocialLinks } from '../SocialLinks/SocialLinks'
@@ -15,7 +16,8 @@ interface FooterProps {
 }
 
 export function Footer({ sectionBase }: FooterProps) {
-  const { t } = useTranslation(['footer', 'navigation', 'follow', 'common'])
+  const { t, i18n } = useTranslation(['footer', 'navigation', 'follow', 'common'])
+  const locale = isEnabledLocale(i18n.resolvedLanguage) ? i18n.resolvedLanguage : siteConfig.defaultLocale
   // Lazy initialiser: the year is read once per mount, not on every render.
   const [year] = useState(() => new Date().getFullYear())
   const hasSocial = getConfiguredSocialLinks().length > 0
@@ -52,7 +54,7 @@ export function Footer({ sectionBase }: FooterProps) {
 
       <div className="site-footer__legal container">
         <p>{t('footer:copyright', { year, studioName: siteConfig.studioName })}</p>
-        <a href={PRIVACY_PATH}>{t('footer:privacy')}</a>
+        <a href={privacyPath(locale)}>{t('footer:privacy')}</a>
       </div>
     </footer>
   )

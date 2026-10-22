@@ -1,0 +1,30 @@
+{
+  "eyebrow": "我们的第一款游戏",
+  "logoAlt": "Magical Garden",
+  "tagline": "一点点魔法，就能改变一切。",
+  "description": "修复一座被遗忘的花园，匹配神奇的宝物，发现藏在杂草之下的魅力。一款温馨的益智冒险游戏，让你的每一天都更明亮——一次匹配，一份欢喜。",
+  "preview": {
+    "label": "游戏预览",
+    "playAlt": "Magical Garden 的一个关卡：棋盘上有待匹配的树叶、花朵、蘑菇、水果和药水。",
+    "menuAlt": "Magical Garden 主菜单，游戏模式上方有一位快乐的花仙子。"
+  },
+  "status": {
+    "title": "即将推出",
+    "subtitle": "登陆 iOS 和 Android"
+  },
+  "stores": {
+    "label": "应用商店上架情况",
+    "pendingPrefix": "即将登陆",
+    "livePrefix": "立即下载于",
+    "pendingAria": "{{store}}：商店页面暂不可用",
+    "liveAria": "{{game}}在 {{store}} 上架（在新标签页中打开）",
+    "notice": "{{store}} 上的商店页面暂不可用。{{game}}准备就绪后，我们会第一时间在这里添加链接。"
+  },
+  "features": {
+    "label": "敬请期待",
+    "relaxing": "轻松有趣的玩法",
+    "worlds": "等待修复的迷人世界",
+    "powerups": "神奇的道具和连击",
+    "growth": "随你的进度成长的花园"
+  }
+}

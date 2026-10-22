@@ -1,8 +1,30 @@
-/** ISO date the privacy policy was last updated. Bump it whenever the policy text changes. */
-export const PRIVACY_LAST_UPDATED = '2026-10-21'
+import { siteConfig } from './siteConfig'
+import type { LocaleCode } from '../i18n/locales'
 
-/** Path of the policy page — the public URL to give to the App Store and Google Play. */
+/** ISO date the privacy policy was last updated. Bump it whenever the policy text changes. */
+export const PRIVACY_LAST_UPDATED = '2026-10-22'
+
+/** Path of the default-language policy page — the public URL to give to the App Store and Google Play. */
 export const PRIVACY_PATH = '/privacy/'
+
+/**
+ * Locales that have their own policy URL: the default locale at `/privacy/`, every other one at
+ * `/<locale>/privacy/` (e.g. `/zh/privacy/`). To give Spanish its own page: add 'es' here, copy
+ * `zh/privacy/index.html` to `es/privacy/index.html` (translate its head) and list it in `vite.config.ts`
+ * and `public/sitemap.xml`. Other locales keep sharing `/privacy/` and are switched in place.
+ */
+export const PRIVACY_PAGE_LOCALES: readonly LocaleCode[] = ['en', 'zh']
+
+/** URL path of the policy page for a locale; falls back to the default-language page. */
+export function privacyPath(locale: LocaleCode): string {
+  return locale !== siteConfig.defaultLocale && PRIVACY_PAGE_LOCALES.includes(locale) ? `/${locale}${PRIVACY_PATH}` : PRIVACY_PATH
+}
 
 /** Unity's own policy, linked from the "who processes your information" section. */
 export const UNITY_PRIVACY_URL = 'https://unity.com/legal/privacy-policy'
+
+/** Unity's player-facing policy: describes LevelPlay and links to each ad network partner's own policy. */
+export const UNITY_PLAYER_PRIVACY_URL = 'https://unity.com/legal/game-player-and-app-user-privacy-policy'
+
+/** LevelPlay's own list of the ad networks it mediates (the network list is not final, so none are named on the page). */
+export const LEVELPLAY_NETWORKS_URL = 'https://docs.unity.com/en-us/grow/levelplay/platform/fundamentals/mediated-networks'

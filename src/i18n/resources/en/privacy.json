@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Privacy Policy — Magical Garden · InkWild Games",
-    "description": "How Magical Garden and the InkWild Games website handle your information: what is collected, why, who processes it, and the choices you have."
+    "description": "How Magical Garden and the InkWild Games website handle your information: what is collected, including by ads, why, who processes it, and the choices you have."
   },
   "title": "Privacy Policy",
   "subtitle": "Magical Garden and inkwildgames.com",
   "updated": "Last updated: {{date}}",
   "summary": {
     "title": "The short version",
-    "text": "Magical Garden has no accounts, no ads, and no purchases. It gives you a random anonymous player ID, saves your progress, and shows your chosen player name and score on the worldwide Ladder. Anonymous play statistics are only collected if you say yes, and you can turn them off at any time."
+    "text": "Magical Garden has no accounts. It contains ads, and it offers one optional one-time purchase that removes them. It gives you a random anonymous player ID, saves your progress on your device and in Unity Cloud Save, and shows your chosen player name and score on the worldwide Ladder. Anonymous play statistics are only collected if you say yes, and you can turn them off at any time."
   },
   "intro": "This policy explains what information Magical Garden (the \"game\") and the InkWild Games website (inkwildgames.com) handle, why, and what choices you have. \"We\" means InkWild Games, the independent studio that makes the game.",
   "collect": {
@@ -30,6 +30,14 @@
       "label": "Anonymous play statistics (only if you allow).",
       "text": "On your first launch the game asks whether it may count how you play. If you tap Allow, it records events such as when a level starts or ends, the mode and level, moves, score, hints used, time on screen, how-to tips shown, and technical errors (error type and the first line of its message). These events contain no player name and no text you typed. Unity also adds its standard events, such as new players and session length, and may receive technical details such as device type, operating system, app version, language, and approximate location derived from your IP address, as described in Unity's privacy policy. If you tap No thanks, nothing is recorded or sent."
     },
+    "ads": {
+      "label": "Advertising data.",
+      "text": "The ad software in the game and its ad partners may collect the data described under Advertising below."
+    },
+    "purchase": {
+      "label": "Purchase status.",
+      "text": "Whether you own Remove Ads, which the game checks with Google Play or the Apple App Store. Payment itself is handled by the store."
+    },
     "device": {
       "label": "Kept on your device only.",
       "text": "Your volume, haptics, and calm mode settings, which how-to tips you have seen, a run that was interrupted so you can resume it, and your answer about play statistics."
@@ -37,30 +45,67 @@
   },
   "nocollect": {
     "title": "What it does not collect",
-    "text": "The game does not collect your real name, email address, phone number, contacts, precise location, photos, or microphone or camera data. It currently shows no advertising and sells nothing, so there is no payment information and no ad tracking."
+    "text": "The game does not collect your real name, email address, phone number, contacts, precise location, photos, or microphone or camera data. It never sees your payment card details; purchases are handled by Google Play or the Apple App Store."
+  },
+  "advertising": {
+    "title": "Advertising",
+    "intro": "Magical Garden contains ads. It shows full-screen (interstitial) ads provided by Unity LevelPlay and the ad networks it works with. There are no banner ads.",
+    "when": {
+      "label": "When ads appear.",
+      "text": "Ads appear only between rounds, after you press a button on a result screen. They never appear during play, at start-up, in menus, in the garden, or in Settings. You see none in your first 10 finished runs, none in Chill mode, and none when you replay the same level."
+    },
+    "data": {
+      "intro": "To show and measure ads, the ad software in the game and its ad partners may collect:",
+      "li1": "the advertising identifier of your device (on iPhone, only if you allow tracking);",
+      "li2": "an approximate location derived from your IP address;",
+      "li3": "device and app information, such as device model, operating system, app version, and language;",
+      "li4": "how you interact with ads;",
+      "li5": "diagnostics, such as crashes and performance.",
+      "share": "Ad partners may receive this information and handle it under their own privacy policies."
+    },
+    "choices": {
+      "label": "Your choices.",
+      "text": "In the European Economic Area, the United Kingdom, and Switzerland, the game shows a consent form, and the Ad privacy button in Settings lets you change that choice at any time. On iPhone, the system asks whether the game may track you before any ads are shown. On any phone you can also reset or limit the advertising identifier in your phone's settings."
+    },
+    "learn": {
+      "intro": "Learn more:",
+      "unity": "Unity's Game Player and App User Privacy Policy, which covers LevelPlay and links to its ad network partners' own privacy policies",
+      "unityAria": "Unity's Game Player and App User Privacy Policy (opens in a new tab)",
+      "networks": "LevelPlay's list of the ad networks it works with",
+      "networksAria": "LevelPlay's list of ad networks (opens in a new tab)"
+    }
+  },
+  "purchases": {
+    "title": "Purchases",
+    "intro": "Magical Garden is free to play, and every level pack is free. It offers one optional, one-time purchase: Remove Ads.",
+    "pay": "You pay through Google Play or the Apple App Store, which handle your payment. The game never sees your card details.",
+    "effect": "Remove Ads turns off every ad permanently and changes nothing else in the game.",
+    "restore": "We have no account system. If you get a new phone, the purchase is restored from the store; you can also tap Restore purchases in Settings."
   },
   "use": {
     "title": "How we use information",
     "li1": "To run the game: sign you in anonymously, save and restore your progress, and show the Ladder.",
     "li2": "To understand where players get stuck so we can balance levels and fix problems, using the anonymous statistics you allowed.",
-    "li3": "To find and fix errors and keep the game and the Ladder fair and secure."
+    "li3": "To find and fix errors and keep the game and the Ladder fair and secure.",
+    "li4": "To show ads, and to unlock the ad-free game if you buy Remove Ads."
   },
   "choices": {
     "title": "Your choices",
     "li1": "Play data: switch it on or off at any time in Settings. Turning it off takes effect at once and discards anything not yet sent.",
     "li2": "Player name: change it in Settings whenever you like.",
     "li3": "Offline play: the game works without a connection; progress and Ladder scores are then kept on your device and sent later.",
-    "li4": "Deleting data: uninstalling the game removes the data on your device. To ask us to delete your cloud progress and Ladder entries, contact us (see below). Because your player ID is anonymous, we may ask for details such as your player name and approximate dates so we can find your records."
+    "li4": "Deleting data: uninstalling the game removes the data on your device. To ask us to delete your cloud progress and Ladder entries, contact us (see below). Because your player ID is anonymous, we may ask for details such as your player name and approximate dates so we can find your records.",
+    "li5": "Ads: change your consent with the Ad privacy button in Settings (where a consent form is shown), or reset or limit the advertising identifier in your phone's settings. Buying Remove Ads turns every ad off."
   },
   "providers": {
     "title": "Who processes your information",
-    "text": "We use Unity Gaming Services (Unity Technologies) for anonymous sign-in, Cloud Save, the Ladder, and analytics. Unity processes this information for us and under its own terms, and it may process it in countries other than yours, including the United States. We do not sell your personal information and we do not share it with advertisers.",
+    "text": "We use Unity Gaming Services (Unity Technologies) for anonymous sign-in, Cloud Save, the Ladder, and analytics, and Unity LevelPlay and its ad networks to show ads. Unity and the ad partners process information under their own terms, and they may process it in countries other than yours, including the United States. We do not sell your name or contact details (we do not have them). The advertising data described under Advertising may be received by ad partners, which some laws describe as sharing information for advertising; you can limit this with the choices described there.",
     "link": "Read Unity's privacy policy",
     "linkAria": "Unity's privacy policy (opens in a new tab)"
   },
   "retention": {
     "title": "How long we keep it",
-    "text": "We keep progress and Ladder entries for as long as the game is available, or until you ask us to delete them. Analytics data is kept only as long as we need it to improve the game, and no longer than Unity's own retention periods allow."
+    "text": "We keep progress and Ladder entries for as long as the game is available, or until you ask us to delete them. Analytics data is kept only as long as we need it to improve the game, and no longer than Unity's own retention periods allow. Ad partners keep advertising data under their own policies."
   },
   "children": {
     "title": "Children",
@@ -68,7 +113,7 @@
   },
   "rights": {
     "title": "Your rights",
-    "text": "Depending on where you live (for example the European Economic Area, the United Kingdom, Mexico, or California), you may have the right to access, correct, delete, or restrict the use of your personal information, to object to its use, and to withdraw consent at any time. You can withdraw consent for play statistics in Settings, and you can contact us to exercise any other right."
+    "text": "Depending on where you live (for example the European Economic Area, the United Kingdom, Mexico, or California), you may have the right to access, correct, delete, or restrict the use of your personal information, to object to its use, and to withdraw consent at any time. You can withdraw consent for play statistics in Settings, change your advertising consent with the Ad privacy button, and contact us to exercise any other right."
   },
   "security": {
     "title": "Security",
@@ -76,7 +121,7 @@
   },
   "changes": {
     "title": "Changes to this policy",
-    "text": "If the game changes in a way that affects your privacy (for example by adding advertising, purchases, or sign-in with Google Play Games or Apple Game Center), we will update this policy before the change reaches you. The date at the top shows when it was last updated."
+    "text": "If the game changes in a way that affects your privacy (for example by adding sign-in with Google Play Games or Apple Game Center), we will update this policy before the change reaches you. The date at the top shows when it was last updated."
   },
   "website": {
     "title": "This website",

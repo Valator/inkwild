@@ -12,6 +12,8 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
         privacy: resolve(import.meta.dirname, 'privacy/index.html'),
+        // One real file per locale in PRIVACY_PAGE_LOCALES (src/config/privacy.ts).
+        privacyZh: resolve(import.meta.dirname, 'zh/privacy/index.html'),
       },
     },
   },

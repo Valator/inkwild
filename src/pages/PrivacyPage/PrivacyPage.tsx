@@ -1,7 +1,12 @@
 import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { toMailtoUrl } from '../../config/links'
-import { PRIVACY_LAST_UPDATED, UNITY_PRIVACY_URL } from '../../config/privacy'
+import {
+  LEVELPLAY_NETWORKS_URL,
+  PRIVACY_LAST_UPDATED,
+  UNITY_PLAYER_PRIVACY_URL,
+  UNITY_PRIVACY_URL,
+} from '../../config/privacy'
 import { siteConfig } from '../../config/siteConfig'
 import { AnnouncerProvider } from '../../components/Announcer/Announcer'
 import { DocumentMeta } from '../../components/DocumentMeta/DocumentMeta'
@@ -67,6 +72,12 @@ export function PrivacyPage() {
                   <strong>{t('collect.stats.label')}</strong> {t('collect.stats.text')}
                 </li>
                 <li>
+                  <strong>{t('collect.ads.label')}</strong> {t('collect.ads.text')}
+                </li>
+                <li>
+                  <strong>{t('collect.purchase.label')}</strong> {t('collect.purchase.text')}
+                </li>
+                <li>
                   <strong>{t('collect.device.label')}</strong> {t('collect.device.text')}
                 </li>
               </ul>
@@ -76,11 +87,61 @@ export function PrivacyPage() {
               <p>{t('nocollect.text')}</p>
             </PolicySection>
 
+            <PolicySection id="advertising" title={t('advertising.title')}>
+              <p>{t('advertising.intro')}</p>
+              <p>
+                <strong>{t('advertising.when.label')}</strong> {t('advertising.when.text')}
+              </p>
+              <p>{t('advertising.data.intro')}</p>
+              <ul>
+                <li>{t('advertising.data.li1')}</li>
+                <li>{t('advertising.data.li2')}</li>
+                <li>{t('advertising.data.li3')}</li>
+                <li>{t('advertising.data.li4')}</li>
+                <li>{t('advertising.data.li5')}</li>
+              </ul>
+              <p>{t('advertising.data.share')}</p>
+              <p>
+                <strong>{t('advertising.choices.label')}</strong> {t('advertising.choices.text')}
+              </p>
+              <p>{t('advertising.learn.intro')}</p>
+              <ul>
+                <li>
+                  <a
+                    href={UNITY_PLAYER_PRIVACY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t('advertising.learn.unityAria')}
+                  >
+                    {t('advertising.learn.unity')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={LEVELPLAY_NETWORKS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t('advertising.learn.networksAria')}
+                  >
+                    {t('advertising.learn.networks')}
+                  </a>
+                </li>
+              </ul>
+            </PolicySection>
+
+            <PolicySection id="purchases" title={t('purchases.title')}>
+              <p>{t('purchases.intro')}</p>
+              <p>{t('purchases.pay')}</p>
+              <p>{t('purchases.effect')}</p>
+              <p>{t('purchases.restore')}</p>
+            </PolicySection>
+
             <PolicySection id="use" title={t('use.title')}>
               <ul>
                 <li>{t('use.li1')}</li>
                 <li>{t('use.li2')}</li>
                 <li>{t('use.li3')}</li>
+                <li>{t('use.li4')}</li>
               </ul>
             </PolicySection>
 
@@ -90,6 +151,7 @@ export function PrivacyPage() {
                 <li>{t('choices.li2')}</li>
                 <li>{t('choices.li3')}</li>
                 <li>{t('choices.li4')}</li>
+                <li>{t('choices.li5')}</li>
               </ul>
             </PolicySection>
 

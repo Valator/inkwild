@@ -1,0 +1,18 @@
+{
+  "title": "魔法绽放时，与我们相聚。",
+  "description": "Magical Garden 即将登陆 iOS 和 Android。应用商店和社区链接一旦可用，就会显示在这里。",
+  "social": {
+    "title": "关注我们的旅程",
+    "empty": "我们的社区链接正在准备中，请稍后再来看看。",
+    "aria": "{{studioName}}在{{network}}上的主页（在新标签页中打开）",
+    "youtube": "YouTube",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "discord": "Discord"
+  },
+  "contact": {
+    "title": "打个招呼",
+    "emailAria": "给 {{studioName}} 发送邮件至 {{email}}",
+    "empty": "我们的联系方式将很快在这里公布。"
+  }
+}

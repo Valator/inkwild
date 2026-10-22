@@ -10,6 +10,9 @@ describe('matchLocale', () => {
     ['es', 'es'],
     ['es-MX', 'es'],
     ['ES-419', 'es'],
+    ['zh', 'zh'],
+    ['zh-CN', 'zh'],
+    ['zh-Hans', 'zh'],
   ])('maps %s to %s', (tag, expected) => {
     expect(matchLocale(tag)).toBe(expected)
   })

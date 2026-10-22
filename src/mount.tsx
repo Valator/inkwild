@@ -3,13 +3,20 @@ import { createRoot } from 'react-dom/client'
 import { I18nextProvider } from 'react-i18next'
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary'
 import { createI18n, reportResourceIssues } from './i18n'
+import { isEnabledLocale } from './i18n/locales'
+
+/** A page served at a language-specific URL (e.g. /zh/privacy/) declares it as `<html data-locale>`. */
+function pageLocale() {
+  const declared = document.documentElement.dataset.locale
+  return isEnabledLocale(declared) ? declared : undefined
+}
 
 /** Shared start-up for every page of the site (home, privacy, …): i18n, error boundary, React root. */
 export function mountPage(page: ReactNode) {
   // Lets CSS hide scroll-reveal content only when scripts are actually running.
   document.documentElement.classList.add('js')
   reportResourceIssues()
-  const i18n = createI18n()
+  const i18n = createI18n(pageLocale())
   createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <I18nextProvider i18n={i18n}>

@@ -1,0 +1,13 @@
+{
+  "home": "首页",
+  "game": "我们的游戏",
+  "about": "关于",
+  "contact": "联系",
+  "primaryLabel": "主导航",
+  "footerLabel": "页脚导航",
+  "menu": {
+    "open": "打开菜单",
+    "close": "关闭菜单",
+    "title": "网站菜单"
+  }
+}

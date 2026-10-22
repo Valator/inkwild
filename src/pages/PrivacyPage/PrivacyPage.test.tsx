@@ -3,9 +3,17 @@ import userEvent from '@testing-library/user-event'
 import { I18nextProvider } from 'react-i18next'
 import { describe, expect, it } from 'vitest'
 import { createI18n } from '../../i18n'
-import type { LocaleCode } from '../../i18n/locales'
+import { locales, type LocaleCode } from '../../i18n/locales'
+import { PRIVACY_PAGE_LOCALES, privacyPath } from '../../config/privacy'
 import { renderApp, setContactEmail } from '../../test/utils'
 import { PrivacyPage } from './PrivacyPage'
+
+/** The static pages, as served: each locale in PRIVACY_PAGE_LOCALES needs its own file. */
+const staticPages = import.meta.glob<string>(['/privacy/index.html', '/zh/privacy/index.html'], {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+})
 
 function renderPrivacy(locale: LocaleCode) {
   return render(
@@ -16,14 +24,15 @@ function renderPrivacy(locale: LocaleCode) {
 }
 
 describe.each([
-  ['en', 'Privacy Policy', 'Last updated: October 21, 2026'],
-  ['es', 'Política de privacidad', 'Última actualización: 21 de octubre de 2026'],
+  ['en', 'Privacy Policy', 'Last updated: October 22, 2026'],
+  ['es', 'Política de privacidad', 'Última actualización: 22 de octubre de 2026'],
+  ['zh', '隐私政策', '最后更新：2026年10月22日'],
 ] as const)('privacy page in %s', (locale, title, updated) => {
   it('has one h1, the update date and a heading for every section', () => {
     renderPrivacy(locale)
     expect(screen.getByRole('heading', { level: 1, name: title })).toBeInTheDocument()
     expect(screen.getByText(updated)).toBeInTheDocument()
-    expect(screen.getAllByRole('heading', { level: 2 }).length).toBeGreaterThanOrEqual(13)
+    expect(screen.getAllByRole('heading', { level: 2 }).length).toBeGreaterThanOrEqual(15)
   })
 
   it('never shows raw keys or unfilled placeholders', () => {
@@ -34,10 +43,12 @@ describe.each([
 
   it('sets the document language, title and its own canonical URL', () => {
     renderPrivacy(locale)
-    expect(document.documentElement.lang).toBe(locale)
-    expect(document.title).toMatch(locale === 'en' ? /^Privacy Policy/ : /^Política de privacidad/)
-    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute('href', 'https://inkwildgames.com/privacy/')
-    expect(document.head.querySelector('meta[property="og:url"]')).toHaveAttribute('content', 'https://inkwildgames.com/privacy/')
+    expect(document.documentElement.lang).toBe(locales[locale].htmlLang)
+    expect(document.title).toMatch({ en: /^Privacy Policy/, es: /^Política de privacidad/, zh: /^隐私政策/ }[locale])
+    // Chinese has its own page; Spanish is switched in place on the shared English URL (see PRIVACY_PAGE_LOCALES).
+    const url = locale === 'zh' ? 'https://inkwildgames.com/zh/privacy/' : 'https://inkwildgames.com/privacy/'
+    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute('href', url)
+    expect(document.head.querySelector('meta[property="og:url"]')).toHaveAttribute('content', url)
   })
 
   it('links to Unity safely and shows a placeholder while no contact email is configured', () => {
@@ -48,6 +59,26 @@ describe.each([
     expect(unity).toHaveAttribute('target', '_blank')
     expect(document.querySelector('a[href^="mailto:"]')).toBeNull()
     expect(document.querySelector('.policy__placeholder')).toBeInTheDocument()
+  })
+
+  it('has Advertising and Purchases sections and links to the ad partner information safely', () => {
+    renderPrivacy(locale)
+    const headings = screen.getAllByRole('heading', { level: 2 }).map((h) => h.textContent)
+    expect(headings).toContain({ en: 'Advertising', es: 'Publicidad', zh: '广告' }[locale])
+    expect(headings).toContain({ en: 'Purchases', es: 'Compras', zh: '购买' }[locale])
+    for (const href of [
+      'https://unity.com/legal/game-player-and-app-user-privacy-policy',
+      'https://docs.unity.com/en-us/grow/levelplay/platform/fundamentals/mediated-networks',
+    ]) {
+      const link = document.querySelector(`a[href="${href}"]`)
+      expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+      expect(link).toHaveAttribute('target', '_blank')
+    }
+  })
+
+  it('no longer claims the game has no ads or purchases', () => {
+    renderPrivacy(locale)
+    expect(document.body.textContent).not.toMatch(/no ads, and no purchases|no tiene cuentas, anuncios ni compras|currently shows no advertising/i)
   })
 
   it('shows the configured contact email as a mailto link', () => {
@@ -63,6 +94,38 @@ describe.each([
     const hrefs = within(nav).getAllByRole('link').map((a) => a.getAttribute('href'))
     expect(hrefs).toEqual(['/#home', '/#game', '/#about', '/#contact'])
     expect(within(nav).queryByRole('link', { current: 'location' })).toBeNull()
+  })
+})
+
+describe('hreflang and locale URLs', () => {
+  it('lists only pages that exist, with an x-default', () => {
+    renderPrivacy('en')
+    const alternates = [...document.head.querySelectorAll('link[rel="alternate"][hreflang]')].map((l) => [
+      l.getAttribute('hreflang'),
+      l.getAttribute('href'),
+    ])
+    expect(alternates).toEqual([
+      ['en', 'https://inkwildgames.com/privacy/'],
+      ['zh-Hans', 'https://inkwildgames.com/zh/privacy/'],
+      ['x-default', 'https://inkwildgames.com/privacy/'],
+    ])
+  })
+
+  it('has a static HTML file for every locale that has its own policy URL', () => {
+    for (const code of PRIVACY_PAGE_LOCALES) {
+      const html = staticPages[`${privacyPath(code)}index.html`]!
+      expect(html).toBeDefined()
+      expect(html).toContain(`href="https://inkwildgames.com${privacyPath(code)}"`)
+      expect(html).toContain(`<html lang="${locales[code].htmlLang}"`)
+    }
+    expect(privacyPath('zh')).toBe('/zh/privacy/')
+    expect(privacyPath('en')).toBe('/privacy/')
+    expect(privacyPath('es')).toBe('/privacy/')
+  })
+
+  it('keeps the English and Chinese policy structurally identical', () => {
+    const shape = (code: LocaleCode) => JSON.stringify(Object.keys(createI18n(code).getResourceBundle(code, 'privacy')))
+    expect(shape('zh')).toBe(shape('en'))
   })
 })
 
@@ -85,5 +148,10 @@ describe('policy link from the home page', () => {
   it('is translated', () => {
     renderApp('es')
     expect(screen.getByRole('link', { name: 'Política de privacidad' })).toHaveAttribute('href', '/privacy/')
+  })
+
+  it('points Chinese visitors at the Chinese policy page', () => {
+    renderApp('zh')
+    expect(screen.getByRole('link', { name: '隐私政策' })).toHaveAttribute('href', '/zh/privacy/')
   })
 })

@@ -40,6 +40,14 @@ export const locales = {
     ogLocale: 'es_MX',
     enabled: true,
   },
+  zh: {
+    label: '简体中文',
+    shortLabel: '中文',
+    htmlLang: 'zh-Hans',
+    dir: 'ltr',
+    ogLocale: 'zh_CN',
+    enabled: true,
+  },
 } as const satisfies Record<string, LocaleDefinition>
 
 export type LocaleCode = keyof typeof locales

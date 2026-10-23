@@ -32,7 +32,7 @@
     },
     "ads": {
       "label": "广告数据。",
-      "text": "游戏中的广告软件及其广告合作伙伴可能会收集下文“广告”部分所述的数据。"
+      "text": "游戏中的广告软件 Google AdMob 及 Google 的广告合作伙伴可能会收集下文“广告”部分所述的数据。"
     },
     "purchase": {
       "label": "购买状态。",
@@ -49,37 +49,39 @@
   },
   "advertising": {
     "title": "广告",
-    "intro": "Magical Garden 含有广告。游戏会展示由 Unity LevelPlay 及其合作的广告网络提供的全屏（插页，interstitial）广告。游戏中没有横幅广告。",
+    "intro": "Magical Garden 含有广告。广告服务提供方是 Google AdMob（Google Mobile Ads SDK），广告由 Google 及其广告合作伙伴投放。广告分为两种：两局之间的全屏（插页，interstitial）广告，以及可选的激励广告（rewarded ad）。游戏中没有横幅广告。",
     "when": {
       "label": "广告出现的时机。",
-      "text": "广告只会在两局之间出现，即你在结算界面点击按钮之后。广告绝不会出现在游戏进行中、启动时、菜单里、花园里或设置（Settings）中。你完成的前 10 局不会看到任何广告，休闲模式（Chill）下没有广告，重玩同一关卡时也没有广告。"
+      "text": "两局之间的广告只会在你于结算界面点击按钮之后出现。你完成的前 10 局不会看到任何广告，休闲模式（Chill）下没有广告，重玩同一关卡时也没有广告。游戏进行中、启动时、菜单里、花园里或设置（Settings）中都不会显示任何广告。"
+    },
+    "rewarded": {
+      "label": "可选的激励广告（rewarded ad）。",
+      "text": "在每一局天梯榜（Ladder）挑战中，你可以选择观看一次激励广告以继续游戏。只有在你选择观看时才会显示。"
     },
     "data": {
-      "intro": "为展示和衡量广告效果，游戏中的广告软件及其广告合作伙伴可能会收集：",
+      "intro": "为展示和衡量广告效果，游戏中的 Google AdMob（Google Mobile Ads SDK）及 Google 的广告合作伙伴可能会收集：",
       "li1": "你设备的广告标识符（advertising identifier）（在 iPhone 上，仅当你允许跟踪时）；",
       "li2": "根据你的 IP 地址得出的大致位置；",
       "li3": "设备和应用信息，例如设备型号、操作系统、应用版本和语言；",
       "li4": "你与广告的互动情况；",
       "li5": "诊断信息，例如崩溃和性能数据。",
-      "share": "广告合作伙伴可能会收到这些信息，并按照其各自的隐私政策处理。"
+      "share": "Google 及其广告合作伙伴可能会收到这些信息，并按照其各自的隐私政策处理。"
     },
     "choices": {
       "label": "你的选择。",
-      "text": "在欧洲经济区（EEA）、英国和瑞士，游戏会显示同意（consent）表单，你可以随时通过设置（Settings）中的“广告隐私”（Ad privacy）按钮更改该选择。在 iPhone 上，系统会在展示任何广告之前询问游戏是否可以跟踪你。在任何手机上，你也可以在手机设置中重置或限制广告标识符（advertising identifier）。"
+      "text": "在欧洲经济区（EEA）、英国和瑞士，将由 Google 提供的同意（consent）表单询问你的选择，你可以随时通过设置（Settings）中的“广告隐私”（Ad privacy）按钮更改该选择。在 iPhone 上，系统会在展示任何广告之前询问游戏是否可以跟踪你。在任何手机上，你也可以在手机设置中重置或限制广告标识符（advertising identifier）。"
     },
     "learn": {
       "intro": "了解更多：",
-      "unity": "Unity《游戏玩家和应用用户隐私政策》（Game Player and App User Privacy Policy，英文），其中介绍了 LevelPlay，并链接到其广告网络合作伙伴各自的隐私政策",
-      "unityAria": "Unity 游戏玩家和应用用户隐私政策（英文，在新标签页中打开）",
-      "networks": "LevelPlay 合作的广告网络列表（英文）",
-      "networksAria": "LevelPlay 广告网络列表（英文，在新标签页中打开）"
+      "google": "Google 如何使用使用其服务的网站或应用中的信息（How Google uses information from sites or apps that use our services，英文）",
+      "googleAria": "Google 如何使用使用其服务的网站或应用中的信息（英文，在新标签页中打开）"
     }
   },
   "purchases": {
     "title": "购买",
     "intro": "Magical Garden 可免费游玩，所有关卡包均免费。游戏提供唯一一项可选的一次性购买：“移除广告”（Remove Ads）。",
     "pay": "你通过 Google Play 或 Apple App Store 付款，由它们处理你的付款。游戏不会看到你的银行卡信息。",
-    "effect": "“移除广告”会永久关闭所有广告，且不会改变游戏中的其他任何内容。",
+    "effect": "“移除广告”会永久关闭所有广告，包括两局之间的广告和可选的激励广告，且不会改变游戏中的其他任何内容。",
     "restore": "我们没有账号系统。换新手机时，可通过应用商店恢复该购买；你也可以在设置（Settings）中点击“恢复购买”（Restore purchases）。"
   },
   "use": {
@@ -99,13 +101,13 @@
   },
   "providers": {
     "title": "谁在处理你的信息",
-    "text": "我们使用 Unity Gaming Services（Unity Technologies）提供匿名登录、Cloud Save、天梯榜（Ladder）和统计分析，并使用 Unity LevelPlay 及其广告网络来展示广告。Unity 和广告合作伙伴依据各自的条款处理信息，并可能在你所在国家或地区以外（包括美国）处理。我们不会出售你的姓名或联系方式（我们并没有这些信息）。广告合作伙伴可能会收到“广告”部分所述的广告数据，部分法律将其称为为广告目的而共享信息；你可以通过该部分所述的选项限制这种情况。",
+    "text": "我们使用 Unity Gaming Services（Unity Technologies）提供匿名登录、Cloud Save、天梯榜（Ladder）和统计分析，并使用 Google AdMob（Google）来展示广告。Unity、Google 及 Google 的广告合作伙伴依据各自的条款处理信息，并可能在你所在国家或地区以外（包括美国）处理。我们不会出售你的姓名或联系方式（我们并没有这些信息）。Google 及其广告合作伙伴可能会收到“广告”部分所述的广告数据，部分法律将其称为为广告目的而共享信息；你可以通过该部分所述的选项限制这种情况。",
     "link": "阅读 Unity 的隐私政策（英文）",
     "linkAria": "Unity 的隐私政策（英文，在新标签页中打开）"
   },
   "retention": {
     "title": "保存多久",
-    "text": "只要游戏仍在提供，或在你要求删除之前，我们会保留进度和天梯榜（Ladder）记录。统计分析数据只会在我们改进游戏所需的时间内保留，且不会超过 Unity 自身的保留期限。广告合作伙伴按照各自的政策保留广告数据。"
+    "text": "只要游戏仍在提供，或在你要求删除之前，我们会保留进度和天梯榜（Ladder）记录。统计分析数据只会在我们改进游戏所需的时间内保留，且不会超过 Unity 自身的保留期限。Google 及其广告合作伙伴按照各自的政策保留广告数据。"
   },
   "children": {
     "title": "儿童",

@@ -32,7 +32,7 @@
     },
     "ads": {
       "label": "Advertising data.",
-      "text": "The ad software in the game and its ad partners may collect the data described under Advertising below."
+      "text": "Google AdMob, the ad software in the game, and Google's ad partners may collect the data described under Advertising below."
     },
     "purchase": {
       "label": "Purchase status.",
@@ -49,37 +49,39 @@
   },
   "advertising": {
     "title": "Advertising",
-    "intro": "Magical Garden contains ads. It shows full-screen (interstitial) ads provided by Unity LevelPlay and the ad networks it works with. There are no banner ads.",
+    "intro": "Magical Garden contains ads. The ad provider is Google AdMob (the Google Mobile Ads SDK), and ads are served by Google and its ad partners. There are two kinds of ads: full-screen (interstitial) ads between rounds, and an optional rewarded ad. There are no banner ads.",
     "when": {
       "label": "When ads appear.",
-      "text": "Ads appear only between rounds, after you press a button on a result screen. They never appear during play, at start-up, in menus, in the garden, or in Settings. You see none in your first 10 finished runs, none in Chill mode, and none when you replay the same level."
+      "text": "Ads between rounds appear only after you press a button on a result screen. You see none in your first 10 finished runs, none in Chill mode, and none when you replay the same level. Nothing is shown during play, at start-up, in menus, in the garden, or in Settings."
+    },
+    "rewarded": {
+      "label": "Optional rewarded ad.",
+      "text": "Once per Ladder run, you may choose to watch a rewarded ad to keep playing. It is shown only if you choose to watch it."
     },
     "data": {
-      "intro": "To show and measure ads, the ad software in the game and its ad partners may collect:",
+      "intro": "To show and measure ads, Google AdMob (the Google Mobile Ads SDK) in the game and Google's ad partners may collect:",
       "li1": "the advertising identifier of your device (on iPhone, only if you allow tracking);",
       "li2": "an approximate location derived from your IP address;",
       "li3": "device and app information, such as device model, operating system, app version, and language;",
       "li4": "how you interact with ads;",
       "li5": "diagnostics, such as crashes and performance.",
-      "share": "Ad partners may receive this information and handle it under their own privacy policies."
+      "share": "Google and its ad partners may receive this information and handle it under their own privacy policies."
     },
     "choices": {
       "label": "Your choices.",
-      "text": "In the European Economic Area, the United Kingdom, and Switzerland, the game shows a consent form, and the Ad privacy button in Settings lets you change that choice at any time. On iPhone, the system asks whether the game may track you before any ads are shown. On any phone you can also reset or limit the advertising identifier in your phone's settings."
+      "text": "In the European Economic Area, the United Kingdom, and Switzerland, a consent form provided by Google asks for your choice, and the Ad privacy button in Settings lets you change it at any time. On iPhone, the system asks whether the game may track you before any ads are shown. On any phone you can also reset or limit the advertising identifier in your phone's settings."
     },
     "learn": {
       "intro": "Learn more:",
-      "unity": "Unity's Game Player and App User Privacy Policy, which covers LevelPlay and links to its ad network partners' own privacy policies",
-      "unityAria": "Unity's Game Player and App User Privacy Policy (opens in a new tab)",
-      "networks": "LevelPlay's list of the ad networks it works with",
-      "networksAria": "LevelPlay's list of ad networks (opens in a new tab)"
+      "google": "How Google uses information from sites or apps that use our services",
+      "googleAria": "How Google uses information from sites or apps that use our services (opens in a new tab)"
     }
   },
   "purchases": {
     "title": "Purchases",
     "intro": "Magical Garden is free to play, and every level pack is free. It offers one optional, one-time purchase: Remove Ads.",
     "pay": "You pay through Google Play or the Apple App Store, which handle your payment. The game never sees your card details.",
-    "effect": "Remove Ads turns off every ad permanently and changes nothing else in the game.",
+    "effect": "Remove Ads turns off every ad permanently, both the ads between rounds and the optional rewarded ad, and changes nothing else in the game.",
     "restore": "We have no account system. If you get a new phone, the purchase is restored from the store; you can also tap Restore purchases in Settings."
   },
   "use": {
@@ -99,13 +101,13 @@
   },
   "providers": {
     "title": "Who processes your information",
-    "text": "We use Unity Gaming Services (Unity Technologies) for anonymous sign-in, Cloud Save, the Ladder, and analytics, and Unity LevelPlay and its ad networks to show ads. Unity and the ad partners process information under their own terms, and they may process it in countries other than yours, including the United States. We do not sell your name or contact details (we do not have them). The advertising data described under Advertising may be received by ad partners, which some laws describe as sharing information for advertising; you can limit this with the choices described there.",
+    "text": "We use Unity Gaming Services (Unity Technologies) for anonymous sign-in, Cloud Save, the Ladder, and analytics, and Google AdMob (Google) to show ads. Unity, Google, and Google's ad partners process information under their own terms, and they may process it in countries other than yours, including the United States. We do not sell your name or contact details (we do not have them). The advertising data described under Advertising may be received by Google and its ad partners, which some laws describe as sharing information for advertising; you can limit this with the choices described there.",
     "link": "Read Unity's privacy policy",
     "linkAria": "Unity's privacy policy (opens in a new tab)"
   },
   "retention": {
     "title": "How long we keep it",
-    "text": "We keep progress and Ladder entries for as long as the game is available, or until you ask us to delete them. Analytics data is kept only as long as we need it to improve the game, and no longer than Unity's own retention periods allow. Ad partners keep advertising data under their own policies."
+    "text": "We keep progress and Ladder entries for as long as the game is available, or until you ask us to delete them. Analytics data is kept only as long as we need it to improve the game, and no longer than Unity's own retention periods allow. Google and its ad partners keep advertising data under their own policies."
   },
   "children": {
     "title": "Children",

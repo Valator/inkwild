@@ -24,9 +24,9 @@ function renderPrivacy(locale: LocaleCode) {
 }
 
 describe.each([
-  ['en', 'Privacy Policy', 'Last updated: October 22, 2026'],
-  ['es', 'Política de privacidad', 'Última actualización: 22 de octubre de 2026'],
-  ['zh', '隐私政策', '最后更新：2026年10月22日'],
+  ['en', 'Privacy Policy', 'Last updated: October 23, 2026'],
+  ['es', 'Política de privacidad', 'Última actualización: 23 de octubre de 2026'],
+  ['zh', '隐私政策', '最后更新：2026年10月23日'],
 ] as const)('privacy page in %s', (locale, title, updated) => {
   it('has one h1, the update date and a heading for every section', () => {
     renderPrivacy(locale)
@@ -66,14 +66,11 @@ describe.each([
     const headings = screen.getAllByRole('heading', { level: 2 }).map((h) => h.textContent)
     expect(headings).toContain({ en: 'Advertising', es: 'Publicidad', zh: '广告' }[locale])
     expect(headings).toContain({ en: 'Purchases', es: 'Compras', zh: '购买' }[locale])
-    for (const href of [
-      'https://unity.com/legal/game-player-and-app-user-privacy-policy',
-      'https://docs.unity.com/en-us/grow/levelplay/platform/fundamentals/mediated-networks',
-    ]) {
-      const link = document.querySelector(`a[href="${href}"]`)
-      expect(link).toHaveAttribute('rel', 'noopener noreferrer')
-      expect(link).toHaveAttribute('target', '_blank')
-    }
+    const google = document.querySelector('a[href="https://policies.google.com/technologies/partner-sites"]')
+    expect(google).toHaveAttribute('rel', 'noopener noreferrer')
+    expect(google).toHaveAttribute('target', '_blank')
+    expect(document.body.textContent).toContain('Google AdMob')
+    expect(document.body.textContent).not.toMatch(/LevelPlay/i)
   })
 
   it('no longer claims the game has no ads or purchases', () => {

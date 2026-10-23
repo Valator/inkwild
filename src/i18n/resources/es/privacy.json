@@ -32,7 +32,7 @@
     },
     "ads": {
       "label": "Datos de publicidad.",
-      "text": "El software de anuncios del juego y sus socios publicitarios pueden recopilar los datos que se describen más abajo en Publicidad."
+      "text": "Google AdMob, el software de anuncios del juego, y los socios publicitarios de Google pueden recopilar los datos que se describen más abajo en Publicidad."
     },
     "purchase": {
       "label": "Estado de la compra.",
@@ -49,37 +49,39 @@
   },
   "advertising": {
     "title": "Publicidad",
-    "intro": "Magical Garden contiene anuncios. Muestra anuncios a pantalla completa (intersticiales) proporcionados por Unity LevelPlay y las redes publicitarias con las que trabaja. No hay anuncios de banner.",
+    "intro": "Magical Garden contiene anuncios. El proveedor de anuncios es Google AdMob (el SDK Google Mobile Ads), y los anuncios los sirven Google y sus socios publicitarios. Hay dos tipos de anuncios: anuncios a pantalla completa (intersticiales) entre rondas y un anuncio con recompensa opcional. No hay anuncios de banner.",
     "when": {
       "label": "Cuándo aparecen los anuncios.",
-      "text": "Los anuncios aparecen solo entre rondas, después de que pulsas un botón en una pantalla de resultados. Nunca aparecen durante el juego, al iniciar la aplicación, en los menús, en el jardín ni en Ajustes (Settings). No ves ninguno en tus primeras 10 partidas terminadas, ninguno en el modo Chill y ninguno cuando repites el mismo nivel."
+      "text": "Los anuncios entre rondas aparecen solo después de que pulsas un botón en una pantalla de resultados. No ves ninguno en tus primeras 10 partidas terminadas, ninguno en el modo Chill y ninguno cuando repites el mismo nivel. No se muestra nada durante el juego, al iniciar la aplicación, en los menús, en el jardín ni en Ajustes (Settings)."
+    },
+    "rewarded": {
+      "label": "Anuncio con recompensa opcional.",
+      "text": "Una vez por partida de la Escalera (Ladder), puedes elegir ver un anuncio con recompensa para seguir jugando. Solo se muestra si tú eliges verlo."
     },
     "data": {
-      "intro": "Para mostrar y medir los anuncios, el software de anuncios del juego y sus socios publicitarios pueden recopilar:",
+      "intro": "Para mostrar y medir los anuncios, Google AdMob (el SDK Google Mobile Ads) del juego y los socios publicitarios de Google pueden recopilar:",
       "li1": "el identificador publicitario de tu dispositivo (en iPhone, solo si permites el rastreo);",
       "li2": "una ubicación aproximada derivada de tu dirección IP;",
       "li3": "información del dispositivo y de la aplicación, como el modelo del dispositivo, el sistema operativo, la versión de la aplicación y el idioma;",
       "li4": "cómo interactúas con los anuncios;",
       "li5": "datos de diagnóstico, como fallos y rendimiento.",
-      "share": "Los socios publicitarios pueden recibir esta información y tratarla conforme a sus propias políticas de privacidad."
+      "share": "Google y sus socios publicitarios pueden recibir esta información y tratarla conforme a sus propias políticas de privacidad."
     },
     "choices": {
       "label": "Tus opciones.",
-      "text": "En el Espacio Económico Europeo, el Reino Unido y Suiza, el juego muestra un formulario de consentimiento, y el botón Ad privacy en Ajustes (Settings) te permite cambiar esa decisión en cualquier momento. En iPhone, el sistema te pregunta si el juego puede rastrearte antes de mostrar cualquier anuncio. En cualquier teléfono también puedes restablecer o limitar el identificador publicitario en los ajustes de tu teléfono."
+      "text": "En el Espacio Económico Europeo, el Reino Unido y Suiza, un formulario de consentimiento proporcionado por Google te pide tu decisión, y el botón Ad privacy en Ajustes (Settings) te permite cambiarla en cualquier momento. En iPhone, el sistema te pregunta si el juego puede rastrearte antes de mostrar cualquier anuncio. En cualquier teléfono también puedes restablecer o limitar el identificador publicitario en los ajustes de tu teléfono."
     },
     "learn": {
       "intro": "Más información:",
-      "unity": "la Política de privacidad de Unity para jugadores y usuarios de aplicaciones (Game Player and App User Privacy Policy), que cubre LevelPlay y enlaza a las políticas de privacidad de sus redes publicitarias socias",
-      "unityAria": "Política de privacidad de Unity para jugadores y usuarios de aplicaciones (se abre en una pestaña nueva)",
-      "networks": "la lista de redes publicitarias con las que trabaja LevelPlay",
-      "networksAria": "Lista de redes publicitarias de LevelPlay (se abre en una pestaña nueva)"
+      "google": "Cómo usa Google la información de sitios o aplicaciones que usan sus servicios (How Google uses information from sites or apps that use our services, en inglés)",
+      "googleAria": "Cómo usa Google la información de sitios o aplicaciones que usan sus servicios (en inglés, se abre en una pestaña nueva)"
     }
   },
   "purchases": {
     "title": "Compras",
     "intro": "Magical Garden es gratis y todos los paquetes de niveles son gratuitos. Ofrece una única compra opcional y de pago único: Remove Ads (Quitar anuncios).",
     "pay": "Pagas a través de Google Play o la App Store de Apple, que gestionan tu pago. El juego nunca ve los datos de tu tarjeta.",
-    "effect": "Remove Ads desactiva todos los anuncios de forma permanente y no cambia nada más en el juego.",
+    "effect": "Remove Ads desactiva todos los anuncios de forma permanente, tanto los de entre rondas como el anuncio con recompensa opcional, y no cambia nada más en el juego.",
     "restore": "No tenemos un sistema de cuentas. Si cambias de teléfono, la compra se restaura desde la tienda; también puedes pulsar Restore purchases (Restaurar compras) en Ajustes (Settings)."
   },
   "use": {
@@ -99,13 +101,13 @@
   },
   "providers": {
     "title": "Quién procesa tu información",
-    "text": "Usamos Unity Gaming Services (Unity Technologies) para el inicio de sesión anónimo, Cloud Save, la Escalera y las estadísticas, y Unity LevelPlay y sus redes publicitarias para mostrar anuncios. Unity y los socios publicitarios procesan la información bajo sus propios términos y pueden hacerlo en países distintos al tuyo, incluido Estados Unidos. No vendemos tu nombre ni tus datos de contacto (no los tenemos). Los datos de publicidad descritos en Publicidad pueden ser recibidos por socios publicitarios, algo que algunas leyes consideran compartir información con fines publicitarios; puedes limitarlo con las opciones descritas allí.",
+    "text": "Usamos Unity Gaming Services (Unity Technologies) para el inicio de sesión anónimo, Cloud Save, la Escalera y las estadísticas, y Google AdMob (Google) para mostrar anuncios. Unity, Google y los socios publicitarios de Google procesan la información bajo sus propios términos y pueden hacerlo en países distintos al tuyo, incluido Estados Unidos. No vendemos tu nombre ni tus datos de contacto (no los tenemos). Los datos de publicidad descritos en Publicidad pueden ser recibidos por Google y sus socios publicitarios, algo que algunas leyes consideran compartir información con fines publicitarios; puedes limitarlo con las opciones descritas allí.",
     "link": "Lee la política de privacidad de Unity",
     "linkAria": "Política de privacidad de Unity (se abre en una pestaña nueva)"
   },
   "retention": {
     "title": "Cuánto tiempo la conservamos",
-    "text": "Conservamos el progreso y los registros de la Escalera mientras el juego esté disponible o hasta que nos pidas eliminarlos. Los datos de estadísticas se conservan solo el tiempo necesario para mejorar el juego, y nunca más allá de los plazos de conservación de Unity. Los socios publicitarios conservan los datos de publicidad conforme a sus propias políticas."
+    "text": "Conservamos el progreso y los registros de la Escalera mientras el juego esté disponible o hasta que nos pidas eliminarlos. Los datos de estadísticas se conservan solo el tiempo necesario para mejorar el juego, y nunca más allá de los plazos de conservación de Unity. Google y sus socios publicitarios conservan los datos de publicidad conforme a sus propias políticas."
   },
   "children": {
     "title": "Menores de edad",

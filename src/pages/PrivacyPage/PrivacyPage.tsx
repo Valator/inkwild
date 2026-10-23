@@ -1,12 +1,7 @@
 import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { toMailtoUrl } from '../../config/links'
-import {
-  LEVELPLAY_NETWORKS_URL,
-  PRIVACY_LAST_UPDATED,
-  UNITY_PLAYER_PRIVACY_URL,
-  UNITY_PRIVACY_URL,
-} from '../../config/privacy'
+import { GOOGLE_ADS_PRIVACY_URL, PRIVACY_LAST_UPDATED, UNITY_PRIVACY_URL } from '../../config/privacy'
 import { siteConfig } from '../../config/siteConfig'
 import { AnnouncerProvider } from '../../components/Announcer/Announcer'
 import { DocumentMeta } from '../../components/DocumentMeta/DocumentMeta'
@@ -92,6 +87,9 @@ export function PrivacyPage() {
               <p>
                 <strong>{t('advertising.when.label')}</strong> {t('advertising.when.text')}
               </p>
+              <p>
+                <strong>{t('advertising.rewarded.label')}</strong> {t('advertising.rewarded.text')}
+              </p>
               <p>{t('advertising.data.intro')}</p>
               <ul>
                 <li>{t('advertising.data.li1')}</li>
@@ -108,22 +106,12 @@ export function PrivacyPage() {
               <ul>
                 <li>
                   <a
-                    href={UNITY_PLAYER_PRIVACY_URL}
+                    href={GOOGLE_ADS_PRIVACY_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={t('advertising.learn.unityAria')}
+                    aria-label={t('advertising.learn.googleAria')}
                   >
-                    {t('advertising.learn.unity')}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={LEVELPLAY_NETWORKS_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={t('advertising.learn.networksAria')}
-                  >
-                    {t('advertising.learn.networks')}
+                    {t('advertising.learn.google')}
                   </a>
                 </li>
               </ul>

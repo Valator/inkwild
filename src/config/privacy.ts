@@ -2,7 +2,7 @@ import { siteConfig } from './siteConfig'
 import type { LocaleCode } from '../i18n/locales'
 
 /** ISO date the privacy policy was last updated. Bump it whenever the policy text changes. */
-export const PRIVACY_LAST_UPDATED = '2026-10-22'
+export const PRIVACY_LAST_UPDATED = '2026-10-23'
 
 /** Path of the default-language policy page — the public URL to give to the App Store and Google Play. */
 export const PRIVACY_PATH = '/privacy/'
@@ -23,8 +23,5 @@ export function privacyPath(locale: LocaleCode): string {
 /** Unity's own policy, linked from the "who processes your information" section. */
 export const UNITY_PRIVACY_URL = 'https://unity.com/legal/privacy-policy'
 
-/** Unity's player-facing policy: describes LevelPlay and links to each ad network partner's own policy. */
-export const UNITY_PLAYER_PRIVACY_URL = 'https://unity.com/legal/game-player-and-app-user-privacy-policy'
-
-/** LevelPlay's own list of the ad networks it mediates (the network list is not final, so none are named on the page). */
-export const LEVELPLAY_NETWORKS_URL = 'https://docs.unity.com/en-us/grow/levelplay/platform/fundamentals/mediated-networks'
+/** Google's page on how it uses information from apps that use its ad services (AdMob), linked from the Advertising section. */
+export const GOOGLE_ADS_PRIVACY_URL = 'https://policies.google.com/technologies/partner-sites'

@@ -61,9 +61,6 @@ export function PrivacyPage() {
                   <strong>{t('collect.progress.label')}</strong> {t('collect.progress.text')}
                 </li>
                 <li>
-                  <strong>{t('collect.ladder.label')}</strong> {t('collect.ladder.text')}
-                </li>
-                <li>
                   <strong>{t('collect.stats.label')}</strong> {t('collect.stats.text')}
                 </li>
                 <li>
@@ -139,7 +136,6 @@ export function PrivacyPage() {
                 <li>{t('choices.li2')}</li>
                 <li>{t('choices.li3')}</li>
                 <li>{t('choices.li4')}</li>
-                <li>{t('choices.li5')}</li>
               </ul>
             </PolicySection>
 

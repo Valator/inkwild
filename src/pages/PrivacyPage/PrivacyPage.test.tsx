@@ -73,9 +73,10 @@ describe.each([
     expect(document.body.textContent).not.toMatch(/LevelPlay/i)
   })
 
-  it('describes rewarded ads generally, not as a Ladder-only placement', () => {
-    const text = createI18n(locale).getResource(locale, 'privacy', 'advertising.rewarded.text') as string
-    expect(text).not.toMatch(/Ladder|Escalera|天梯/)
+  // The Ladder is a later feature: mention it in the policy only in the release that ships it.
+  it('does not mention the Ladder or player names', () => {
+    renderPrivacy(locale)
+    expect(document.body.textContent).not.toMatch(/Ladder|Escalera|天梯|player name|nombre de jugador|玩家名称/i)
   })
 
   it('no longer claims the game has no ads or purchases', () => {

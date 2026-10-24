@@ -8,7 +8,7 @@
   "updated": "Última actualización: {{date}}",
   "summary": {
     "title": "En pocas palabras",
-    "text": "Magical Garden no tiene cuentas. Contiene anuncios y ofrece una compra única y opcional que los quita. Te asigna un ID de jugador anónimo y aleatorio, guarda tu progreso en tu dispositivo y en Unity Cloud Save, y muestra en la Escalera (Ladder) mundial el nombre de jugador que elijas junto con tu puntuación. Las estadísticas anónimas de juego solo se recopilan si tú aceptas, y puedes desactivarlas en cualquier momento."
+    "text": "Magical Garden no tiene cuentas. Contiene anuncios y ofrece una compra única y opcional que los quita. Te asigna un ID de jugador anónimo y aleatorio y guarda tu progreso en tu dispositivo y en Unity Cloud Save. Las estadísticas anónimas de juego solo se recopilan si tú aceptas, y puedes desactivarlas en cualquier momento."
   },
   "intro": "Esta política explica qué información tratan Magical Garden (el \"juego\") y el sitio web de InkWild Games (inkwildgames.com), para qué se usa y qué opciones tienes. \"Nosotros\" se refiere a InkWild Games, el estudio independiente que crea el juego.",
   "collect": {
@@ -20,15 +20,11 @@
     },
     "progress": {
       "label": "Progreso del juego.",
-      "text": "Tu nivel de la Historia, las estrellas de cada nivel, tu mejor puntuación en la Escalera (Ladder) y el avance de la restauración del jardín. Se guardan en tu dispositivo y se copian en Unity Cloud Save, para que no pierdas tu progreso si falla un guardado."
-    },
-    "ladder": {
-      "label": "Nombre y puntuación en la Escalera.",
-      "text": "Cuando terminas una partida de la Escalera, tu nombre de jugador (\"Gardener\" más un número aleatorio hasta que lo cambies), tu puntuación y la semilla de la partida se envían a la Escalera (Ladder) mundial, donde otros jugadores pueden ver tu nombre y tu puntuación. Por favor, no uses tu nombre real ni datos personales como nombre de jugador."
+      "text": "Tu nivel de la Historia, las estrellas de cada nivel y el avance de la restauración del jardín. Se guardan en tu dispositivo y se copian en Unity Cloud Save, para que no pierdas tu progreso si falla un guardado."
     },
     "stats": {
       "label": "Estadísticas anónimas de juego (solo si lo permites).",
-      "text": "En tu primer inicio, el juego te pregunta si puede contar cómo juegas. Si pulsas Permitir (Allow), registra eventos como el inicio y el fin de un nivel, el modo y el nivel, los movimientos, la puntuación, las pistas usadas, el tiempo en pantalla, los consejos mostrados y los errores técnicos (el tipo de error y la primera línea de su mensaje). Estos eventos no incluyen tu nombre de jugador ni texto que hayas escrito. Unity también añade sus eventos estándar, como jugadores nuevos y duración de las sesiones, y puede recibir datos técnicos como el tipo de dispositivo, el sistema operativo, la versión de la app, el idioma y una ubicación aproximada derivada de tu dirección IP, según describe la política de privacidad de Unity. Si pulsas No, gracias (No thanks), no se registra ni se envía nada."
+      "text": "En tu primer inicio, el juego te pregunta si puede contar cómo juegas. Si pulsas Permitir (Allow), registra eventos como el inicio y el fin de un nivel, el modo y el nivel, los movimientos, la puntuación, las pistas usadas, el tiempo en pantalla, los consejos mostrados y los errores técnicos (el tipo de error y la primera línea de su mensaje). Estos eventos no incluyen tu nombre ni texto que hayas escrito. Unity también añade sus eventos estándar, como jugadores nuevos y duración de las sesiones, y puede recibir datos técnicos como el tipo de dispositivo, el sistema operativo, la versión de la app, el idioma y una ubicación aproximada derivada de tu dirección IP, según describe la política de privacidad de Unity. Si pulsas No, gracias (No thanks), no se registra ni se envía nada."
     },
     "ads": {
       "label": "Datos de publicidad.",
@@ -86,28 +82,27 @@
   },
   "use": {
     "title": "Cómo usamos la información",
-    "li1": "Para que el juego funcione: iniciar tu sesión anónima, guardar y recuperar tu progreso y mostrar la Escalera.",
+    "li1": "Para que el juego funcione: iniciar tu sesión anónima y guardar y recuperar tu progreso.",
     "li2": "Para entender dónde se atoran los jugadores y así equilibrar los niveles y corregir problemas, con las estadísticas anónimas que permitiste.",
-    "li3": "Para detectar y corregir errores, y mantener el juego y la Escalera justos y seguros.",
+    "li3": "Para detectar y corregir errores, y mantener el juego funcionando y seguro.",
     "li4": "Para mostrar anuncios y desbloquear el juego sin anuncios si compras Remove Ads."
   },
   "choices": {
     "title": "Tus opciones",
     "li1": "Datos de juego (Play data): actívalos o desactívalos cuando quieras en Ajustes (Settings). Al desactivarlos, el cambio es inmediato y se descarta lo que aún no se haya enviado.",
-    "li2": "Nombre de jugador: cámbialo en Ajustes (Settings) cuando quieras.",
-    "li3": "Juego sin conexión: el juego funciona sin internet; el progreso y las puntuaciones de la Escalera se guardan en tu dispositivo y se envían después.",
-    "li4": "Eliminar datos: al desinstalar el juego se borran los datos de tu dispositivo. Para pedirnos que eliminemos tu progreso en la nube y tus registros de la Escalera, escríbenos (consulta más abajo). Como tu ID de jugador es anónimo, es posible que te pidamos datos como tu nombre de jugador y fechas aproximadas para poder localizar tus registros.",
-    "li5": "Anuncios: cambia tu consentimiento con el botón Ad privacy en Ajustes (Settings) (donde se muestre un formulario de consentimiento), o restablece o limita el identificador publicitario en los ajustes de tu teléfono. Comprar Remove Ads desactiva todos los anuncios."
+    "li2": "Juego sin conexión: el juego funciona sin internet; el progreso se guarda entonces en tu dispositivo y se sincroniza después.",
+    "li3": "Eliminar datos: al desinstalar el juego se borran los datos de tu dispositivo. Para pedirnos que eliminemos tu progreso en la nube, escríbenos (consulta más abajo). Como tu ID de jugador es anónimo, es posible que te pidamos datos como fechas aproximadas para poder localizar tus registros.",
+    "li4": "Anuncios: cambia tu consentimiento con el botón Ad privacy en Ajustes (Settings) (donde se muestre un formulario de consentimiento), o restablece o limita el identificador publicitario en los ajustes de tu teléfono. Comprar Remove Ads desactiva todos los anuncios."
   },
   "providers": {
     "title": "Quién procesa tu información",
-    "text": "Usamos Unity Gaming Services (Unity Technologies) para el inicio de sesión anónimo, Cloud Save, la Escalera y las estadísticas, y Google AdMob (Google) para mostrar anuncios. Unity, Google y los socios publicitarios de Google procesan la información bajo sus propios términos y pueden hacerlo en países distintos al tuyo, incluido Estados Unidos. No vendemos tu nombre ni tus datos de contacto (no los tenemos). Los datos de publicidad descritos en Publicidad pueden ser recibidos por Google y sus socios publicitarios, algo que algunas leyes consideran compartir información con fines publicitarios; puedes limitarlo con las opciones descritas allí.",
+    "text": "Usamos Unity Gaming Services (Unity Technologies) para el inicio de sesión anónimo, Cloud Save y las estadísticas, y Google AdMob (Google) para mostrar anuncios. Unity, Google y los socios publicitarios de Google procesan la información bajo sus propios términos y pueden hacerlo en países distintos al tuyo, incluido Estados Unidos. No vendemos tu nombre ni tus datos de contacto (no los tenemos). Los datos de publicidad descritos en Publicidad pueden ser recibidos por Google y sus socios publicitarios, algo que algunas leyes consideran compartir información con fines publicitarios; puedes limitarlo con las opciones descritas allí.",
     "link": "Lee la política de privacidad de Unity",
     "linkAria": "Política de privacidad de Unity (se abre en una pestaña nueva)"
   },
   "retention": {
     "title": "Cuánto tiempo la conservamos",
-    "text": "Conservamos el progreso y los registros de la Escalera mientras el juego esté disponible o hasta que nos pidas eliminarlos. Los datos de estadísticas se conservan solo el tiempo necesario para mejorar el juego, y nunca más allá de los plazos de conservación de Unity. Google y sus socios publicitarios conservan los datos de publicidad conforme a sus propias políticas."
+    "text": "Conservamos el progreso mientras el juego esté disponible o hasta que nos pidas eliminarlos. Los datos de estadísticas se conservan solo el tiempo necesario para mejorar el juego, y nunca más allá de los plazos de conservación de Unity. Google y sus socios publicitarios conservan los datos de publicidad conforme a sus propias políticas."
   },
   "children": {
     "title": "Menores de edad",

@@ -8,7 +8,7 @@
   "updated": "Last updated: {{date}}",
   "summary": {
     "title": "The short version",
-    "text": "Magical Garden has no accounts. It contains ads, and it offers one optional one-time purchase that removes them. It gives you a random anonymous player ID, saves your progress on your device and in Unity Cloud Save, and shows your chosen player name and score on the worldwide Ladder. Anonymous play statistics are only collected if you say yes, and you can turn them off at any time."
+    "text": "Magical Garden has no accounts. It contains ads, and it offers one optional one-time purchase that removes them. It gives you a random anonymous player ID and saves your progress on your device and in Unity Cloud Save. Anonymous play statistics are only collected if you say yes, and you can turn them off at any time."
   },
   "intro": "This policy explains what information Magical Garden (the \"game\") and the InkWild Games website (inkwildgames.com) handle, why, and what choices you have. \"We\" means InkWild Games, the independent studio that makes the game.",
   "collect": {
@@ -20,15 +20,11 @@
     },
     "progress": {
       "label": "Game progress.",
-      "text": "Your Story level, stars per level, best Ladder score, and garden restoration progress. They are saved on your device and copied to Unity Cloud Save, so your progress is not lost if a save fails."
-    },
-    "ladder": {
-      "label": "Ladder name and score.",
-      "text": "When you finish a Ladder run, your player name (\"Gardener\" plus a random number until you change it), your score, and the run's seed are sent to the worldwide Ladder, where other players can see your name and score. Please do not use your real name or any personal information as a player name."
+      "text": "Your Story level, stars per level, and garden restoration progress. They are saved on your device and copied to Unity Cloud Save, so your progress is not lost if a save fails."
     },
     "stats": {
       "label": "Anonymous play statistics (only if you allow).",
-      "text": "On your first launch the game asks whether it may count how you play. If you tap Allow, it records events such as when a level starts or ends, the mode and level, moves, score, hints used, time on screen, how-to tips shown, and technical errors (error type and the first line of its message). These events contain no player name and no text you typed. Unity also adds its standard events, such as new players and session length, and may receive technical details such as device type, operating system, app version, language, and approximate location derived from your IP address, as described in Unity's privacy policy. If you tap No thanks, nothing is recorded or sent."
+      "text": "On your first launch the game asks whether it may count how you play. If you tap Allow, it records events such as when a level starts or ends, the mode and level, moves, score, hints used, time on screen, how-to tips shown, and technical errors (error type and the first line of its message). These events contain no name and no text you typed. Unity also adds its standard events, such as new players and session length, and may receive technical details such as device type, operating system, app version, language, and approximate location derived from your IP address, as described in Unity's privacy policy. If you tap No thanks, nothing is recorded or sent."
     },
     "ads": {
       "label": "Advertising data.",
@@ -86,28 +82,27 @@
   },
   "use": {
     "title": "How we use information",
-    "li1": "To run the game: sign you in anonymously, save and restore your progress, and show the Ladder.",
+    "li1": "To run the game: sign you in anonymously and save and restore your progress.",
     "li2": "To understand where players get stuck so we can balance levels and fix problems, using the anonymous statistics you allowed.",
-    "li3": "To find and fix errors and keep the game and the Ladder fair and secure.",
+    "li3": "To find and fix errors and keep the game working and secure.",
     "li4": "To show ads, and to unlock the ad-free game if you buy Remove Ads."
   },
   "choices": {
     "title": "Your choices",
     "li1": "Play data: switch it on or off at any time in Settings. Turning it off takes effect at once and discards anything not yet sent.",
-    "li2": "Player name: change it in Settings whenever you like.",
-    "li3": "Offline play: the game works without a connection; progress and Ladder scores are then kept on your device and sent later.",
-    "li4": "Deleting data: uninstalling the game removes the data on your device. To ask us to delete your cloud progress and Ladder entries, contact us (see below). Because your player ID is anonymous, we may ask for details such as your player name and approximate dates so we can find your records.",
-    "li5": "Ads: change your consent with the Ad privacy button in Settings (where a consent form is shown), or reset or limit the advertising identifier in your phone's settings. Buying Remove Ads turns every ad off."
+    "li2": "Offline play: the game works without a connection; progress is then kept on your device and synced later.",
+    "li3": "Deleting data: uninstalling the game removes the data on your device. To ask us to delete your cloud progress, contact us (see below). Because your player ID is anonymous, we may ask for details such as approximate dates so we can find your records.",
+    "li4": "Ads: change your consent with the Ad privacy button in Settings (where a consent form is shown), or reset or limit the advertising identifier in your phone's settings. Buying Remove Ads turns every ad off."
   },
   "providers": {
     "title": "Who processes your information",
-    "text": "We use Unity Gaming Services (Unity Technologies) for anonymous sign-in, Cloud Save, the Ladder, and analytics, and Google AdMob (Google) to show ads. Unity, Google, and Google's ad partners process information under their own terms, and they may process it in countries other than yours, including the United States. We do not sell your name or contact details (we do not have them). The advertising data described under Advertising may be received by Google and its ad partners, which some laws describe as sharing information for advertising; you can limit this with the choices described there.",
+    "text": "We use Unity Gaming Services (Unity Technologies) for anonymous sign-in, Cloud Save, and analytics, and Google AdMob (Google) to show ads. Unity, Google, and Google's ad partners process information under their own terms, and they may process it in countries other than yours, including the United States. We do not sell your name or contact details (we do not have them). The advertising data described under Advertising may be received by Google and its ad partners, which some laws describe as sharing information for advertising; you can limit this with the choices described there.",
     "link": "Read Unity's privacy policy",
     "linkAria": "Unity's privacy policy (opens in a new tab)"
   },
   "retention": {
     "title": "How long we keep it",
-    "text": "We keep progress and Ladder entries for as long as the game is available, or until you ask us to delete them. Analytics data is kept only as long as we need it to improve the game, and no longer than Unity's own retention periods allow. Google and its ad partners keep advertising data under their own policies."
+    "text": "We keep progress for as long as the game is available, or until you ask us to delete them. Analytics data is kept only as long as we need it to improve the game, and no longer than Unity's own retention periods allow. Google and its ad partners keep advertising data under their own policies."
   },
   "children": {
     "title": "Children",

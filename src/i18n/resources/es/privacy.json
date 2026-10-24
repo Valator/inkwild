@@ -55,8 +55,8 @@
       "text": "Los anuncios entre rondas aparecen solo después de que pulsas un botón en una pantalla de resultados. No ves ninguno en tus primeras 10 partidas terminadas, ninguno en el modo Chill y ninguno cuando repites el mismo nivel. No se muestra nada durante el juego, al iniciar la aplicación, en los menús, en el jardín ni en Ajustes (Settings)."
     },
     "rewarded": {
-      "label": "Anuncio con recompensa opcional.",
-      "text": "Una vez por partida de la Escalera (Ladder), puedes elegir ver un anuncio con recompensa para seguir jugando. Solo se muestra si tú eliges verlo."
+      "label": "Anuncios con recompensa opcionales.",
+      "text": "Puedes elegir ver un anuncio corto a cambio de un beneficio dentro del juego, por ejemplo movimientos extra para la calificación de estrellas de un nivel o una segunda oportunidad en una partida. Ver el anuncio nunca es obligatorio, y quienes compran Remove Ads reciben el beneficio sin ver un anuncio."
     },
     "data": {
       "intro": "Para mostrar y medir los anuncios, Google AdMob (el SDK Google Mobile Ads) del juego y los socios publicitarios de Google pueden recopilar:",

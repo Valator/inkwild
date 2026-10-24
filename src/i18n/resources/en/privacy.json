@@ -55,8 +55,8 @@
       "text": "Ads between rounds appear only after you press a button on a result screen. You see none in your first 10 finished runs, none in Chill mode, and none when you replay the same level. Nothing is shown during play, at start-up, in menus, in the garden, or in Settings."
     },
     "rewarded": {
-      "label": "Optional rewarded ad.",
-      "text": "Once per Ladder run, you may choose to watch a rewarded ad to keep playing. It is shown only if you choose to watch it."
+      "label": "Optional rewarded ads.",
+      "text": "You may choose to watch a short ad in exchange for an in-game benefit, for example extra moves toward a level's star rating or a second chance in a run. Watching is never required, and players who buy Remove Ads are given the benefit without an ad."
     },
     "data": {
       "intro": "To show and measure ads, Google AdMob (the Google Mobile Ads SDK) in the game and Google's ad partners may collect:",

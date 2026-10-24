@@ -73,6 +73,11 @@ describe.each([
     expect(document.body.textContent).not.toMatch(/LevelPlay/i)
   })
 
+  it('describes rewarded ads generally, not as a Ladder-only placement', () => {
+    const text = createI18n(locale).getResource(locale, 'privacy', 'advertising.rewarded.text') as string
+    expect(text).not.toMatch(/Ladder|Escalera|天梯/)
+  })
+
   it('no longer claims the game has no ads or purchases', () => {
     renderPrivacy(locale)
     expect(document.body.textContent).not.toMatch(/no ads, and no purchases|no tiene cuentas, anuncios ni compras|currently shows no advertising/i)

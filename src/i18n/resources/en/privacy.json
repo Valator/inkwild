@@ -24,7 +24,7 @@
     },
     "stats": {
       "label": "Anonymous play statistics (only if you allow).",
-      "text": "On your first launch the game asks whether it may count how you play. If you tap Allow, it records events such as when a level starts or ends, the mode and level, moves, score, hints used, time on screen, how-to tips shown, and technical errors (error type and the first line of its message). These events contain no name and no text you typed. Unity also adds its standard events, such as new players and session length, and may receive technical details such as device type, operating system, app version, language, and approximate location derived from your IP address, as described in Unity's privacy policy. If you tap No thanks, nothing is recorded or sent."
+      "text": "On your first launch the game asks whether it may count how you play. If you tap Allow, it records events such as when a level starts or ends, the mode and level, moves, score, hints used, time on screen, how-to tips shown, and technical errors (the type of error and the part of the game's code where it happened, never personal data). These events contain no name and no text you typed. Unity also adds its standard events, such as new players and session length, and may receive technical details such as device type, operating system, app version, language, and approximate location derived from your IP address, as described in Unity's privacy policy. If you tap No thanks, nothing is recorded or sent."
     },
     "ads": {
       "label": "Advertising data.",

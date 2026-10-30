@@ -22,6 +22,10 @@
       "label": "Progreso del juego.",
       "text": "Tu nivel de la Historia, las estrellas de cada nivel y el avance de la restauración del jardín. Se guardan en tu dispositivo y se copian en Unity Cloud Save, para que no pierdas tu progreso si falla un guardado."
     },
+    "ladder": {
+      "label": "Ladder (clasificación global).",
+      "text": "Si juegas al modo Ladder, el juego envía tu puntuación de Ladder, el número con el que empezó esa partida (una semilla aleatoria que sirve para comprobar las puntuaciones) y el nombre de Ladder que elijas (de 3 a 16 letras o cifras) a Unity Gaming Services (Leaderboards), vinculados al identificador anónimo de jugador del juego. Tu nombre y tu mejor puntuación se muestran a otros jugadores en la clasificación. Puedes cambiar tu nombre en Ajustes en cualquier momento; no uses tu nombre real. Las puntuaciones se guardan mientras exista la clasificación; escríbenos a inkwildgames@gmail.com para que eliminemos la tuya."
+    },
     "stats": {
       "label": "Estadísticas anónimas de juego (solo si lo permites).",
       "text": "En tu primer inicio, el juego te pregunta si puede contar cómo juegas. Si pulsas Permitir (Allow), registra eventos como el inicio y el fin de un nivel, el modo y el nivel, los movimientos, la puntuación, las pistas usadas, el tiempo en pantalla, los consejos mostrados y los errores técnicos (el tipo de error y la parte del código del juego donde ocurrió, nunca datos personales). Estos eventos no incluyen tu nombre ni texto que hayas escrito. Unity también añade sus eventos estándar, como jugadores nuevos y duración de las sesiones, y puede recibir datos técnicos como el tipo de dispositivo, el sistema operativo, la versión de la app, el idioma y una ubicación aproximada derivada de tu dirección IP, según describe la política de privacidad de Unity. Si pulsas No, gracias (No thanks), no se registra ni se envía nada."

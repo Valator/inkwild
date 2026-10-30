@@ -24,9 +24,9 @@ function renderPrivacy(locale: LocaleCode) {
 }
 
 describe.each([
-  ['en', 'Privacy Policy', 'Last updated: October 29, 2026'],
-  ['es', 'Política de privacidad', 'Última actualización: 29 de octubre de 2026'],
-  ['zh', '隐私政策', '最后更新：2026年10月29日'],
+  ['en', 'Privacy Policy', 'Last updated: October 30, 2026'],
+  ['es', 'Política de privacidad', 'Última actualización: 30 de octubre de 2026'],
+  ['zh', '隐私政策', '最后更新：2026年10月30日'],
 ] as const)('privacy page in %s', (locale, title, updated) => {
   it('has one h1, the update date and a heading for every section', () => {
     renderPrivacy(locale)
@@ -73,10 +73,11 @@ describe.each([
     expect(document.body.textContent).not.toMatch(/LevelPlay/i)
   })
 
-  // The Ladder is a later feature: mention it in the policy only in the release that ships it.
-  it('does not mention the Ladder or player names', () => {
+  it('describes the Ladder data and gives a working contact address for removal', () => {
     renderPrivacy(locale)
-    expect(document.body.textContent).not.toMatch(/Ladder|Escalera|天梯|player name|nombre de jugador|玩家名称/i)
+    expect(document.body.textContent).toMatch(/Ladder/)
+    expect(document.body.textContent).toContain('inkwildgames@gmail.com')
+    expect(document.body.textContent).not.toMatch(/＠/)
   })
 
   it('no longer claims the game has no ads or purchases', () => {

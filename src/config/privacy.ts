@@ -2,7 +2,7 @@ import { siteConfig } from './siteConfig'
 import type { LocaleCode } from '../i18n/locales'
 
 /** ISO date the privacy policy was last updated. Bump it whenever the policy text changes. */
-export const PRIVACY_LAST_UPDATED = '2026-10-30'
+export const PRIVACY_LAST_UPDATED = '2026-11-02'
 
 /** Path of the default-language policy page — the public URL to give to the App Store and Google Play. */
 export const PRIVACY_PATH = '/privacy/'
@@ -25,3 +25,6 @@ export const UNITY_PRIVACY_URL = 'https://unity.com/legal/privacy-policy'
 
 /** Google's page on how it uses information from apps that use its ad services (AdMob), linked from the Advertising section. */
 export const GOOGLE_ADS_PRIVACY_URL = 'https://policies.google.com/technologies/partner-sites'
+
+/** Google's own privacy policy, linked from the "who processes your information" section (AdMob, Google Play Games). */
+export const GOOGLE_PRIVACY_URL = 'https://policies.google.com/privacy'

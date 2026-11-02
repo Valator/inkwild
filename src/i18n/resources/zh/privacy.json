@@ -8,7 +8,7 @@
   "updated": "最后更新：{{date}}",
   "summary": {
     "title": "简要说明",
-    "text": "Magical Garden 没有账号系统。游戏内含广告，并提供一项可选的一次性购买，用于移除广告。游戏会为你生成一个随机的匿名玩家 ID，并将你的进度保存在你的设备和 Unity Cloud Save 中。只有在你同意的情况下，才会收集匿名游戏统计数据，你也可以随时关闭。"
+    "text": "Magical Garden 没有自己的账号系统；在 Android 上，你可以选择使用 Google Play Games 获取成就，并在新手机上保留你的进度。游戏内含广告，并提供一项可选的一次性购买，用于移除广告。游戏会为你生成一个随机的匿名玩家 ID，并将你的进度保存在你的设备和 Unity Cloud Save 中。只有在你同意的情况下，才会收集匿名游戏统计数据，你也可以随时关闭。"
   },
   "intro": "本政策说明 Magical Garden（以下称“游戏”）和 InkWild Games 网站（inkwildgames.com）会处理哪些信息、处理目的，以及你有哪些选择。“我们”指 InkWild Games，即开发本游戏的独立工作室。",
   "collect": {
@@ -16,7 +16,7 @@
     "intro": "Magical Garden 不会要求你提供电子邮箱、真实姓名或密码。游戏处理的全部信息如下：",
     "id": {
       "label": "匿名玩家 ID。",
-      "text": "你打开游戏时，游戏会通过 Unity Authentication 为你匿名登录。该 ID 是保存在你设备上的随机代码，不会与你的姓名、邮箱或手机号关联。"
+      "text": "你打开游戏时，游戏会通过 Unity Authentication 为你匿名登录。该 ID 是保存在你设备上的随机代码，除非你选择关联 Google Play Games（见下文），否则它不会与你的姓名、邮箱或手机号关联。"
     },
     "progress": {
       "label": "游戏进度。",
@@ -25,6 +25,10 @@
     "ladder": {
       "label": "Ladder（全球排行榜）。",
       "text": "如果你玩 Ladder 模式，游戏会将你的 Ladder 分数、该局游戏的起始数字（一个用于核对分数的随机种子）以及你选择的 Ladder 名称（3 到 16 个字母或数字）发送到 Unity Gaming Services（Leaderboards），并与游戏的匿名玩家 ID 关联。你的名称和最高分会在排行榜上向其他玩家显示。你可以随时在“设置”中更改名称；请不要使用真实姓名。分数会在排行榜存在期间保留；如需删除你的分数，请发送邮件至 inkwildgames@gmail.com。"
+    },
+    "playgames": {
+      "label": "Google Play Games（Android，可选）。",
+      "text": "如果你在手机上使用 Google Play Games，它可能会在游戏启动时自动为你登录游戏。登录期间，游戏会将你获得的成就和 Ladder 分数发送给 Google。Google 会在 Google Play Games 中展示这些内容，并附上你的 Play Games 个人资料名称和头像；其他玩家能否看到取决于你的 Play Games 设置。Google 依据其自身的隐私政策处理这些信息。如果你还在设置（Settings）的“账号”中点击“登录”，你的 Play Games 账号会在 Unity Authentication 中与游戏的匿名玩家 ID 关联，以便在新手机上恢复你的进度。此时 Unity 会收到你的 Play Games 玩家 ID，但绝不会收到你的邮箱地址。游戏本身不会收到你的邮箱地址、真实姓名或头像。"
     },
     "stats": {
       "label": "匿名游戏统计数据（仅在你允许时）。",
@@ -82,27 +86,31 @@
     "intro": "Magical Garden 可免费游玩，所有关卡包均免费。游戏提供唯一一项可选的一次性购买：“移除广告”（Remove Ads）。",
     "pay": "你通过 Google Play 或 Apple App Store 付款，由它们处理你的付款。游戏不会看到你的银行卡信息。",
     "effect": "“移除广告”会永久关闭所有广告，包括两局之间的广告和可选的激励广告，且不会改变游戏中的其他任何内容。",
-    "restore": "我们没有账号系统。换新手机时，可通过应用商店恢复该购买；你也可以在设置（Settings）中点击“恢复购买”（Restore purchases）。"
+    "restore": "我们没有自己的账号系统。换新手机时，可通过应用商店恢复该购买；你也可以在设置（Settings）中点击“恢复购买”（Restore purchases）。"
   },
   "use": {
     "title": "我们如何使用信息",
     "li1": "运行游戏：为你匿名登录，并保存和恢复你的进度。",
     "li2": "了解玩家在哪里遇到困难，以便平衡关卡并修复问题，使用的是你允许收集的匿名统计数据。",
     "li3": "发现并修复错误，保持游戏正常运行和安全。",
-    "li4": "展示广告，并在你购买“移除广告”后为你提供无广告的游戏。"
+    "li4": "展示广告，并在你购买“移除广告”后为你提供无广告的游戏。",
+    "li5": "在 Google Play Games 中展示你的成就和 Ladder 分数；如果你登录，还用于在新手机上恢复你的进度。"
   },
   "choices": {
     "title": "你的选择",
     "li1": "游戏数据（Play data）：可随时在设置（Settings）中开启或关闭。关闭后立即生效，尚未发送的数据会被丢弃。",
     "li2": "离线游玩：游戏无需网络即可运行；进度会先保存在你的设备上，稍后再同步。",
     "li3": "删除数据：卸载游戏会删除设备上的数据。如需我们删除你的云端进度，请联系我们（见下文）。由于你的玩家 ID 是匿名的，我们可能会请你提供大致日期等信息，以便找到你的记录。",
-    "li4": "广告：可通过设置（Settings）中的“广告隐私”（Ad privacy）按钮更改你的同意（consent）（在显示同意表单的地区），也可以在手机设置中重置或限制广告标识符（advertising identifier）。购买“移除广告”会关闭所有广告。"
+    "li4": "广告：可通过设置（Settings）中的“广告隐私”（Ad privacy）按钮更改你的同意（consent）（在显示同意表单的地区），也可以在手机设置中重置或限制广告标识符（advertising identifier）。购买“移除广告”会关闭所有广告。",
+    "li5": "Google Play Games：你可以在 Google Play Games 设置中退出登录，或更改谁可以看到你的个人资料。如需将你的进度与 Play Games 账号解除关联，请联系我们。"
   },
   "providers": {
     "title": "谁在处理你的信息",
-    "text": "我们使用 Unity Gaming Services（Unity Technologies）提供匿名登录、Cloud Save 和统计分析，并使用 Google AdMob（Google）来展示广告。Unity、Google 及 Google 的广告合作伙伴依据各自的条款处理信息，并可能在你所在国家或地区以外（包括美国）处理。我们不会出售你的姓名或联系方式（我们并没有这些信息）。Google 及其广告合作伙伴可能会收到“广告”部分所述的广告数据，部分法律将其称为为广告目的而共享信息；你可以通过该部分所述的选项限制这种情况。",
+    "text": "我们使用 Unity Gaming Services（Unity Technologies）提供匿名登录、Cloud Save 和统计分析，使用 Google AdMob（Google）来展示广告，并使用 Google Play Games（Google）在 Android 上提供成就、排行榜和可选登录。Unity、Google 及 Google 的广告合作伙伴依据各自的条款处理信息，并可能在你所在国家或地区以外（包括美国）处理。我们不会出售你的姓名或联系方式（我们并没有这些信息）。Google 及其广告合作伙伴可能会收到“广告”部分所述的广告数据，部分法律将其称为为广告目的而共享信息；你可以通过该部分所述的选项限制这种情况。",
     "link": "阅读 Unity 的隐私政策（英文）",
-    "linkAria": "Unity 的隐私政策（英文，在新标签页中打开）"
+    "linkAria": "Unity 的隐私政策（英文，在新标签页中打开）",
+    "googleLink": "阅读 Google 的隐私政策",
+    "googleLinkAria": "Google 的隐私政策（在新标签页中打开）"
   },
   "retention": {
     "title": "保存多久",
@@ -122,7 +130,7 @@
   },
   "changes": {
     "title": "本政策的变更",
-    "text": "如果游戏发生影响你隐私的变化（例如增加使用 Google Play Games 或 Apple Game Center 登录），我们会在变化到达你之前更新本政策。顶部的日期显示最近一次更新的时间。"
+    "text": "如果游戏发生影响你隐私的变化（例如增加使用 Apple Game Center 登录），我们会在变化到达你之前更新本政策。顶部的日期显示最近一次更新的时间。"
   },
   "website": {
     "title": "本网站",

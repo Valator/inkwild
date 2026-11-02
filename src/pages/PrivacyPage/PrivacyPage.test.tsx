@@ -24,9 +24,9 @@ function renderPrivacy(locale: LocaleCode) {
 }
 
 describe.each([
-  ['en', 'Privacy Policy', 'Last updated: October 30, 2026'],
-  ['es', 'Política de privacidad', 'Última actualización: 30 de octubre de 2026'],
-  ['zh', '隐私政策', '最后更新：2026年10月30日'],
+  ['en', 'Privacy Policy', 'Last updated: November 2, 2026'],
+  ['es', 'Política de privacidad', 'Última actualización: 2 de noviembre de 2026'],
+  ['zh', '隐私政策', '最后更新：2026年11月2日'],
 ] as const)('privacy page in %s', (locale, title, updated) => {
   it('has one h1, the update date and a heading for every section', () => {
     renderPrivacy(locale)
@@ -57,6 +57,9 @@ describe.each([
     const unity = document.querySelector('a[href="https://unity.com/legal/privacy-policy"]')
     expect(unity).toHaveAttribute('rel', 'noopener noreferrer')
     expect(unity).toHaveAttribute('target', '_blank')
+    const google = document.querySelector('a[href="https://policies.google.com/privacy"]')
+    expect(google).toHaveAttribute('rel', 'noopener noreferrer')
+    expect(google).toHaveAttribute('target', '_blank')
     expect(document.querySelector('a[href^="mailto:"]')).toBeNull()
     expect(document.querySelector('.policy__placeholder')).toBeInTheDocument()
   })

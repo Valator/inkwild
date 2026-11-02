@@ -8,7 +8,7 @@
   "updated": "Last updated: {{date}}",
   "summary": {
     "title": "The short version",
-    "text": "Magical Garden has no accounts. It contains ads, and it offers one optional one-time purchase that removes them. It gives you a random anonymous player ID and saves your progress on your device and in Unity Cloud Save. Anonymous play statistics are only collected if you say yes, and you can turn them off at any time."
+    "text": "Magical Garden has no accounts of its own; on Android you can choose to use Google Play Games for achievements and to keep your progress on a new phone. It contains ads, and it offers one optional one-time purchase that removes them. It gives you a random anonymous player ID and saves your progress on your device and in Unity Cloud Save. Anonymous play statistics are only collected if you say yes, and you can turn them off at any time."
   },
   "intro": "This policy explains what information Magical Garden (the \"game\") and the InkWild Games website (inkwildgames.com) handle, why, and what choices you have. \"We\" means InkWild Games, the independent studio that makes the game.",
   "collect": {
@@ -16,7 +16,7 @@
     "intro": "Magical Garden asks for no email address, real name, or password. This is everything it handles:",
     "id": {
       "label": "Anonymous player ID.",
-      "text": "When you open the game it signs you in anonymously through Unity Authentication. The ID is a random code kept on your device. It is not linked to your name, email, or phone."
+      "text": "When you open the game it signs you in anonymously through Unity Authentication. The ID is a random code kept on your device. It is not linked to your name, email, or phone, unless you choose to link Google Play Games (see below)."
     },
     "progress": {
       "label": "Game progress.",
@@ -25,6 +25,10 @@
     "ladder": {
       "label": "Ladder (global ranking).",
       "text": "If you play the Ladder mode, the game sends your Ladder score, the number that started that run (a random seed, used to check scores) and the Ladder name you choose (3 to 16 letters or digits) to Unity Gaming Services (Leaderboards), linked to the game's anonymous player ID. Your name and best score are shown to other players on the ranking. You can change your name in Settings at any time; please do not use your real name. Scores are kept while the ranking exists; email us at inkwildgames@gmail.com to have yours removed."
+    },
+    "playgames": {
+      "label": "Google Play Games (Android, optional).",
+      "text": "If you use Google Play Games on your phone, it may sign you in to the game automatically when the game starts. While you are signed in, the game sends Google the achievements you earn and your Ladder scores. Google shows them, with your Play Games profile name and picture, in Google Play Games, where other players may see them depending on your Play Games settings; Google handles this under its own privacy policy. If you also tap Sign in under Account in Settings, your Play Games account is linked to the game's anonymous player ID in Unity Authentication, so your progress can be restored on a new phone. Unity then receives your Play Games player ID, never your email address. The game itself does not receive your email address, real name, or profile picture."
     },
     "stats": {
       "label": "Anonymous play statistics (only if you allow).",
@@ -82,27 +86,31 @@
     "intro": "Magical Garden is free to play, and every level pack is free. It offers one optional, one-time purchase: Remove Ads.",
     "pay": "You pay through Google Play or the Apple App Store, which handle your payment. The game never sees your card details.",
     "effect": "Remove Ads turns off every ad permanently, both the ads between rounds and the optional rewarded ad, and changes nothing else in the game.",
-    "restore": "We have no account system. If you get a new phone, the purchase is restored from the store; you can also tap Restore purchases in Settings."
+    "restore": "We have no account system of our own. If you get a new phone, the purchase is restored from the store; you can also tap Restore purchases in Settings."
   },
   "use": {
     "title": "How we use information",
     "li1": "To run the game: sign you in anonymously and save and restore your progress.",
     "li2": "To understand where players get stuck so we can balance levels and fix problems, using the anonymous statistics you allowed.",
     "li3": "To find and fix errors and keep the game working and secure.",
-    "li4": "To show ads, and to unlock the ad-free game if you buy Remove Ads."
+    "li4": "To show ads, and to unlock the ad-free game if you buy Remove Ads.",
+    "li5": "To show your achievements and Ladder scores in Google Play Games and, if you sign in, to restore your progress on a new phone."
   },
   "choices": {
     "title": "Your choices",
     "li1": "Play data: switch it on or off at any time in Settings. Turning it off takes effect at once and discards anything not yet sent.",
     "li2": "Offline play: the game works without a connection; progress is then kept on your device and synced later.",
     "li3": "Deleting data: uninstalling the game removes the data on your device. To ask us to delete your cloud progress, contact us (see below). Because your player ID is anonymous, we may ask for details such as approximate dates so we can find your records.",
-    "li4": "Ads: change your consent with the Ad privacy button in Settings (where a consent form is shown), or reset or limit the advertising identifier in your phone's settings. Buying Remove Ads turns every ad off."
+    "li4": "Ads: change your consent with the Ad privacy button in Settings (where a consent form is shown), or reset or limit the advertising identifier in your phone's settings. Buying Remove Ads turns every ad off.",
+    "li5": "Google Play Games: you can sign out of Google Play Games or change who sees your profile in the Google Play Games settings. To have your progress unlinked from your Play Games account, contact us."
   },
   "providers": {
     "title": "Who processes your information",
-    "text": "We use Unity Gaming Services (Unity Technologies) for anonymous sign-in, Cloud Save, and analytics, and Google AdMob (Google) to show ads. Unity, Google, and Google's ad partners process information under their own terms, and they may process it in countries other than yours, including the United States. We do not sell your name or contact details (we do not have them). The advertising data described under Advertising may be received by Google and its ad partners, which some laws describe as sharing information for advertising; you can limit this with the choices described there.",
+    "text": "We use Unity Gaming Services (Unity Technologies) for anonymous sign-in, Cloud Save, and analytics, Google AdMob (Google) to show ads, and Google Play Games (Google) for achievements, its leaderboard, and optional sign-in on Android. Unity, Google, and Google's ad partners process information under their own terms, and they may process it in countries other than yours, including the United States. We do not sell your name or contact details (we do not have them). The advertising data described under Advertising may be received by Google and its ad partners, which some laws describe as sharing information for advertising; you can limit this with the choices described there.",
     "link": "Read Unity's privacy policy",
-    "linkAria": "Unity's privacy policy (opens in a new tab)"
+    "linkAria": "Unity's privacy policy (opens in a new tab)",
+    "googleLink": "Read Google's privacy policy",
+    "googleLinkAria": "Google's privacy policy (opens in a new tab)"
   },
   "retention": {
     "title": "How long we keep it",
@@ -122,7 +130,7 @@
   },
   "changes": {
     "title": "Changes to this policy",
-    "text": "If the game changes in a way that affects your privacy (for example by adding sign-in with Google Play Games or Apple Game Center), we will update this policy before the change reaches you. The date at the top shows when it was last updated."
+    "text": "If the game changes in a way that affects your privacy (for example by adding sign-in with Apple Game Center), we will update this policy before the change reaches you. The date at the top shows when it was last updated."
   },
   "website": {
     "title": "This website",

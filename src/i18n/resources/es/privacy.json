@@ -8,7 +8,7 @@
   "updated": "Última actualización: {{date}}",
   "summary": {
     "title": "En pocas palabras",
-    "text": "Magical Garden no tiene cuentas. Contiene anuncios y ofrece una compra única y opcional que los quita. Te asigna un ID de jugador anónimo y aleatorio y guarda tu progreso en tu dispositivo y en Unity Cloud Save. Las estadísticas anónimas de juego solo se recopilan si tú aceptas, y puedes desactivarlas en cualquier momento."
+    "text": "Magical Garden no tiene cuentas propias; en Android puedes usar Google Play Juegos para los logros y para conservar tu progreso en un teléfono nuevo. Contiene anuncios y ofrece una compra única y opcional que los quita. Te asigna un ID de jugador anónimo y aleatorio y guarda tu progreso en tu dispositivo y en Unity Cloud Save. Las estadísticas anónimas de juego solo se recopilan si tú aceptas, y puedes desactivarlas en cualquier momento."
   },
   "intro": "Esta política explica qué información tratan Magical Garden (el \"juego\") y el sitio web de InkWild Games (inkwildgames.com), para qué se usa y qué opciones tienes. \"Nosotros\" se refiere a InkWild Games, el estudio independiente que crea el juego.",
   "collect": {
@@ -16,7 +16,7 @@
     "intro": "Magical Garden no te pide correo electrónico, nombre real ni contraseña. Esto es todo lo que trata:",
     "id": {
       "label": "ID de jugador anónimo.",
-      "text": "Al abrir el juego, inicias sesión de forma anónima mediante Unity Authentication. El ID es un código aleatorio que se guarda en tu dispositivo. No está vinculado a tu nombre, correo ni teléfono."
+      "text": "Al abrir el juego, inicias sesión de forma anónima mediante Unity Authentication. El ID es un código aleatorio que se guarda en tu dispositivo. No está vinculado a tu nombre, correo ni teléfono, salvo que decidas vincular Google Play Juegos (ver más abajo)."
     },
     "progress": {
       "label": "Progreso del juego.",
@@ -25,6 +25,10 @@
     "ladder": {
       "label": "Ladder (clasificación global).",
       "text": "Si juegas al modo Ladder, el juego envía tu puntuación de Ladder, el número con el que empezó esa partida (una semilla aleatoria que sirve para comprobar las puntuaciones) y el nombre de Ladder que elijas (de 3 a 16 letras o cifras) a Unity Gaming Services (Leaderboards), vinculados al identificador anónimo de jugador del juego. Tu nombre y tu mejor puntuación se muestran a otros jugadores en la clasificación. Puedes cambiar tu nombre en Ajustes en cualquier momento; no uses tu nombre real. Las puntuaciones se guardan mientras exista la clasificación; escríbenos a inkwildgames@gmail.com para que eliminemos la tuya."
+    },
+    "playgames": {
+      "label": "Google Play Juegos (Android, opcional).",
+      "text": "Si usas Google Play Juegos en tu teléfono, puede iniciar tu sesión en el juego automáticamente al abrirlo. Mientras tengas la sesión iniciada, el juego envía a Google los logros que consigues y tus puntuaciones de Ladder. Google los muestra, junto con el nombre y la foto de tu perfil de Play Juegos, en Google Play Juegos, donde otros jugadores pueden verlos según tu configuración de Play Juegos; Google trata esta información según su propia política de privacidad. Si además pulsas Entrar en Cuenta, en Ajustes (Settings), tu cuenta de Play Juegos se vincula al ID de jugador anónimo del juego en Unity Authentication, para que tu progreso pueda restaurarse en un teléfono nuevo. Unity recibe entonces tu ID de jugador de Play Juegos, nunca tu correo. El juego no recibe tu correo, tu nombre real ni tu foto de perfil."
     },
     "stats": {
       "label": "Estadísticas anónimas de juego (solo si lo permites).",
@@ -82,27 +86,31 @@
     "intro": "Magical Garden es gratis y todos los paquetes de niveles son gratuitos. Ofrece una única compra opcional y de pago único: Remove Ads (Quitar anuncios).",
     "pay": "Pagas a través de Google Play o la App Store de Apple, que gestionan tu pago. El juego nunca ve los datos de tu tarjeta.",
     "effect": "Remove Ads desactiva todos los anuncios de forma permanente, tanto los de entre rondas como el anuncio con recompensa opcional, y no cambia nada más en el juego.",
-    "restore": "No tenemos un sistema de cuentas. Si cambias de teléfono, la compra se restaura desde la tienda; también puedes pulsar Restore purchases (Restaurar compras) en Ajustes (Settings)."
+    "restore": "No tenemos un sistema de cuentas propio. Si cambias de teléfono, la compra se restaura desde la tienda; también puedes pulsar Restore purchases (Restaurar compras) en Ajustes (Settings)."
   },
   "use": {
     "title": "Cómo usamos la información",
     "li1": "Para que el juego funcione: iniciar tu sesión anónima y guardar y recuperar tu progreso.",
     "li2": "Para entender dónde se atoran los jugadores y así equilibrar los niveles y corregir problemas, con las estadísticas anónimas que permitiste.",
     "li3": "Para detectar y corregir errores, y mantener el juego funcionando y seguro.",
-    "li4": "Para mostrar anuncios y desbloquear el juego sin anuncios si compras Remove Ads."
+    "li4": "Para mostrar anuncios y desbloquear el juego sin anuncios si compras Remove Ads.",
+    "li5": "Para mostrar tus logros y puntuaciones de Ladder en Google Play Juegos y, si inicias sesión, restaurar tu progreso en un teléfono nuevo."
   },
   "choices": {
     "title": "Tus opciones",
     "li1": "Datos de juego (Play data): actívalos o desactívalos cuando quieras en Ajustes (Settings). Al desactivarlos, el cambio es inmediato y se descarta lo que aún no se haya enviado.",
     "li2": "Juego sin conexión: el juego funciona sin internet; el progreso se guarda entonces en tu dispositivo y se sincroniza después.",
     "li3": "Eliminar datos: al desinstalar el juego se borran los datos de tu dispositivo. Para pedirnos que eliminemos tu progreso en la nube, escríbenos (consulta más abajo). Como tu ID de jugador es anónimo, es posible que te pidamos datos como fechas aproximadas para poder localizar tus registros.",
-    "li4": "Anuncios: cambia tu consentimiento con el botón Ad privacy en Ajustes (Settings) (donde se muestre un formulario de consentimiento), o restablece o limita el identificador publicitario en los ajustes de tu teléfono. Comprar Remove Ads desactiva todos los anuncios."
+    "li4": "Anuncios: cambia tu consentimiento con el botón Ad privacy en Ajustes (Settings) (donde se muestre un formulario de consentimiento), o restablece o limita el identificador publicitario en los ajustes de tu teléfono. Comprar Remove Ads desactiva todos los anuncios.",
+    "li5": "Google Play Juegos: puedes cerrar la sesión de Google Play Juegos o cambiar quién ve tu perfil en la configuración de Google Play Juegos. Para desvincular tu progreso de tu cuenta de Play Juegos, contáctanos."
   },
   "providers": {
     "title": "Quién procesa tu información",
-    "text": "Usamos Unity Gaming Services (Unity Technologies) para el inicio de sesión anónimo, Cloud Save y las estadísticas, y Google AdMob (Google) para mostrar anuncios. Unity, Google y los socios publicitarios de Google procesan la información bajo sus propios términos y pueden hacerlo en países distintos al tuyo, incluido Estados Unidos. No vendemos tu nombre ni tus datos de contacto (no los tenemos). Los datos de publicidad descritos en Publicidad pueden ser recibidos por Google y sus socios publicitarios, algo que algunas leyes consideran compartir información con fines publicitarios; puedes limitarlo con las opciones descritas allí.",
+    "text": "Usamos Unity Gaming Services (Unity Technologies) para el inicio de sesión anónimo, Cloud Save y las estadísticas, Google AdMob (Google) para mostrar anuncios, y Google Play Juegos (Google) para los logros, su clasificación y el inicio de sesión opcional en Android. Unity, Google y los socios publicitarios de Google procesan la información bajo sus propios términos y pueden hacerlo en países distintos al tuyo, incluido Estados Unidos. No vendemos tu nombre ni tus datos de contacto (no los tenemos). Los datos de publicidad descritos en Publicidad pueden ser recibidos por Google y sus socios publicitarios, algo que algunas leyes consideran compartir información con fines publicitarios; puedes limitarlo con las opciones descritas allí.",
     "link": "Lee la política de privacidad de Unity",
-    "linkAria": "Política de privacidad de Unity (se abre en una pestaña nueva)"
+    "linkAria": "Política de privacidad de Unity (se abre en una pestaña nueva)",
+    "googleLink": "Lee la política de privacidad de Google",
+    "googleLinkAria": "Política de privacidad de Google (se abre en una pestaña nueva)"
   },
   "retention": {
     "title": "Cuánto tiempo la conservamos",
@@ -122,7 +130,7 @@
   },
   "changes": {
     "title": "Cambios a esta política",
-    "text": "Si el juego cambia de una forma que afecte tu privacidad (por ejemplo, al añadir el inicio de sesión con Google Play Juegos o Apple Game Center), actualizaremos esta política antes de que el cambio llegue a ti. La fecha de arriba indica cuándo se actualizó por última vez."
+    "text": "Si el juego cambia de una forma que afecte tu privacidad (por ejemplo, al añadir el inicio de sesión con Apple Game Center), actualizaremos esta política antes de que el cambio llegue a ti. La fecha de arriba indica cuándo se actualizó por última vez."
   },
   "website": {
     "title": "Este sitio web",

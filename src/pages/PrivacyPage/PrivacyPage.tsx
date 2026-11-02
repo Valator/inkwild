@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { toMailtoUrl } from '../../config/links'
-import { GOOGLE_ADS_PRIVACY_URL, PRIVACY_LAST_UPDATED, UNITY_PRIVACY_URL } from '../../config/privacy'
+import { GOOGLE_ADS_PRIVACY_URL, GOOGLE_PRIVACY_URL, PRIVACY_LAST_UPDATED, UNITY_PRIVACY_URL } from '../../config/privacy'
 import { siteConfig } from '../../config/siteConfig'
 import { AnnouncerProvider } from '../../components/Announcer/Announcer'
 import { DocumentMeta } from '../../components/DocumentMeta/DocumentMeta'
@@ -62,6 +62,9 @@ export function PrivacyPage() {
                 </li>
                 <li>
                   <strong>{t('collect.ladder.label')}</strong> {t('collect.ladder.text')}
+                </li>
+                <li>
+                  <strong>{t('collect.playgames.label')}</strong> {t('collect.playgames.text')}
                 </li>
                 <li>
                   <strong>{t('collect.stats.label')}</strong> {t('collect.stats.text')}
@@ -130,6 +133,7 @@ export function PrivacyPage() {
                 <li>{t('use.li2')}</li>
                 <li>{t('use.li3')}</li>
                 <li>{t('use.li4')}</li>
+                <li>{t('use.li5')}</li>
               </ul>
             </PolicySection>
 
@@ -139,6 +143,7 @@ export function PrivacyPage() {
                 <li>{t('choices.li2')}</li>
                 <li>{t('choices.li3')}</li>
                 <li>{t('choices.li4')}</li>
+                <li>{t('choices.li5')}</li>
               </ul>
             </PolicySection>
 
@@ -147,6 +152,11 @@ export function PrivacyPage() {
               <p>
                 <a href={UNITY_PRIVACY_URL} target="_blank" rel="noopener noreferrer" aria-label={t('providers.linkAria')}>
                   {t('providers.link')}
+                </a>
+              </p>
+              <p>
+                <a href={GOOGLE_PRIVACY_URL} target="_blank" rel="noopener noreferrer" aria-label={t('providers.googleLinkAria')}>
+                  {t('providers.googleLink')}
                 </a>
               </p>
             </PolicySection>

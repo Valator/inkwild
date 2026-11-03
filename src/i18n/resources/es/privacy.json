@@ -42,6 +42,10 @@
       "label": "Estado de la compra.",
       "text": "Si tienes Remove Ads (Quitar anuncios), algo que el juego comprueba con Google Play o la App Store de Apple. El pago lo gestiona la tienda."
     },
+    "updates": {
+      "label": "Actualizaciones (Android).",
+      "text": "Cuando el juego se abre, y cuando vuelves a él, pregunta a Google Play si hay una versión más reciente; si la hay, se te pide actualizar antes de jugar. Para responder, Google Play usa los datos de tu dispositivo y la versión instalada del juego, según sus propias condiciones. El juego solo sabe si hay una actualización disponible."
+    },
     "device": {
       "label": "Solo en tu dispositivo.",
       "text": "Tus ajustes de volumen, vibración y modo calmado, los consejos que ya viste, una partida interrumpida para que puedas retomarla y tu respuesta sobre las estadísticas de juego."

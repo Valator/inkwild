@@ -24,9 +24,9 @@ function renderPrivacy(locale: LocaleCode) {
 }
 
 describe.each([
-  ['en', 'Privacy Policy', 'Last updated: November 2, 2026'],
-  ['es', 'Política de privacidad', 'Última actualización: 2 de noviembre de 2026'],
-  ['zh', '隐私政策', '最后更新：2026年11月2日'],
+  ['en', 'Privacy Policy', 'Last updated: November 3, 2026'],
+  ['es', 'Política de privacidad', 'Última actualización: 3 de noviembre de 2026'],
+  ['zh', '隐私政策', '最后更新：2026年11月3日'],
 ] as const)('privacy page in %s', (locale, title, updated) => {
   it('has one h1, the update date and a heading for every section', () => {
     renderPrivacy(locale)

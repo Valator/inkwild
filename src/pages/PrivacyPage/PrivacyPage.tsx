@@ -76,6 +76,9 @@ export function PrivacyPage() {
                   <strong>{t('collect.purchase.label')}</strong> {t('collect.purchase.text')}
                 </li>
                 <li>
+                  <strong>{t('collect.updates.label')}</strong> {t('collect.updates.text')}
+                </li>
+                <li>
                   <strong>{t('collect.device.label')}</strong> {t('collect.device.text')}
                 </li>
               </ul>

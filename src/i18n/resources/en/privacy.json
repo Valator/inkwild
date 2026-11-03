@@ -42,6 +42,10 @@
       "label": "Purchase status.",
       "text": "Whether you own Remove Ads, which the game checks with Google Play or the Apple App Store. Payment itself is handled by the store."
     },
+    "updates": {
+      "label": "Updates (Android).",
+      "text": "When the game starts, and when you return to it, it asks Google Play whether a newer version is available; if there is one, you are asked to update before playing. To answer, Google Play uses your device details and the installed version of the game, under Google Play's own terms. The game only learns whether an update is available."
+    },
     "device": {
       "label": "Kept on your device only.",
       "text": "Your volume, haptics, and calm mode settings, which how-to tips you have seen, a run that was interrupted so you can resume it, and your answer about play statistics."

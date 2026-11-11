@@ -24,11 +24,11 @@
     },
     "ladder": {
       "label": "Ladder（全球排行榜）。",
-      "text": "如果你玩 Ladder 模式，为保证排行榜公平，每一局都会在我们的游戏服务器（Unity Cloud Code，属于 Unity Gaming Services）上进行核验。开局时，游戏从服务器获取本局的起始编号（一个随机种子）；结束时，游戏发送本局的操作及其时间、分数和时长。服务器会重放这一局，只有核验通过才会将分数发布到排行榜（Unity Gaming Services，Leaderboards）。这些操作仅用于本次核验，不会保存。为识别这一局，服务器会保存其编号、起始编号和开始时间，最长 24 小时；还会保存近期的开局时间以限制开局频率，以及未通过核验的局数。这些信息都与游戏的匿名玩家 ID 关联。排行榜会向其他玩家显示你的名称和最高分，并随之保存本局的起始编号和规则版本。你选择的 Ladder 名称为 3 到 16 个字母或数字；你可以随时在“设置”中更改，请不要使用真实姓名。离线进行的对局只保留在你的设备上，不会发送。分数会在排行榜存在期间保留；如需删除你的分数，请发送邮件至 inkwildgames@gmail.com。"
+      "text": "如果你玩 Ladder 模式，为保证排行榜公平，每一局都会在我们的游戏服务器（Unity Cloud Code，属于 Unity Gaming Services）上进行核验。开局时，游戏从服务器获取本局的起始编号（一个随机种子）；结束时，游戏发送本局的操作及其时间、分数和时长。服务器会重放这一局，只有核验通过才会将分数发布到排行榜（Unity Gaming Services，Leaderboards）。这些操作仅用于本次核验，不会保存。为识别这一局，服务器会保存其编号、起始编号和开始时间，最长 24 小时；还会保存近期的开局时间以限制开局频率，以及未通过核验的局数。这些信息都与游戏的匿名玩家 ID 关联。排行榜会向其他玩家显示你的名称和最高分，并随之保存本局的起始编号和规则版本。你的 Ladder 名称由 3 到 16 个字母或数字组成。在 Android 上，如果你使用 Google Play Games 且尚未自己输入名称，你的 Ladder 名称就是你的 Play Games 玩家名称（去掉空格和符号，最多 16 个字符）。你可以随时在“设置”中输入其他名称，之后游戏会保留你输入的名称；请不要使用你的真实姓名。离线进行的对局只保留在你的设备上，不会发送。分数会在排行榜存在期间保留；如需删除你的分数，请发送邮件至 inkwildgames@gmail.com。"
     },
     "playgames": {
       "label": "Google Play Games（Android，可选）。",
-      "text": "如果你在手机上使用 Google Play Games，它可能会在游戏启动时自动为你登录游戏。登录期间，游戏会将你获得的成就和 Ladder 分数发送给 Google。Google 会在 Google Play Games 中展示这些内容，并附上你的 Play Games 个人资料名称和头像；其他玩家能否看到取决于你的 Play Games 设置。Google 依据其自身的隐私政策处理这些信息。如果你还在设置（Settings）的“账号”中点击“登录”，你的 Play Games 账号会在 Unity Authentication 中与游戏的匿名玩家 ID 关联，以便在新手机上恢复你的进度。此时 Unity 会收到你的 Play Games 玩家 ID，但绝不会收到你的邮箱地址。游戏本身不会收到你的邮箱地址、真实姓名或头像。"
+      "text": "如果你在手机上使用 Google Play Games，它可能会在游戏启动时自动为你登录游戏。登录期间，游戏会将你获得的成就和 Ladder 分数发送给 Google。Google 会在 Google Play Games 中展示这些内容，并附上你的 Play Games 个人资料名称和头像；其他玩家能否看到取决于你的 Play Games 设置。Google 依据其自身的隐私政策处理这些信息。如果你还在设置（Settings）的“账号”中点击“登录”，你的 Play Games 账号会在 Unity Authentication 中与游戏的匿名玩家 ID 关联，以便在新手机上恢复你的进度。此时 Unity 会收到你的 Play Games 玩家 ID，但绝不会收到你的邮箱地址。游戏会收到你的 Play Games 玩家名称；除非你已在“设置”中输入自己的 Ladder 名称，否则游戏会将其用作你的 Ladder 名称：该名称会发送给 Unity（Authentication 和 Leaderboards），并与你的最高分一起在 Ladder 排行榜上向其他玩家显示。游戏不会收到你的邮箱地址、真实姓名或头像。"
     },
     "stats": {
       "label": "匿名游戏统计数据（仅在你允许时）。",
@@ -98,7 +98,7 @@
     "li2": "了解玩家在哪里遇到困难，以便平衡关卡并修复问题，使用的是你允许收集的匿名统计数据。",
     "li3": "发现并修复错误，保持游戏正常运行和安全。",
     "li4": "展示广告，并在你购买“移除广告”后为你提供无广告的游戏。",
-    "li5": "在 Google Play Games 中展示你的成就和 Ladder 分数；如果你登录，还用于在新手机上恢复你的进度。"
+    "li5": "在 Google Play Games 中展示你的成就和 Ladder 分数；除非你自己选择名称，否则将你的 Play Games 玩家名称用作 Ladder 名称；如果你登录，还用于在新手机上恢复你的进度。"
   },
   "choices": {
     "title": "你的选择",

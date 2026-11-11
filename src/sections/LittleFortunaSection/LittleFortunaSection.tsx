@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import { ParallaxLayer } from '../../components/ParallaxLayer/ParallaxLayer'
 import { Reveal } from '../../components/Reveal/Reveal'
 import { StoreButtons } from '../../components/StoreButtons/StoreButtons'
 import city from '../../assets/games/fortuna-city.webp'
@@ -35,9 +34,10 @@ export function LittleFortunaSection() {
 
   return (
     <section id="little-fortuna" className="section fortuna" tabIndex={-1} aria-labelledby="fortuna-title">
-      <ParallaxLayer speed={0.08} className="fortuna__backdrop">
+      {/* The hub's painted city with its five layers assembled flat; the game tilts them, the site does not. */}
+      <div className="fortuna__backdrop" aria-hidden="true">
         <img src={city} width={1600} height={900} alt="" loading="lazy" decoding="async" />
-      </ParallaxLayer>
+      </div>
       <div className="fortuna__veil" aria-hidden="true" />
 
       <div className="container fortuna__grid">

@@ -2,6 +2,7 @@ import 'i18next'
 import type common from './resources/en/common.json'
 import type follow from './resources/en/follow.json'
 import type footer from './resources/en/footer.json'
+import type fortuna from './resources/en/fortuna.json'
 import type game from './resources/en/game.json'
 import type home from './resources/en/home.json'
 import type privacy from './resources/en/privacy.json'
@@ -17,6 +18,7 @@ declare module 'i18next' {
       navigation: typeof navigation
       home: typeof home
       game: typeof game
+      fortuna: typeof fortuna
       studio: typeof studio
       follow: typeof follow
       footer: typeof footer

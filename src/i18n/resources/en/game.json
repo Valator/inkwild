@@ -13,10 +13,10 @@
     "subtitle": "to iOS and Android"
   },
   "stores": {
-    "label": "Store availability",
+    "label": "Store availability: {{game}}",
     "pendingPrefix": "Coming soon on",
     "livePrefix": "Get it on",
-    "pendingAria": "{{store}}: the store listing isn't available yet",
+    "pendingAria": "{{game}} on {{store}}: the store listing isn't available yet",
     "liveAria": "{{game}} on {{store}} (opens in a new tab)",
     "notice": "The {{store}} listing isn't available yet. We'll add the link here as soon as {{game}} is ready."
   },

@@ -1,6 +1,6 @@
 # InkWild Games website
 
-Single-page, multilingual (English / Spanish) site for **InkWild Games** and its first game, **Magical Garden**.
+Single-page, multilingual (English / Spanish / Simplified Chinese) site for **InkWild Games** and its games, **Magical Garden** and **Little Fortuna**.
 React 19 · TypeScript (strict) · Vite · `i18next` + `react-i18next` · plain CSS with custom properties.
 
 ```bash
@@ -21,7 +21,7 @@ npm run check                    # i18n validation + tsc + lint + tests + produc
 ## Configuration
 
 Everything an owner is likely to edit lives in [`src/config/siteConfig.ts`](src/config/siteConfig.ts):
-contact email, the App Store / Google Play URLs, social profiles, default locale, and whether browser-language
+contact email, each game's App Store / Google Play URLs (`games.magicalGarden`, `games.littleFortuna`), social profiles, default locale, and whether browser-language
 detection and persistence are on. **Empty values are never rendered as links** — the UI shows a translated
 "coming soon" state instead. Filled-in URLs must be `https:` (or a valid email); anything else is ignored.
 
@@ -84,6 +84,8 @@ One-time setup: **Settings → Pages → Source: GitHub Actions**, then set the 
 
 Optimised images are committed. `npm run assets` rebuilds them from the Magical Garden Unity project
 (`~/MagicalGarden/Assets/Art`, `DesignProposals`) — override with `MG_ART_DIR` / `MG_DESIGN_DIR`.
+Little Fortuna's pictures come from the game's own shipped art (`~/ThievesRun/Assets/Resources/Art`, override with `LF_ART_DIR`), never from
+its concept art; the logo's blank ribbon is cropped off and the title screen's five painted layers are stacked into one backdrop.
 
 **InkWild Games logo:** the supplied original (gold lettering on pure black, no alpha) is kept untouched in
 `assets-source/inkwild-logo.webp`. `npm run assets` only resizes it and keys the pure-black backdrop out to transparency
@@ -97,7 +99,7 @@ src/
   assets/{brand,games}   optimised images
   components/            Header, LanguageSwitcher, MobileNavigation, ParticleField, ParallaxLayer, Reveal,
                          StoreButtons, SocialLinks, Footer, DocumentMeta, Announcer, …
-  sections/              HeroSection, MagicalGardenSection, StudioSection, FollowSection (#contact)
+  sections/              HeroSection, MagicalGardenSection, LittleFortunaSection, StudioSection, FollowSection (#contact)
   config/                siteConfig, navigation, seo, links (URL validation)
   i18n/                  locales registry, detection, storage, validation, resources/<locale>/<ns>.json
   hooks/ lib/            reduced motion, active section, parallax & reveal engines, <head> helpers

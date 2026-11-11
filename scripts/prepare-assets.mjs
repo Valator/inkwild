@@ -6,6 +6,7 @@
  * Sources (override with environment variables if your files live elsewhere):
  *   MG_ART_DIR      Magical Garden Unity project art     (default ~/MagicalGarden/Assets/Art)
  *   MG_DESIGN_DIR   Magical Garden design proposals       (default ~/MagicalGarden/DesignProposals)
+ *   LF_ART_DIR      Little Fortuna game art (the pictures the game ships) (default ~/ThievesRun/Assets/Resources/Art)
  *   IW_LOGO_SOURCE  InkWild Games logo original            (default assets-source/inkwild-logo.webp)
  *
  * The generated files are committed, so this only needs to run when a source changes.
@@ -25,6 +26,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const home = homedir()
 const ART = process.env.MG_ART_DIR ?? path.join(home, 'MagicalGarden/Assets/Art')
 const DESIGN = process.env.MG_DESIGN_DIR ?? path.join(home, 'MagicalGarden/DesignProposals')
+
+const FORTUNA_ART = process.env.LF_ART_DIR ?? path.join(home, 'ThievesRun/Assets/Resources/Art')
 
 const out = (...p) => path.join(root, ...p)
 const LOGO_SOURCE = process.env.IW_LOGO_SOURCE ?? out('assets-source/inkwild-logo.webp')
@@ -107,6 +110,49 @@ for (const [name, file] of [
 for (const tile of ['leaf', 'flower', 'mushroom', 'potion', 'fruit', 'firefly']) {
   await run(`games/tile-${tile}.webp`, path.join(ART, 'Tiles', `${tile}.png`), () =>
     sharp(path.join(ART, 'Tiles', `${tile}.png`)).resize({ width: 256 }).webp(webp(88)).toFile(path.join(gamesDir, `tile-${tile}.webp`)),
+  )
+}
+
+// ---- Little Fortuna art: the game's own pictures (never the concept art) -------------------
+const fortunaTitle = path.join(FORTUNA_ART, 'UI/Title')
+await run('games/fortuna-logo.webp', path.join(fortunaTitle, 'logo.png'), async () => {
+  // The in-game logo carries a blank ribbon that the game fills with a translated subtitle; the
+  // site writes its subtitle as text, so the ribbon is cropped away (the lettering is untouched).
+  const { width } = await sharp(path.join(fortunaTitle, 'logo.png')).metadata()
+  await sharp(path.join(fortunaTitle, 'logo.png'))
+    .extract({ left: 0, top: 0, width, height: 560 })
+    .resize({ width: 900 })
+    .webp({ quality: 90, alphaQuality: 100, effort: 5 })
+    .toFile(path.join(gamesDir, 'fortuna-logo.webp'))
+})
+await run('games/fortuna-city.webp', path.join(fortunaTitle, 'sky.png'), async () => {
+  // The title screen's five painted layers, stacked back to front as the game draws them.
+  const layers = ['far', 'mid', 'perch', 'foreground'].map((name) => ({ input: path.join(fortunaTitle, `${name}.png`) }))
+  const stacked = await sharp(path.join(fortunaTitle, 'sky.png'))
+    .flatten({ background: '#000000' })
+    .composite(layers)
+    .png()
+    .toBuffer()
+  await sharp(stacked)
+    .resize({ width: 1600 })
+    .webp(webp(80))
+    .toFile(path.join(gamesDir, 'fortuna-city.webp'))
+})
+for (const [name, file, width] of [
+  ['fortuna-thief', 'UI/title_thief.png', 720],
+  ['fortuna-guard', 'Characters/Frames/guard_stand_01.png', 256],
+  ['fortuna-jump', 'Characters/Frames/thief_jump_01.png', 256],
+  ['fortuna-coin', 'Pickups/coin.png', 256],
+  ['fortuna-cloak', 'Pickups/cloak.png', 256],
+  ['fortuna-lodestone', 'Pickups/lodestone.png', 256],
+  ['fortuna-pocket-watch', 'Treasures/pocket_watch.png', 256],
+  ['fortuna-jade-idol', 'Treasures/jade_idol.png', 256],
+]) {
+  await run(`games/${name}.webp`, path.join(FORTUNA_ART, file), () =>
+    sharp(path.join(FORTUNA_ART, file))
+      .resize({ width, height: width === 256 ? 256 : undefined, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .webp({ quality: 88, alphaQuality: 100, effort: 5 })
+      .toFile(path.join(gamesDir, `${name}.webp`)),
   )
 }
 

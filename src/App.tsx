@@ -5,6 +5,7 @@ import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 import { FollowSection } from './sections/FollowSection/FollowSection'
 import { HeroSection } from './sections/HeroSection/HeroSection'
+import { LittleFortunaSection } from './sections/LittleFortunaSection/LittleFortunaSection'
 import { MagicalGardenSection } from './sections/MagicalGardenSection/MagicalGardenSection'
 import { StudioSection } from './sections/StudioSection/StudioSection'
 
@@ -20,6 +21,7 @@ export default function App() {
         <main id="main" tabIndex={-1}>
           <HeroSection />
           <MagicalGardenSection />
+          <LittleFortunaSection />
           <StudioSection />
           <FollowSection />
         </main>

@@ -101,8 +101,8 @@ describe.each(['en', 'es'] as const)('content in %s', (locale) => {
   it('exposes every section with a heading and the four navigation links', () => {
     renderApp(locale)
     expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1)
-    expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(3)
-    for (const id of ['home', 'game', 'about', 'contact']) expect(document.getElementById(id)).toBeInTheDocument()
+    expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(4)
+    for (const id of ['home', 'game', 'little-fortuna', 'about', 'contact']) expect(document.getElementById(id)).toBeInTheDocument()
     const nav = screen.getAllByRole('navigation').find((n) => n.classList.contains('site-header__nav'))!
     expect(within(nav).getAllByRole('link')).toHaveLength(4)
   })
@@ -118,6 +118,25 @@ describe.each(['en', 'es'] as const)('content in %s', (locale) => {
   it('renders a copyright line with the current year and studio name', () => {
     renderApp(locale)
     expect(screen.getByText(new RegExp(`© ${new Date().getFullYear()} InkWild Games\\.`))).toBeInTheDocument()
+  })
+})
+
+describe('Little Fortuna section', () => {
+  it('introduces the game with its logo, subtitle and tagline', () => {
+    renderApp()
+    const section = document.getElementById('little-fortuna')!
+    expect(within(section).getByRole('heading', { level: 2, name: 'Little Fortuna' })).toBeInTheDocument()
+    expect(within(section).getByText('Thief & Tumble')).toBeInTheDocument()
+    expect(within(section).getByText('Run the rooftops. Outwit the Watch.')).toBeInTheDocument()
+    expect(within(section).getByRole('img', { name: /red-haired thief/ })).toBeInTheDocument()
+  })
+
+  it.each([
+    ['es', 'Ladronaje y volteretas'],
+    ['zh', '盗窃与翻跃'],
+  ] as const)('is translated (%s)', (locale, subtitle) => {
+    renderApp(locale)
+    expect(within(document.getElementById('little-fortuna')!).getByText(subtitle)).toBeInTheDocument()
   })
 })
 
@@ -141,7 +160,7 @@ describe('navigation', () => {
   it('translates navigation labels', () => {
     renderApp('es')
     const nav = screen.getAllByRole('navigation').find((n) => n.classList.contains('site-header__nav'))!
-    expect(within(nav).getAllByRole('link').map((a) => a.textContent)).toEqual(['Inicio', 'Nuestro juego', 'El estudio', 'Contacto'])
+    expect(within(nav).getAllByRole('link').map((a) => a.textContent)).toEqual(['Inicio', 'Nuestros juegos', 'El estudio', 'Contacto'])
   })
 })
 
@@ -196,7 +215,7 @@ describe('mobile menu', () => {
     })
     renderApp()
     await user.click(screen.getByRole('button', { name: 'Open menu' }))
-    await user.click(within(screen.getByRole('dialog', { name: 'Site menu' })).getByRole('link', { name: 'Our Game' }))
+    await user.click(within(screen.getByRole('dialog', { name: 'Site menu' })).getByRole('link', { name: 'Our Games' }))
     expect(screen.getByRole('button', { name: 'Open menu' })).toHaveAttribute('aria-expanded', 'false')
     expect(Element.prototype.scrollIntoView).toHaveBeenCalled()
     expect(window.location.hash).toBe('#game')
@@ -217,20 +236,27 @@ describe('mobile menu', () => {
 describe('store badges and links without configured URLs', () => {
   it('shows honest coming-soon states and no store links', () => {
     renderApp()
-    expect(screen.getByText('Coming soon')).toBeInTheDocument()
-    expect(screen.getByText('to iOS and Android')).toBeInTheDocument()
+    expect(screen.getAllByText('Coming soon')).toHaveLength(2)
+    expect(screen.getAllByText('to iOS and Android')).toHaveLength(2)
     expect(document.querySelector('a[href*="apps.apple.com"], a[href*="play.google.com"]')).toBeNull()
-    const list = screen.getByRole('list', { name: 'Store availability' })
+    const list = screen.getByRole('list', { name: 'Store availability: Magical Garden' })
     expect(within(list).queryAllByRole('link')).toHaveLength(0)
-    const apple = within(list).getByRole('button', { name: "App Store: the store listing isn't available yet" })
+    const apple = within(list).getByRole('button', { name: "Magical Garden on App Store: the store listing isn't available yet" })
     expect(apple).toHaveAttribute('aria-disabled', 'true')
     expect(within(list).getByRole('button', { name: /Google Play/ })).toBeInTheDocument()
+  })
+
+  it('lists each game\'s store badges under its own name', () => {
+    renderApp()
+    const list = screen.getByRole('list', { name: 'Store availability: Little Fortuna' })
+    expect(within(list).getByRole('button', { name: "Little Fortuna on App Store: the store listing isn't available yet" })).toBeInTheDocument()
+    expect(within(list).queryAllByRole('link')).toHaveLength(0)
   })
 
   it('explains, in the active language, why the badge does nothing', async () => {
     const user = userEvent.setup()
     renderApp('es')
-    await user.click(screen.getByRole('button', { name: /App Store: la página de la tienda/ }))
+    await user.click(screen.getByRole('button', { name: /Magical Garden en App Store: la página de la tienda/ }))
     await waitFor(() => expect(screen.getByTestId('toast')).toHaveTextContent('La página de Magical Garden en App Store aún no está disponible.'))
     expect(screen.getByTestId('toast')).toHaveAttribute('role', 'status')
   })

@@ -70,6 +70,7 @@ export const namespaces = [
   'navigation',
   'home',
   'game',
+  'fortuna',
   'studio',
   'follow',
   'footer',

@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Our second game",
+  "logoAlt": "Little Fortuna",
+  "subtitle": "Thief & Tumble",
+  "tagline": "Run the rooftops. Outwit the Watch.",
+  "description": "A thief flees a heist across the moonlit rooftops of a dark-fantasy city while the City Watch gives chase. Jump, slide and dash over rooftops, streets and sewers, grab treasure and power-ups, and see how far you can run.",
+  "art": {
+    "label": "Artwork from the game",
+    "alt": "Artwork from Little Fortuna: a red-haired thief crouches on a tiled rooftop with a sack of gold coins, above a lamplit city and its castle under a full moon."
+  },
+  "status": {
+    "title": "Coming soon",
+    "subtitle": "to iOS and Android"
+  },
+  "features": {
+    "label": "What to expect",
+    "run": "Jump, slide and dash across the rooftops",
+    "watch": "The City Watch is always close behind",
+    "loot": "Treasures, tools and power-ups to find",
+    "guild": "Guild jobs, daily heists and outfits"
+  }
+}

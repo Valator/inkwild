@@ -1,12 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import { toSafeExternalUrl } from '../../config/links'
-import { siteConfig } from '../../config/siteConfig'
+import { siteConfig, type GameId } from '../../config/siteConfig'
 import { useAnnouncer } from '../Announcer/context'
 import { AppleIcon, GooglePlayIcon } from '../icons/BrandIcons'
 import './StoreButtons.css'
 
 interface StoreButtonsProps {
-  /** Defaults to `siteConfig.storeUrls`; overridable for tests and previews. */
+  /** Which game's listings to show. */
+  game?: GameId
+  /** Defaults to the game's `storeUrls` in `siteConfig`; overridable for tests and previews. */
   urls?: { ios: string; android: string }
 }
 
@@ -20,13 +22,13 @@ const STORES = [
  * Without a valid https URL a badge is an honest, non-navigating "coming soon" button
  * that announces why — never a broken or invented link.
  */
-export function StoreButtons({ urls = siteConfig.storeUrls }: StoreButtonsProps) {
+export function StoreButtons({ game: gameId = 'magicalGarden', urls = siteConfig.games[gameId].storeUrls }: StoreButtonsProps) {
   const { t } = useTranslation('game')
   const { notify } = useAnnouncer()
-  const game = siteConfig.gameName
+  const game = siteConfig.games[gameId].name
 
   return (
-    <ul className="store-buttons" aria-label={t('stores.label')}>
+    <ul className="store-buttons" aria-label={t('stores.label', { game })}>
       {STORES.map(({ id, name, Icon }) => {
         const href = toSafeExternalUrl(urls[id])
         const inner = (
@@ -55,7 +57,7 @@ export function StoreButtons({ urls = siteConfig.storeUrls }: StoreButtonsProps)
                 type="button"
                 className="store-badge store-badge--pending"
                 aria-disabled="true"
-                aria-label={t('stores.pendingAria', { store: name })}
+                aria-label={t('stores.pendingAria', { store: name, game })}
                 onClick={() => notify(t('stores.notice', { store: name, game }))}
               >
                 {inner}

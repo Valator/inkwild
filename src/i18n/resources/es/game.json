@@ -13,10 +13,10 @@
     "subtitle": "en iOS y Android"
   },
   "stores": {
-    "label": "Disponibilidad en tiendas",
+    "label": "Disponibilidad en tiendas: {{game}}",
     "pendingPrefix": "Próximamente en",
     "livePrefix": "Consíguelo en",
-    "pendingAria": "{{store}}: la página de la tienda aún no está disponible",
+    "pendingAria": "{{game}} en {{store}}: la página de la tienda aún no está disponible",
     "liveAria": "{{game}} en {{store}} (se abre en una pestaña nueva)",
     "notice": "La página de {{game}} en {{store}} aún no está disponible. Agregaremos el enlace aquí en cuanto el juego esté listo."
   },

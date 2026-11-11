@@ -13,10 +13,10 @@
     "subtitle": "登陆 iOS 和 Android"
   },
   "stores": {
-    "label": "应用商店上架情况",
+    "label": "应用商店上架情况：{{game}}",
     "pendingPrefix": "即将登陆",
     "livePrefix": "立即下载于",
-    "pendingAria": "{{store}}：商店页面暂不可用",
+    "pendingAria": "{{game}}在 {{store}} 上：商店页面暂不可用",
     "liveAria": "{{game}}在 {{store}} 上架（在新标签页中打开）",
     "notice": "{{store}} 上的商店页面暂不可用。{{game}}准备就绪后，我们会第一时间在这里添加链接。"
   },

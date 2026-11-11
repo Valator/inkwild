@@ -68,7 +68,7 @@ export function LittleFortunaSection() {
 
         <Reveal className="fortuna__art" delay={160}>
           <figure className="fortuna__figure" aria-label={t('art.label')}>
-            <img className="fortuna__thief" src={thief} width={720} height={604} alt={t('art.alt')} loading="lazy" decoding="async" />
+            <img className="fortuna__thief" src={thief} width={720} height={632} alt={t('art.alt')} loading="lazy" decoding="async" />
             {FLOATERS.map(({ src, className }) => (
               <img key={className} className={`fortuna__floater float ${className}`} src={src} width={256} height={256} alt="" aria-hidden="true" loading="lazy" />
             ))}

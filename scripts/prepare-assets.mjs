@@ -138,8 +138,12 @@ await run('games/fortuna-city.webp', path.join(fortunaTitle, 'sky.png'), async (
     .webp(webp(80))
     .toFile(path.join(gamesDir, 'fortuna-city.webp'))
 })
+// The owner's supplied running thief (transparent PNG-style WebP), kept untouched in assets-source/.
+const THIEF_SOURCE = out('assets-source/fortuna-thief.webp')
+await run('games/fortuna-thief.webp', THIEF_SOURCE, () =>
+  sharp(THIEF_SOURCE).trim({ threshold: 1 }).resize({ width: 720 }).webp({ quality: 90, alphaQuality: 100, effort: 5 }).toFile(path.join(gamesDir, 'fortuna-thief.webp')),
+)
 for (const [name, file, width] of [
-  ['fortuna-thief', 'UI/title_thief.png', 720],
   ['fortuna-guard', 'Characters/Frames/guard_stand_01.png', 256],
   ['fortuna-jump', 'Characters/Frames/thief_jump_01.png', 256],
   ['fortuna-coin', 'Pickups/coin.png', 256],

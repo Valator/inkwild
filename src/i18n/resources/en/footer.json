@@ -1,5 +1,5 @@
 {
   "tagline": "Where imagination runs wild.",
   "copyright": "© {{year}} {{studioName}}. All rights reserved.",
-  "privacy": "Privacy policy"
+  "privacy": "{{game}} privacy policy"
 }

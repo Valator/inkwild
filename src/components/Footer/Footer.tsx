@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { navItems } from '../../config/navigation'
-import { privacyPath } from '../../config/privacy'
+import { fortunaPrivacyPath, privacyPath } from '../../config/privacy'
 import { siteConfig } from '../../config/siteConfig'
 import { isEnabledLocale } from '../../i18n/locales'
 import { sectionLinkHandler } from '../../lib/navigateToSection'
@@ -54,7 +54,10 @@ export function Footer({ sectionBase }: FooterProps) {
 
       <div className="site-footer__legal container">
         <p>{t('footer:copyright', { year, studioName: siteConfig.studioName })}</p>
-        <a href={privacyPath(locale)}>{t('footer:privacy')}</a>
+        <div className="site-footer__policies">
+          <a href={privacyPath(locale)}>{t('footer:privacy', { game: siteConfig.games.magicalGarden.name })}</a>
+          <a href={fortunaPrivacyPath(locale)}>{t('footer:privacy', { game: siteConfig.games.littleFortuna.name })}</a>
+        </div>
       </div>
     </footer>
   )

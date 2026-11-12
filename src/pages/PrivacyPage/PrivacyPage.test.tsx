@@ -149,16 +149,19 @@ describe('language switching on the privacy page', () => {
 describe('policy link from the home page', () => {
   it('is in the footer and points at the public policy URL', () => {
     renderApp('en')
-    expect(screen.getByRole('link', { name: 'Privacy policy' })).toHaveAttribute('href', '/privacy/')
+    expect(screen.getByRole('link', { name: 'Magical Garden privacy policy' })).toHaveAttribute('href', '/privacy/')
+    expect(screen.getByRole('link', { name: 'Little Fortuna privacy policy' })).toHaveAttribute('href', '/privacy/little-fortuna/')
   })
 
   it('is translated', () => {
     renderApp('es')
-    expect(screen.getByRole('link', { name: 'Política de privacidad' })).toHaveAttribute('href', '/privacy/')
+    expect(screen.getByRole('link', { name: 'Política de privacidad de Magical Garden' })).toHaveAttribute('href', '/privacy/')
+    expect(screen.getByRole('link', { name: 'Política de privacidad de Little Fortuna' })).toHaveAttribute('href', '/privacy/little-fortuna/')
   })
 
   it('points Chinese visitors at the Chinese policy page', () => {
     renderApp('zh')
-    expect(screen.getByRole('link', { name: '隐私政策' })).toHaveAttribute('href', '/zh/privacy/')
+    expect(screen.getByRole('link', { name: 'Magical Garden隐私政策' })).toHaveAttribute('href', '/zh/privacy/')
+    expect(screen.getByRole('link', { name: 'Little Fortuna隐私政策' })).toHaveAttribute('href', '/zh/privacy/little-fortuna/')
   })
 })

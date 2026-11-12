@@ -43,7 +43,8 @@ describe.each([
 
   it("is about Little Fortuna only: no Magical Garden, no player ID, no Ladder, no cloud save claims", () => {
     renderFortuna(locale)
-    expect(document.body.textContent).not.toMatch(/Magical Garden|LevelPlay/i)
+    // The footer legitimately links to both policies, so check the policy itself.
+    expect(screen.getByRole('main').textContent).not.toMatch(/Magical Garden|LevelPlay/i)
     expect(document.body.textContent).toMatch(/Little Fortuna|小小福尔图娜/)
     expect(document.body.textContent).toMatch(/AdMob/)
   })

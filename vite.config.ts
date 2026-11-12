@@ -14,6 +14,9 @@ export default defineConfig({
         privacy: resolve(import.meta.dirname, 'privacy/index.html'),
         // One real file per locale in PRIVACY_PAGE_LOCALES (src/config/privacy.ts).
         privacyZh: resolve(import.meta.dirname, 'zh/privacy/index.html'),
+        // Little Fortuna's own policy, likewise one file per locale (fortunaPrivacyPath).
+        privacyFortuna: resolve(import.meta.dirname, 'privacy/little-fortuna/index.html'),
+        privacyFortunaZh: resolve(import.meta.dirname, 'zh/privacy/little-fortuna/index.html'),
       },
     },
   },

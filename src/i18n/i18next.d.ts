@@ -6,6 +6,7 @@ import type fortuna from './resources/en/fortuna.json'
 import type game from './resources/en/game.json'
 import type home from './resources/en/home.json'
 import type privacy from './resources/en/privacy.json'
+import type privacyFortuna from './resources/en/privacyFortuna.json'
 import type navigation from './resources/en/navigation.json'
 import type studio from './resources/en/studio.json'
 
@@ -23,6 +24,7 @@ declare module 'i18next' {
       follow: typeof follow
       footer: typeof footer
       privacy: typeof privacy
+      privacyFortuna: typeof privacyFortuna
     }
   }
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { PRIVACY_PAGE_LOCALES, PRIVACY_PATH, privacyPath } from '../../config/privacy'
+import { FORTUNA_PRIVACY_PATH, PRIVACY_PAGE_LOCALES, PRIVACY_PATH, fortunaPrivacyPath, privacyPath } from '../../config/privacy'
 import { getAbsoluteUrl, getCanonicalUrl } from '../../config/seo'
 import { toSafeExternalUrl } from '../../config/links'
 import { siteConfig } from '../../config/siteConfig'
@@ -16,11 +16,11 @@ import { replaceHreflangLinks, replaceMetaGroup, upsertJsonLd, upsertLink, upser
  */
 interface DocumentMetaProps {
   /** Which page is showing; each has its own title, description and canonical URL. */
-  page?: 'home' | 'privacy'
+  page?: 'home' | 'privacy' | 'privacyFortuna'
 }
 
 export function DocumentMeta({ page = 'home' }: DocumentMetaProps) {
-  const { t, i18n } = useTranslation(['common', 'footer', 'privacy'])
+  const { t, i18n } = useTranslation(['common', 'footer', 'privacy', 'privacyFortuna'])
   const locale = isEnabledLocale(i18n.resolvedLanguage) ? i18n.resolvedLanguage : siteConfig.defaultLocale
 
   useEffect(() => {
@@ -30,10 +30,17 @@ export function DocumentMeta({ page = 'home' }: DocumentMetaProps) {
     root.dir = definition.dir
     root.dataset.locale = locale
 
-    const isPrivacy = page === 'privacy'
-    const title = isPrivacy ? t('privacy:meta.title') : t('common:meta.title')
-    const description = isPrivacy ? t('privacy:meta.description') : t('common:meta.description')
-    const canonical = getCanonicalUrl(locale, isPrivacy ? privacyPath(locale) : '/')
+    const isPrivacy = page !== 'home'
+    const isFortunaPolicy = page === 'privacyFortuna'
+    const policyPath = isFortunaPolicy ? fortunaPrivacyPath : privacyPath
+    const policyDefaultPath = isFortunaPolicy ? FORTUNA_PRIVACY_PATH : PRIVACY_PATH
+    const title = isFortunaPolicy ? t('privacyFortuna:meta.title') : isPrivacy ? t('privacy:meta.title') : t('common:meta.title')
+    const description = isFortunaPolicy
+      ? t('privacyFortuna:meta.description')
+      : isPrivacy
+        ? t('privacy:meta.description')
+        : t('common:meta.description')
+    const canonical = getCanonicalUrl(locale, isPrivacy ? policyPath(locale) : '/')
     const image = getAbsoluteUrl('/og-image.jpg')
 
     document.title = title
@@ -45,9 +52,9 @@ export function DocumentMeta({ page = 'home' }: DocumentMetaProps) {
         ? [
             ...PRIVACY_PAGE_LOCALES.map((code) => ({
               hreflang: locales[code].htmlLang,
-              href: getCanonicalUrl(code, privacyPath(code)),
+              href: getCanonicalUrl(code, policyPath(code)),
             })),
-            { hreflang: 'x-default', href: getCanonicalUrl(siteConfig.defaultLocale, PRIVACY_PATH) },
+            { hreflang: 'x-default', href: getCanonicalUrl(siteConfig.defaultLocale, policyDefaultPath) },
           ]
         : [],
     )

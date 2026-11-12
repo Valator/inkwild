@@ -75,6 +75,7 @@ export const namespaces = [
   'follow',
   'footer',
   'privacy',
+  'privacyFortuna',
 ] as const
 
 export type Namespace = (typeof namespaces)[number]

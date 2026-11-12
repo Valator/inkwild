@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Política de privacidad — Little Fortuna · InkWild Games",
+    "description": "Cómo Little Fortuna maneja tu información: qué se queda en tu teléfono, qué recopilan los anuncios y qué opciones tienes."
+  },
+  "title": "Política de privacidad",
+  "subtitle": "Little Fortuna: Thief & Tumble",
+  "updated": "Última actualización: {{date}}",
+  "summary": {
+    "title": "En pocas palabras",
+    "text": "Little Fortuna no tiene cuentas, inicio de sesión ni estadísticas de juego: tu progreso se queda en tu teléfono. El juego contiene anuncios de Google AdMob, que recopilan información para mostrarlos y medirlos, y ofrece una compra única y opcional que quita todos los anuncios."
+  },
+  "intro": "Esta política explica qué información maneja Little Fortuna: Thief & Tumble (el \"juego\"), por qué y qué opciones tienes. \"Nosotros\" se refiere a InkWild Games, el estudio independiente que hace el juego.",
+  "collect": {
+    "title": "Qué maneja el juego",
+    "intro": "Little Fortuna no te pide correo electrónico, nombre real ni contraseña, y no nos envía nada sobre cómo juegas. Esto es todo lo que maneja:",
+    "device": {
+      "label": "Solo en tu dispositivo.",
+      "text": "Tu oro, tu mejor distancia y el número de carreras terminadas; tus mejoras, tu rango de ladrona, los encargos del gremio y el calendario del golpe diario; tus herramientas, atuendos y tesoros; los peligros que ya conociste; un registro de tu mejor carrera, para que puedas competir contra ella; qué consejos ya viste; tus ajustes de música, efectos, vibración, Modo calma e idioma; cuándo viste el último anuncio, para espaciarlos; y si tienes Quitar anuncios, para que el juego funcione sin conexión. Nada de esto se nos envía. Al desinstalar el juego, se borra."
+    },
+    "ads": {
+      "label": "Datos de publicidad.",
+      "text": "Google AdMob, el software de anuncios del juego, y los socios publicitarios de Google pueden recopilar los datos que se describen en Publicidad, más abajo."
+    },
+    "purchase": {
+      "label": "Estado de la compra.",
+      "text": "Si tienes Quitar anuncios, lo cual el juego verifica con Google Play o la App Store de Apple cada vez que se inicia. El pago lo maneja la tienda."
+    },
+    "updates": {
+      "label": "Actualizaciones (Android).",
+      "text": "Cuando el juego se inicia, y cuando vuelves a él, le pregunta a Google Play si hay una versión más nueva; si la hay, se te pide actualizar antes de jugar. Para responder, Google Play usa los datos de tu dispositivo y la versión instalada del juego, según sus propios términos. El juego solo sabe si hay una actualización disponible."
+    },
+    "engine": {
+      "label": "Estadísticas del dispositivo.",
+      "text": "Cuando el juego se inicia, Unity, el motor con el que está hecho, puede enviar a Unity Technologies datos técnicos de tu dispositivo, como el modelo, el sistema operativo, el hardware gráfico y la pantalla, para mejorar su motor. No incluyen tu nombre ni tus datos de contacto, ni nada sobre cómo juegas. Unity los maneja según su propia política de privacidad."
+    }
+  },
+  "nocollect": {
+    "title": "Qué no recopila",
+    "text": "El juego no tiene cuentas, ID de jugador propio, guardado en la nube, clasificaciones, estadísticas de juego ni informes de errores. No recopila tu nombre real, correo electrónico, número de teléfono, contactos, ubicación precisa, fotos, ni datos del micrófono o la cámara. Nunca ve los datos de tu tarjeta; las compras las manejan Google Play o la App Store de Apple."
+  },
+  "advertising": {
+    "title": "Publicidad",
+    "intro": "Little Fortuna contiene anuncios. El proveedor es Google AdMob (el SDK de Google Mobile Ads), y los anuncios los sirven Google y sus socios publicitarios. Hay dos tipos: anuncios de pantalla completa (intersticiales) entre carreras y anuncios opcionales con recompensa. No hay anuncios de banner.",
+    "when": {
+      "label": "Cuándo aparecen.",
+      "text": "Los anuncios de pantalla completa solo aparecen después de terminar una carrera, cuando sales de la pantalla de resultados para volver a correr o para ir al menú. No ves ninguno en tus primeras 10 carreras terminadas; después, como máximo uno cada 3 a 5 carreras terminadas, y nunca a menos de 30 segundos de otro anuncio. No se muestra nada mientras corres, al iniciar, en los menús ni en Ajustes."
+    },
+    "rewarded": {
+      "label": "Anuncios opcionales con recompensa.",
+      "text": "Puedes elegir ver un anuncio corto a cambio de un beneficio en el juego: Escapa, una segunda oportunidad cuando la Guardia te acorrala (una vez por carrera), o duplicar el oro de una carrera. Nunca es obligatorio, y quienes compran Quitar anuncios reciben estos beneficios sin ver un anuncio."
+    },
+    "data": {
+      "intro": "Para mostrar y medir los anuncios, Google AdMob (el SDK de Google Mobile Ads) en el juego y los socios publicitarios de Google pueden recopilar:",
+      "li1": "el identificador de publicidad de tu dispositivo (en iPhone, solo si permites el rastreo);",
+      "li2": "una ubicación aproximada obtenida de tu dirección IP;",
+      "li3": "información del dispositivo y de la app, como el modelo, el sistema operativo, la versión de la app y el idioma;",
+      "li4": "cómo interactúas con los anuncios;",
+      "li5": "diagnósticos, como fallos y rendimiento.",
+      "share": "Google y sus socios publicitarios pueden recibir esta información y la manejan según sus propias políticas de privacidad."
+    },
+    "choices": {
+      "label": "Tus opciones.",
+      "text": "En el Espacio Económico Europeo, el Reino Unido y Suiza, un formulario de consentimiento de Google te pide tu decisión, y el botón Privacidad de anuncios en Ajustes te permite cambiarla en cualquier momento. En iPhone, el sistema te pregunta si el juego puede rastrearte antes de mostrar anuncios. En cualquier teléfono también puedes restablecer o limitar el identificador de publicidad en los ajustes del teléfono."
+    },
+    "learn": {
+      "intro": "Más información:",
+      "google": "Cómo usa Google la información de los sitios o apps que usan sus servicios",
+      "googleAria": "Cómo usa Google la información de los sitios o apps que usan sus servicios (se abre en una pestaña nueva)"
+    }
+  },
+  "purchases": {
+    "title": "Compras",
+    "intro": "Little Fortuna es gratis. El oro solo se gana jugando y nunca se vende. El juego ofrece una compra única y opcional: Quitar anuncios.",
+    "pay": "Pagas a través de Google Play o la App Store de Apple, que manejan tu pago. El juego nunca ve los datos de tu tarjeta.",
+    "effect": "Quitar anuncios desactiva todos los anuncios para siempre, y recibes Escapa y el oro duplicado sin ver un anuncio. No cambia nada más del juego.",
+    "restore": "No tenemos un sistema de cuentas propio. Si cambias de teléfono, la compra se restaura desde la tienda; también puedes tocar Restaurar compras en Ajustes. El juego guarda una copia en tu teléfono para funcionar sin conexión."
+  },
+  "use": {
+    "title": "Cómo usamos la información",
+    "li1": "Para que el juego funcione y tu progreso se guarde en tu teléfono.",
+    "li2": "Para mostrar anuncios, y para quitarlos si compras Quitar anuncios.",
+    "li3": "Para verificar con la tienda si tienes Quitar anuncios.",
+    "li4": "En Android, para saber si hay una actualización obligatoria."
+  },
+  "choices": {
+    "title": "Tus opciones",
+    "li1": "Anuncios: cambia tu consentimiento con el botón Privacidad de anuncios en Ajustes (donde se muestra un formulario de consentimiento), o restablece o limita el identificador de publicidad en los ajustes del teléfono. En iPhone puedes cambiar si el juego puede rastrearte en los Ajustes del teléfono. Comprar Quitar anuncios desactiva todos los anuncios.",
+    "li2": "Jugar sin conexión: el juego funciona sin internet. Los anuncios, la compra y la búsqueda de actualizaciones necesitan conexión.",
+    "li3": "Borrar datos: al desinstalar el juego se borra todo lo que guardó en tu teléfono. No guardamos ningún dato de tu juego en servidores propios, así que no hay nada más que podamos borrar; Google y las tiendas conservan sus propios registros según sus políticas. Igual puedes escribirnos con cualquier pregunta."
+  },
+  "providers": {
+    "title": "Quién procesa tu información",
+    "text": "Usamos Google AdMob (Google) para mostrar anuncios, y Google Play o la App Store de Apple para la compra de Quitar anuncios y, en Android, para buscar actualizaciones. Ellos procesan la información según sus propios términos y pueden hacerlo en países distintos al tuyo, incluido Estados Unidos. No vendemos tu nombre ni tus datos de contacto (no los tenemos). Los datos de publicidad descritos en Publicidad pueden llegar a Google y sus socios publicitarios, lo que algunas leyes llaman compartir información con fines publicitarios; puedes limitarlo con las opciones descritas ahí.",
+    "googleLink": "Lee la política de privacidad de Google",
+    "googleLinkAria": "Política de privacidad de Google (se abre en una pestaña nueva)"
+  },
+  "retention": {
+    "title": "Cuánto tiempo lo guardamos",
+    "text": "El juego guarda tu progreso en tu teléfono hasta que lo desinstales. No guardamos nada sobre ti en servidores propios. Google y sus socios publicitarios conservan los datos de publicidad, y las tiendas tu registro de compra, según sus propias políticas."
+  },
+  "children": {
+    "title": "Menores",
+    "text": "Little Fortuna no está dirigido a menores de 13 años (ni de 16 donde la ley local fije una edad mayor). No recopilamos intencionalmente información personal de ellos. Si crees que un menor nos dio información personal, escríbenos y la borraremos."
+  },
+  "rights": {
+    "title": "Tus derechos",
+    "text": "Según dónde vivas (por ejemplo, el Espacio Económico Europeo, el Reino Unido, México o California), puedes tener derecho a acceder, corregir, borrar o limitar el uso de tu información personal, a oponerte a su uso y a retirar tu consentimiento en cualquier momento. Puedes cambiar tu consentimiento de publicidad con el botón Privacidad de anuncios, y escribirnos para ejercer cualquier otro derecho."
+  },
+  "security": {
+    "title": "Seguridad",
+    "text": "El juego solo envía lo que se describe aquí, y los anuncios y las compras pasan por los servicios protegidos de Google y de las tiendas. Ningún sistema es totalmente seguro, así que no podemos garantizar una seguridad absoluta."
+  },
+  "changes": {
+    "title": "Cambios a esta política",
+    "text": "Si el juego cambia de un modo que afecte tu privacidad (por ejemplo, si agrega inicio de sesión, guardado en la nube, logros o estadísticas de juego), actualizaremos esta política antes de que esa versión te llegue. La fecha de arriba indica cuándo se actualizó por última vez."
+  },
+  "website": {
+    "title": "Este sitio web",
+    "text": "El sitio web de InkWild Games (inkwildgames.com) tiene su propia sección sobre cómo maneja la información, en nuestra otra política de privacidad.",
+    "link": "Lee la sección sobre este sitio web",
+    "linkAria": "La sección sobre este sitio web, en nuestra otra política de privacidad"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "text": "¿Tienes dudas o quieres ejercer alguno de tus derechos? Escríbenos:",
+    "emailAria": "Escribe a {{studioName}} a {{email}}",
+    "empty": "Publicaremos aquí nuestro correo de contacto antes del lanzamiento del juego."
+  }
+}

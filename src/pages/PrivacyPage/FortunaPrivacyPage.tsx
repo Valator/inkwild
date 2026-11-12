@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { FORTUNA_PRIVACY_LAST_UPDATED, GOOGLE_ADS_PRIVACY_URL, GOOGLE_PRIVACY_URL, privacyPath } from '../../config/privacy'
+import { FORTUNA_PRIVACY_LAST_UPDATED, GOOGLE_ADS_PRIVACY_URL, GOOGLE_PRIVACY_URL, UNITY_PRIVACY_URL, privacyPath } from '../../config/privacy'
 import { siteConfig } from '../../config/siteConfig'
 import { isEnabledLocale } from '../../i18n/locales'
 import { PolicySection, PolicyShell } from './PolicyShell'
@@ -92,6 +92,11 @@ export function FortunaPrivacyPage() {
 
       <PolicySection id="providers" title={t('providers.title')}>
         <p>{t('providers.text')}</p>
+        <p>
+          <a href={UNITY_PRIVACY_URL} target="_blank" rel="noopener noreferrer" aria-label={t('providers.linkAria')}>
+            {t('providers.link')}
+          </a>
+        </p>
         <p>
           <a href={GOOGLE_PRIVACY_URL} target="_blank" rel="noopener noreferrer" aria-label={t('providers.googleLinkAria')}>
             {t('providers.googleLink')}

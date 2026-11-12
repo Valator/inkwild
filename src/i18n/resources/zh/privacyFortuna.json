@@ -92,6 +92,8 @@
   "providers": {
     "title": "谁会处理你的信息",
     "text": "我们使用 Google AdMob（Google）展示广告，使用 Google Play 或 Apple App Store 处理\"移除广告\"的购买，并在 Android 上检查更新。它们按照各自的条款处理信息，并可能在你所在国家/地区以外（包括美国）处理信息。我们不会出售你的姓名或联系方式（我们并不掌握这些信息）。\"广告\"部分所述的广告数据可能会被 Google 及其广告合作伙伴接收，某些法律将此称为出于广告目的共享信息；你可以通过该部分所述的选择加以限制。",
+    "link": "阅读 Unity 的隐私政策（英文）",
+    "linkAria": "Unity 的隐私政策（英文，在新标签页中打开）",
     "googleLink": "阅读 Google 的隐私政策",
     "googleLinkAria": "Google 的隐私政策（在新标签页中打开）"
   },

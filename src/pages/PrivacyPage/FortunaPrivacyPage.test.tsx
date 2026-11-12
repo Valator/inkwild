@@ -63,9 +63,9 @@ describe.each([
     expect(document.head.querySelector('meta[property="og:url"]')).toHaveAttribute('content', url)
   })
 
-  it('opens Google links safely and links to the website section of the other policy', () => {
+  it('opens the Unity and Google links safely and links to the website section of the other policy', () => {
     renderFortuna(locale)
-    for (const href of ['https://policies.google.com/privacy', 'https://policies.google.com/technologies/partner-sites']) {
+    for (const href of ['https://unity.com/legal/privacy-policy', 'https://policies.google.com/privacy', 'https://policies.google.com/technologies/partner-sites']) {
       const link = document.querySelector(`a[href="${href}"]`)
       expect(link).toHaveAttribute('rel', 'noopener noreferrer')
       expect(link).toHaveAttribute('target', '_blank')

@@ -92,6 +92,8 @@
   "providers": {
     "title": "Quién procesa tu información",
     "text": "Usamos Google AdMob (Google) para mostrar anuncios, y Google Play o la App Store de Apple para la compra de Quitar anuncios y, en Android, para buscar actualizaciones. Ellos procesan la información según sus propios términos y pueden hacerlo en países distintos al tuyo, incluido Estados Unidos. No vendemos tu nombre ni tus datos de contacto (no los tenemos). Los datos de publicidad descritos en Publicidad pueden llegar a Google y sus socios publicitarios, lo que algunas leyes llaman compartir información con fines publicitarios; puedes limitarlo con las opciones descritas ahí.",
+    "link": "Lee la política de privacidad de Unity",
+    "linkAria": "Política de privacidad de Unity (se abre en una pestaña nueva)",
     "googleLink": "Lee la política de privacidad de Google",
     "googleLinkAria": "Política de privacidad de Google (se abre en una pestaña nueva)"
   },
